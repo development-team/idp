@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="ch.epfl.lamp.sdt.launching.SCALA_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/idpBatchProcessor"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/minorThird_XMLStable"/>
+	<classpathentry kind="lib" path="/LibsCommon/libs/plcafe.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/LibsCommon"/>
+	<classpathentry kind="lib" path="/LibsCommon/libs/ScalaCheck-1.1.1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

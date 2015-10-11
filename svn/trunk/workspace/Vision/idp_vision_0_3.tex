@@ -1,0 +1,108 @@
+\documentclass[12pt]{article}
+
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage[colorlinks]{hyperref}
+
+\title{IDP v.0.3 vision}
+\author{Max Talanov}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Outline}
+\tableofcontents
+
+\section{Overview}
+Purpose of this document is to create some overall picture of 0.3 version of IDP project.
+
+\section{Main features}
+
+\subsection{Semantic network (SN)}
+Main enhancement of 0.3 version is migration from text mining to concept mining, that is mainly use of semantic network for data representation of processed documents and heuristics for annotation and normalization.
+
+\subsubsection{Options}
+
+There are several options to use open-source Java projects:
+\begin{description}
+  \item[KAON] is an ontology management infrastructure targeted for business applications,\\
+    \emph{(+) good GUI for ontology, TextToOnto, LGPL;}\\
+    \emph{(-) querying and reasoning is still experimental, RDF only, last update 2003}
+  \item[TextToOnto] The aim of TextToOnto is to support developers in the ontology construction process by applying text mining techniques. For this purpose it builds on KAON.
+  \item[KAON2] - is an infrastructure for managing OWL-DL, SWRL, and F-Logic ontologies.\\
+    \emph{(+) reasoning implemented, Text2Onto;}\\ 
+    \emph{(-) commercial for non educational purposes}
+  \item[Text2Onto] A Framework for Ontology Learning and Data-driven Change Discovery.\\
+    \emph{(+) LGPL, OWL}
+  \item[NeOn] State of the art application for using ontologies for large-scale semantic applications in the distributed organizations. Particularly,improve the capability to handle multiple networked ontologies that exist in a particular context, which are created collaboratively, and might be highly dynamic and constantly evolving.\\
+    \emph{(+) integration with Text2Onto,querying;}\\ 
+    \emph{(-) commercial, no Reasoning implemented}
+  \item[pellet] is an open source, OWL DL reasoner in Java that is developed, and commercially supported, by Clark \& Parsia LLC. OWL is an international, web standard produced by the W3C.\\
+    \emph{(+) free, integration with Protege, Jena; - tabular calculus}.
+  \item[Protege] is a free, open source ontology editor and knowledge-base framework.\\
+    \emph{(+) free, OWL}.
+  \item[Mulgara] is a scalable RDF database written entirely in Java. Mulgara is an Open Source fork of Kowari.\\
+    \emph{(+) free}
+  \item[Jena] is a Java framework for building Semantic Web applications. It provides a programmatic environment for RDF, RDFS and OWL, SPARQL and includes a rule-based inference engine.\\
+    \emph{(+) SPARQL, OWL, free}.
+  \item[conceptNet + minorthird] conceptNet is integrated with montylingua for NLP, it is possible to integrate semantic network of conceptNet with minorthird to extract concepts from texts.\\
+	\emph{(+) free, minorthird is integrated with idp;} \\
+	\emph{(-) not OWL}.
+\end{description}
+We have to have some research to do to decide what is proper base for further development. At the moment it seems to me that TextToOnto/Text2Onto + pellet/Jena + Protege is best for our purposes, because they are free and modern.
+
+\subsection{Reasoning, querying and analysis}
+This should be implemented on base of SN. Several reasoning servers, \emph{pellet}, \emph{KAON2} and \emph{Jena} provide option for reasoning and querying. This should be base for busyness rules description and analysis as well as reports.
+
+\subsection{Subst2 (normalization based on SN)}
+There should be several steps
+\begin{itemize}
+  \item Add multiple rules use for normalization, add probability consideration of different rules.
+  \item Make normalization able to learn based on positive examples.
+  \item Make normalization rules description based on OWL(SN).
+  \item Make use of SN described heuristics, ex.: for date ranges description.
+  \item Generalize learned rules to heuristics(optional).
+\end{itemize}
+
+\subsection{Non text documents}
+We have to start processing different formats of documents:
+\begin{itemize}
+  \item DOC
+  \item OXML
+  \item ODF
+  \item PDF
+  \item HTML pages, not only local
+  \item XML
+  \item RSS channel
+\end{itemize}
+For Microsoft formats it is possible to use POI, for PDF PDFBox.
+
+\subsection{JBoss}
+It could be good option to use application server of client server messaging and multiple users service, as well as web-services use.
+
+\subsection{Third parity application updates}
+We should move to new versions of applications:
+\begin{itemize}
+  \item minorthird 20080414
+  \item JGAP 3.3.3
+\end{itemize}
+
+\section{Milestones}
+Some vision of sequence of steps to Beta.
+\begin{enumerate}
+  \item Various document formats processing.
+  \item Analise of SN platforms servers -$>$ \emph{estimates to implement document integration}.
+  \item Analise of SN reasoning servers -$>$ \emph{estimates to implement analytical environment}.
+  \item Implementation of SN document representation.
+  \item Concept mining implementation.
+  \item Reasoning integration.
+  \item Subst2.
+  \item JBoss migration analysis and implementation.
+  \item Multiproject enhancement.
+  \item minorthird and JGAP new versions migration.
+\end{enumerate}
+This is very rough sequence and could not be considered as guidance or a project plan.
+
+\end{document}

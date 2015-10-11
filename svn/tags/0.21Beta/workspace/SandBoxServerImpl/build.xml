@@ -1,0 +1,65 @@
+<project name="SandBoxServer" default="dist-only" basedir=".">
+    <description>
+        IDP build file
+    </description>
+  	<!-- set global properties for this build -->
+  	<property name="src" location="src"/>
+	<property name="bin" location="bin"/>
+  	<property name="dist" location="dist"/>
+	<property name="lib" location="lib"/>
+	<property name="projectName" value="SandBoxServer"/>
+	<property environment="env"/>
+	<property name="scala.home" value="${env.SCALA_HOME}"/>
+
+	<target name="init">
+		<property name="scala-library.jar"  value="${scala.home}/lib/scala-library.jar"/>
+		<path id="build.classpath">
+	    	<pathelement location="${scala-library.jar}"/>
+			<fileset dir="${lib}" includes="**/*.jar"/>
+	    </path>
+		<taskdef resource="scala/tools/ant/antlib.xml">
+	    	<classpath>
+	        	<pathelement location="${scala.home}/lib/scala-compiler.jar"/>
+	            <pathelement location="${scala-library.jar}"/>
+	        </classpath>
+	     </taskdef>
+		<!-- Create the time stamp -->
+		<tstamp/>
+	</target>
+
+  	<target name="compile" depends="init" description="compile the source " >
+    	<!-- Compile the scala code from ${src} into ${build} -->
+  		<mkdir dir="${bin}"/>
+  		<scalac srcdir="${src}" destdir="${bin}" 
+  			classpathref="build.classpath" force="changed">
+			<include name="**/*.scala"/>
+  		</scalac>
+  	</target>
+
+  	<target name="dist" depends="compile"
+    	    description="generate the distribution" >
+    	<!-- Create the distribution directory -->
+    	<mkdir dir="${dist}/lib"/>
+    	<!-- Put everything in ${build} into the MyProject-${DSTAMP}.jar file -->
+    	<jar jarfile="${dist}/lib/${projectName}-${DSTAMP}.jar" basedir="${bin}"/>
+  	</target>
+
+	<!-- use this only if you have build automatically option switched on in Eclipse -->
+	<target name="dist-only" 
+		description="generate the distribution based on builded suppose we have build automatically option in Eclipse" >
+	    <!-- Create the distribution directory -->
+	    <mkdir dir="${dist}/lib"/>
+		<!-- Create the time stamp -->
+    	<tstamp/>
+		<!-- Put everything in ${bin} into the MyProject-${DSTAMP}.jar file -->
+	    <jar jarfile="${dist}/lib/${projectName}-${DSTAMP}.jar" basedir="${bin}"/>
+		<copy file="${dist}/lib/${projectName}-${DSTAMP}.jar" toFile="${dist}/lib/${projectName}.jar"/>
+	 </target>
+	
+ 	 <target name="clean"
+        	description="clean up" >
+    	<!-- Delete the ${build} and ${dist} directory trees -->
+    	<delete dir="${bin}"/>
+    	<!-- delete dir="${dist}"/ -->
+  	</target>
+</project>

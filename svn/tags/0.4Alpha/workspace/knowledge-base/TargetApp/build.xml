@@ -1,0 +1,72 @@
+<project name="idp-proof-of-concept" default="dist-only" basedir=".">
+    <description>
+        IDP build file
+    </description>
+    <!-- set global properties for this build -->
+    <property name="src" location="src"/>
+    <property name="bin" location="bin"/>
+    <!-- correct me -->
+    <property name="dist" location="bin"/>
+    <property name="lib" location="lib"/>
+    <property name="projectName" value="idp-proof-of-concept"/>
+    <property environment="env"/>
+    <property name="scala.home" value="${env.SCALA_HOME}"/>
+
+    <target name="init">
+        <property name="scala-library.jar" value="${scala.home}/lib/scala-library.jar"/>
+        <path id="build.classpath">
+            <pathelement location="${scala-library.jar}"/>
+            <fileset dir="${lib}" includes="**/*.jar"/>
+        </path>
+        <path id="libs">
+            <fileset dir="${lib}">
+                <include name="**/*.jar"/>
+            </fileset>
+        </path>
+
+        <taskdef resource="scala/tools/ant/antlib.xml">
+            <classpath>
+                <pathelement location="${scala.home}/lib/scala-compiler.jar"/>
+                <pathelement location="${scala-library.jar}"/>
+            </classpath>
+        </taskdef>
+        <!-- Create the time stamp -->
+        <tstamp/>
+    </target>
+
+    <target name="compile" depends="init" description="compile the source ">
+        <!-- Compile the scala code from ${src} into ${build} -->
+        <mkdir dir="${bin}"/>
+        <javac srcdir="${src}" destdir="${bin}">
+            <include name="**/*.java"/>
+            <classpath refid="libs"/>
+        </javac>
+    </target>
+
+    <target name="dist" depends="compile"
+            description="generate the distribution">
+        <!-- Create the distribution directory -->
+        <mkdir dir="${dist}/lib"/>
+        <!-- Put everything in ${build} into the MyProject-${DSTAMP}.jar file -->
+        <jar jarfile="${dist}/lib/${projectName}-${DSTAMP}.jar" basedir="${bin}"/>
+    </target>
+
+    <!-- use this only if you have build automatically option switched on in Eclipse -->
+    <target name="dist-only"
+            description="generate the distribution based on builded suppose we have build automatically option in Eclipse">
+        <!-- Create the distribution directory -->
+        <mkdir dir="${dist}/lib"/>
+        <!-- Create the time stamp -->
+        <tstamp/>
+        <!-- Put everything in ${bin} into the MyProject-${DSTAMP}.jar file -->
+        <jar jarfile="${dist}/lib/${projectName}-${DSTAMP}.jar" basedir="${bin}"/>
+        <copy file="${dist}/lib/${projectName}-${DSTAMP}.jar" toFile="${dist}/lib/${projectName}.jar"/>
+    </target>
+
+    <target name="clean"
+            description="clean up">
+        <!-- Delete the ${build} and ${dist} directory trees -->
+        <delete dir="${bin}"/>
+        <!-- delete dir="${dist}"/ -->
+    </target>
+</project>

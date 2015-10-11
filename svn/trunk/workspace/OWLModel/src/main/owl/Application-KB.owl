@@ -1,0 +1,1355 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY Application-KB "http://idp.org/ontologies/2009/6/Application-KB.owl#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2006/12/owl2-xml#"
+     xml:base="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:Application-KB="http://idp.org/ontologies/2009/6/Application-KB.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     URI="http://idp.org/ontologies/2009/6/Application-KB.owl">
+    <Annotation annotationURI="&owl;versionInfo">
+        <Constant datatypeURI="&xsd;int">3</Constant>
+    </Annotation>
+    <Annotation annotationURI="&owl;versionInfo">
+        <Constant datatypeURI="&xsd;int">5</Constant>
+    </Annotation>
+    <Annotation annotationURI="&owl;versionInfo">
+        <Constant datatypeURI="&xsd;int">4</Constant>
+    </Annotation>
+    <Annotation annotationURI="&rdfs;comment">
+        <Constant>checked</Constant>
+    </Annotation>
+    <SubClassOf>
+        <Class URI="&Application-KB;AnyFromApplication"/>
+        <Class URI="&owl;Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&Application-KB;AnyFromApplication"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&Application-KB;hasFile"/>
+            <Class URI="&Application-KB;File"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&Application-KB;AnyFromApplication"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty URI="&Application-KB;hasValue"/>
+            <Datatype URI="&xsd;string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Application-KB;AnyFromApplication"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Application-KB;AnyFromExpressions"/>
+        <Class URI="&Application-KB;AnyFromTechnologyStack"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&Application-KB;AnyFromExpressions"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&Application-KB;hasLanguage"/>
+            <Class URI="&Application-KB;ProgrammingLanguage"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Application-KB;AnyFromExpressions"/>
+    </Declaration>
+    <Declaration>
+        <Class URI="&Application-KB;AnyFromFileSystem"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Application-KB;AnyFromTechnologyStack"/>
+        <Class URI="&owl;Thing"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Application-KB;AnyFromTechnologyStack"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Application-KB;Application"/>
+        <Class URI="&Application-KB;AnyFromApplication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&Application-KB;Application"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&Application-KB;hasProject"/>
+            <Class URI="&Application-KB;Project"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Application-KB;Application"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Application-KB;DatatypeDefinition"/>
+        <Class URI="&Application-KB;AnyFromTechnologyStack"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Application-KB;DatatypeDefinition"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Application-KB;Directory"/>
+        <Class URI="&Application-KB;File"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&Application-KB;Directory"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&Application-KB;hasFile"/>
+            <Class URI="&Application-KB;File"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Application-KB;Directory"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Application-KB;Expression"/>
+        <Class URI="&Application-KB;Operand"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&Application-KB;Expression"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&Application-KB;hasLeftOperand"/>
+            <Class URI="&Application-KB;Operand"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&Application-KB;Expression"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&Application-KB;hasRightOperand"/>
+            <Class URI="&Application-KB;Operand"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&Application-KB;Expression"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&Application-KB;isRefenece"/>
+            <Class URI="&Application-KB;AnyFromApplication"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Application-KB;Expression"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Application-KB;Field"/>
+        <Class URI="&Application-KB;AnyFromApplication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&Application-KB;Field"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&Application-KB;hasDefinition"/>
+            <Class URI="&Application-KB;FieldDefinition"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&Application-KB;FieldDefinition"/>
+        <Class URI="&Application-KB;AnyFromTechnologyStack"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&Application-KB;FieldDefinition"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&Application-KB;hasExpression"/>
+            <Class URI="&Application-KB;Expression"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Application-KB;FieldDefinition"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Application-KB;File"/>
+        <Class URI="&Application-KB;AnyFromFileSystem"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&Application-KB;File"/>
+        <DataSomeValuesFrom>
+            <DataProperty URI="&Application-KB;hasAddress"/>
+            <Datatype URI="&xsd;anyURI"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Application-KB;File"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Application-KB;Framework"/>
+        <Class URI="&Application-KB;AnyFromTechnologyStack"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Application-KB;Framework"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Application-KB;LiteralConstant"/>
+        <Class URI="&Application-KB;Operand"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Application-KB;LiteralConstant"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Application-KB;Method"/>
+        <Class URI="&Application-KB;AnyFromApplication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&Application-KB;Method"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&Application-KB;hasDefinition"/>
+            <Class URI="&Application-KB;MethodDefinition"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&Application-KB;MethodDefinition"/>
+        <Class URI="&Application-KB;AnyFromTechnologyStack"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&Application-KB;MethodDefinition"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&Application-KB;hasSequence"/>
+            <Class URI="&Application-KB;Sequence"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Application-KB;MethodDefinition"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Application-KB;Module"/>
+        <Class URI="&Application-KB;AnyFromApplication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&Application-KB;Module"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&Application-KB;hasDefinition"/>
+            <Class URI="&Application-KB;ModuleDefinition"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&Application-KB;Module"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&Application-KB;hasField"/>
+            <Class URI="&Application-KB;Field"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&Application-KB;Module"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&Application-KB;hasMethod"/>
+            <Class URI="&Application-KB;Method"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&Application-KB;Module"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&Application-KB;hasModule"/>
+            <Class URI="&Application-KB;Module"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&Application-KB;ModuleCompleteDefinition"/>
+        <Class URI="&Application-KB;ModuleWithoutFieldsDefinition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&Application-KB;ModuleCompleteDefinition"/>
+        <Class URI="&Application-KB;ModuleWithoutMethods"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Application-KB;ModuleCompleteDefinition"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Application-KB;ModuleDefinition"/>
+        <Class URI="&Application-KB;AnyFromTechnologyStack"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&Application-KB;ModuleDefinition"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&Application-KB;hasLanguage"/>
+            <Class URI="&Application-KB;ProgrammingLanguage"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&Application-KB;ModuleDefinition"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&Application-KB;hasSequence"/>
+            <Class URI="&Application-KB;Sequence"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&Application-KB;ModuleDefinition"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&Application-KB;hasReference"/>
+            <Class URI="&Application-KB;ModuleDefinition"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Application-KB;ModuleDefinition"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Application-KB;ModuleWithoutFieldsDefinition"/>
+        <Class URI="&Application-KB;ModuleDefinition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&Application-KB;ModuleWithoutFieldsDefinition"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&Application-KB;hasMethodDefinition"/>
+            <Class URI="&Application-KB;MethodDefinition"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <EntityAnnotation>
+        <Class URI="&Application-KB;ModuleWithoutFieldsDefinition"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant datatypeURI="&rdfs;Literal"
+                >Class for Modules with no Fields, ex.: Perl scripts.</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <Declaration>
+        <Class URI="&Application-KB;ModuleWithoutFieldsDefinition"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Application-KB;ModuleWithoutMethods"/>
+        <Class URI="&Application-KB;ModuleDefinition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&Application-KB;ModuleWithoutMethods"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&Application-KB;hasFieldDefinition"/>
+            <Class URI="&Application-KB;FieldDefinition"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <EntityAnnotation>
+        <Class URI="&Application-KB;ModuleWithoutMethods"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant datatypeURI="&rdfs;Literal"
+                >Class for static Module only with Fields, JSP page for example.</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <Declaration>
+        <Class URI="&Application-KB;ModuleWithoutMethods"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Application-KB;Operand"/>
+        <Class URI="&Application-KB;AnyFromExpressions"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Application-KB;Operand"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Application-KB;Operator"/>
+        <Class URI="&Application-KB;AnyFromExpressions"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Application-KB;Operator"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Application-KB;ProgrammingLanguage"/>
+        <Class URI="&Application-KB;AnyFromTechnologyStack"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Application-KB;ProgrammingLanguage"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Application-KB;Project"/>
+        <Class URI="&Application-KB;AnyFromApplication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&Application-KB;Project"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&Application-KB;hasModule"/>
+            <Class URI="&Application-KB;Module"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Application-KB;Project"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Application-KB;Sequence"/>
+        <Class URI="&Application-KB;AnyFromExpressions"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&Application-KB;Sequence"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&Application-KB;hasHead"/>
+            <Class URI="&Application-KB;Expression"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&Application-KB;Sequence"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&Application-KB;hasTail"/>
+            <Class URI="&Application-KB;Sequence"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Application-KB;Sequence"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty URI="&Application-KB;anyApplicationProperty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty URI="&Application-KB;anyFromFileSystem"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty URI="&Application-KB;anyTechnologyStackProperty"/>
+    </Declaration>
+    <SubObjectPropertyOf>
+        <ObjectProperty URI="&Application-KB;hasDefinition"/>
+        <ObjectProperty URI="&Application-KB;anyApplicationProperty"/>
+    </SubObjectPropertyOf>
+    <Declaration>
+        <ObjectProperty URI="&Application-KB;hasDefinition"/>
+    </Declaration>
+    <SubObjectPropertyOf>
+        <ObjectProperty URI="&Application-KB;hasExpression"/>
+        <ObjectProperty URI="&Application-KB;anyTechnologyStackProperty"/>
+    </SubObjectPropertyOf>
+    <Declaration>
+        <ObjectProperty URI="&Application-KB;hasExpression"/>
+    </Declaration>
+    <SubObjectPropertyOf>
+        <ObjectProperty URI="&Application-KB;hasField"/>
+        <ObjectProperty URI="&Application-KB;anyApplicationProperty"/>
+    </SubObjectPropertyOf>
+    <Declaration>
+        <ObjectProperty URI="&Application-KB;hasField"/>
+    </Declaration>
+    <SubObjectPropertyOf>
+        <ObjectProperty URI="&Application-KB;hasFieldDefinition"/>
+        <ObjectProperty URI="&Application-KB;anyTechnologyStackProperty"/>
+    </SubObjectPropertyOf>
+    <Declaration>
+        <ObjectProperty URI="&Application-KB;hasFieldDefinition"/>
+    </Declaration>
+    <SubObjectPropertyOf>
+        <ObjectProperty URI="&Application-KB;hasFile"/>
+        <ObjectProperty URI="&Application-KB;anyFromFileSystem"/>
+    </SubObjectPropertyOf>
+    <ObjectPropertyRange>
+        <ObjectProperty URI="&Application-KB;hasFile"/>
+        <Class URI="&Application-KB;File"/>
+    </ObjectPropertyRange>
+    <Declaration>
+        <ObjectProperty URI="&Application-KB;hasFile"/>
+    </Declaration>
+    <SubObjectPropertyOf>
+        <ObjectProperty URI="&Application-KB;hasFramework"/>
+        <ObjectProperty URI="&Application-KB;anyTechnologyStackProperty"/>
+    </SubObjectPropertyOf>
+    <Declaration>
+        <ObjectProperty URI="&Application-KB;hasFramework"/>
+    </Declaration>
+    <SubObjectPropertyOf>
+        <ObjectProperty URI="&Application-KB;hasHead"/>
+        <ObjectProperty URI="&Application-KB;anyTechnologyStackProperty"/>
+    </SubObjectPropertyOf>
+    <Declaration>
+        <ObjectProperty URI="&Application-KB;hasHead"/>
+    </Declaration>
+    <SubObjectPropertyOf>
+        <ObjectProperty URI="&Application-KB;hasLanguage"/>
+        <ObjectProperty URI="&Application-KB;anyTechnologyStackProperty"/>
+    </SubObjectPropertyOf>
+    <Declaration>
+        <ObjectProperty URI="&Application-KB;hasLanguage"/>
+    </Declaration>
+    <SubObjectPropertyOf>
+        <ObjectProperty URI="&Application-KB;hasLeftOperand"/>
+        <ObjectProperty URI="&Application-KB;anyTechnologyStackProperty"/>
+    </SubObjectPropertyOf>
+    <Declaration>
+        <ObjectProperty URI="&Application-KB;hasLeftOperand"/>
+    </Declaration>
+    <SubObjectPropertyOf>
+        <ObjectProperty URI="&Application-KB;hasMethod"/>
+        <ObjectProperty URI="&Application-KB;anyApplicationProperty"/>
+    </SubObjectPropertyOf>
+    <Declaration>
+        <ObjectProperty URI="&Application-KB;hasMethod"/>
+    </Declaration>
+    <SubObjectPropertyOf>
+        <ObjectProperty URI="&Application-KB;hasMethodDefinition"/>
+        <ObjectProperty URI="&Application-KB;anyTechnologyStackProperty"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty URI="&Application-KB;hasMethodDefinition"/>
+        <ObjectProperty URI="&Application-KB;inModuleDefinition"/>
+    </InverseObjectProperties>
+    <Declaration>
+        <ObjectProperty URI="&Application-KB;hasMethodDefinition"/>
+    </Declaration>
+    <SubObjectPropertyOf>
+        <ObjectProperty URI="&Application-KB;hasModule"/>
+        <ObjectProperty URI="&Application-KB;anyApplicationProperty"/>
+    </SubObjectPropertyOf>
+    <Declaration>
+        <ObjectProperty URI="&Application-KB;hasModule"/>
+    </Declaration>
+    <SubObjectPropertyOf>
+        <ObjectProperty URI="&Application-KB;hasOperator"/>
+        <ObjectProperty URI="&Application-KB;anyTechnologyStackProperty"/>
+    </SubObjectPropertyOf>
+    <Declaration>
+        <ObjectProperty URI="&Application-KB;hasOperator"/>
+    </Declaration>
+    <SubObjectPropertyOf>
+        <ObjectProperty URI="&Application-KB;hasProject"/>
+        <ObjectProperty URI="&Application-KB;anyApplicationProperty"/>
+    </SubObjectPropertyOf>
+    <Declaration>
+        <ObjectProperty URI="&Application-KB;hasProject"/>
+    </Declaration>
+    <SubObjectPropertyOf>
+        <ObjectProperty URI="&Application-KB;hasReference"/>
+        <ObjectProperty URI="&Application-KB;anyTechnologyStackProperty"/>
+    </SubObjectPropertyOf>
+    <Declaration>
+        <ObjectProperty URI="&Application-KB;hasReference"/>
+    </Declaration>
+    <SubObjectPropertyOf>
+        <ObjectProperty URI="&Application-KB;hasRightOperand"/>
+        <ObjectProperty URI="&Application-KB;anyTechnologyStackProperty"/>
+    </SubObjectPropertyOf>
+    <Declaration>
+        <ObjectProperty URI="&Application-KB;hasRightOperand"/>
+    </Declaration>
+    <SubObjectPropertyOf>
+        <ObjectProperty URI="&Application-KB;hasSequence"/>
+        <ObjectProperty URI="&Application-KB;anyTechnologyStackProperty"/>
+    </SubObjectPropertyOf>
+    <Declaration>
+        <ObjectProperty URI="&Application-KB;hasSequence"/>
+    </Declaration>
+    <SubObjectPropertyOf>
+        <ObjectProperty URI="&Application-KB;hasTail"/>
+        <ObjectProperty URI="&Application-KB;anyTechnologyStackProperty"/>
+    </SubObjectPropertyOf>
+    <Declaration>
+        <ObjectProperty URI="&Application-KB;hasTail"/>
+    </Declaration>
+    <SubObjectPropertyOf>
+        <ObjectProperty URI="&Application-KB;inModuleDefinition"/>
+        <ObjectProperty URI="&Application-KB;anyTechnologyStackProperty"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty URI="&Application-KB;inModuleDefinition"/>
+        <ObjectProperty URI="&Application-KB;hasFieldDefinition"/>
+    </InverseObjectProperties>
+    <ObjectPropertyRange>
+        <ObjectProperty URI="&Application-KB;inModuleDefinition"/>
+        <Class URI="&Application-KB;MethodDefinition"/>
+    </ObjectPropertyRange>
+    <Declaration>
+        <ObjectProperty URI="&Application-KB;inModuleDefinition"/>
+    </Declaration>
+    <SubObjectPropertyOf>
+        <ObjectProperty URI="&Application-KB;isRefenece"/>
+        <ObjectProperty URI="&Application-KB;anyTechnologyStackProperty"/>
+    </SubObjectPropertyOf>
+    <Declaration>
+        <ObjectProperty URI="&Application-KB;isRefenece"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Application-KB;hasAddress"/>
+    </Declaration>
+    <DataPropertyRange>
+        <DataProperty URI="&Application-KB;hasValue"/>
+        <Datatype URI="&xsd;string"/>
+    </DataPropertyRange>
+    <Declaration>
+        <DataProperty URI="&Application-KB;hasValue"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Application-KB;ProgrammingLanguage"/>
+        <Individual URI="&Application-KB;ASPNET"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&Application-KB;ASPNET"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Application-KB;Application"/>
+        <Individual URI="&Application-KB;Application_example"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasProject"/>
+        <Individual URI="&Application-KB;Application_example"/>
+        <Individual URI="&Application-KB;Project_example"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Application-KB;hasValue"/>
+        <Individual URI="&Application-KB;Application_example"/>
+        <Constant datatypeURI="&xsd;string"
+            >example application</Constant>
+    </DataPropertyAssertion>
+    <Declaration>
+        <Individual URI="&Application-KB;Application_example"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Application-KB;ProgrammingLanguage"/>
+        <Individual URI="&Application-KB;CSharp"/>
+    </ClassAssertion>
+    <EntityAnnotation>
+        <Individual URI="&Application-KB;CSharp"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant
+                >Microsoft language for .NET platform also supported in NON-Windows platforms</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <Declaration>
+        <Individual URI="&Application-KB;CSharp"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Application-KB;Directory"/>
+        <Individual URI="&Application-KB;Directory_example"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasFile"/>
+        <Individual URI="&Application-KB;Directory_example"/>
+        <Individual URI="&Application-KB;File_Customer.jsp"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasFile"/>
+        <Individual URI="&Application-KB;Directory_example"/>
+        <Individual URI="&Application-KB;File_CustomerTable"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasFile"/>
+        <Individual URI="&Application-KB;Directory_example"/>
+        <Individual URI="&Application-KB;File_Customer.java"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasFile"/>
+        <Individual URI="&Application-KB;Directory_example"/>
+        <Individual URI="&Application-KB;File_CustomerModel.java"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Application-KB;hasAddress"/>
+        <Individual URI="&Application-KB;Directory_example"/>
+        <Constant datatypeURI="&xsd;anyURI">/example</Constant>
+    </DataPropertyAssertion>
+    <Declaration>
+        <Individual URI="&Application-KB;Directory_example"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Application-KB;Field"/>
+        <Individual URI="&Application-KB;Field_Id"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&Application-KB;Field_Id"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Application-KB;Field"/>
+        <Individual URI="&Application-KB;Field_Name"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&Application-KB;Field_Name"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Application-KB;Field"/>
+        <Individual URI="&Application-KB;Field_Surname"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&Application-KB;Field_Surname"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Application-KB;File"/>
+        <Individual URI="&Application-KB;File_Customer.java"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Application-KB;hasAddress"/>
+        <Individual URI="&Application-KB;File_Customer.java"/>
+        <Constant datatypeURI="&xsd;anyURI"
+            >/WEB-APP/WEB-INF/org/example/first</Constant>
+    </DataPropertyAssertion>
+    <EntityAnnotation>
+        <Individual URI="&Application-KB;File_Customer.java"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant datatypeURI="&xsd;string"
+                >Customer.java is backing bean</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <Declaration>
+        <Individual URI="&Application-KB;File_Customer.java"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Application-KB;File"/>
+        <Individual URI="&Application-KB;File_Customer.jsp"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Application-KB;hasAddress"/>
+        <Individual URI="&Application-KB;File_Customer.jsp"/>
+        <Constant datatypeURI="&xsd;anyURI"
+            >/WEB-APP/pages/Customer.jsp</Constant>
+    </DataPropertyAssertion>
+    <Declaration>
+        <Individual URI="&Application-KB;File_Customer.jsp"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Application-KB;File"/>
+        <Individual URI="&Application-KB;File_CustomerModel.java"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Application-KB;hasAddress"/>
+        <Individual URI="&Application-KB;File_CustomerModel.java"/>
+        <Constant datatypeURI="&xsd;anyURI"
+            >/WEB-APP/WEB-INF/org/example/first/model</Constant>
+    </DataPropertyAssertion>
+    <Declaration>
+        <Individual URI="&Application-KB;File_CustomerModel.java"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Application-KB;File"/>
+        <Individual URI="&Application-KB;File_CustomerTable"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Application-KB;hasAddress"/>
+        <Individual URI="&Application-KB;File_CustomerTable"/>
+        <Constant datatypeURI="&xsd;anyURI">mysql:Customer</Constant>
+    </DataPropertyAssertion>
+    <Declaration>
+        <Individual URI="&Application-KB;File_CustomerTable"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Application-KB;ProgrammingLanguage"/>
+        <Individual URI="&Application-KB;HQL"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&Application-KB;HQL"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Application-KB;ProgrammingLanguage"/>
+        <Individual URI="&Application-KB;JSP"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&Application-KB;JSP"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Application-KB;ProgrammingLanguage"/>
+        <Individual URI="&Application-KB;Java"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&Application-KB;Java"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Application-KB;Sequence"/>
+        <Individual URI="&Application-KB;JavaModuleDef_0"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasHead"/>
+        <Individual URI="&Application-KB;JavaModuleDef_0"/>
+        <Individual URI="&Application-KB;classModuleNameBlock"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasTail"/>
+        <Individual URI="&Application-KB;JavaModuleDef_0"/>
+        <Individual URI="&Application-KB;JavaModuleDef_1"/>
+    </ObjectPropertyAssertion>
+    <Declaration>
+        <Individual URI="&Application-KB;JavaModuleDef_0"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Application-KB;Sequence"/>
+        <Individual URI="&Application-KB;JavaModuleDef_1"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasHead"/>
+        <Individual URI="&Application-KB;JavaModuleDef_1"/>
+        <Individual URI="&Application-KB;fieldReference"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasTail"/>
+        <Individual URI="&Application-KB;JavaModuleDef_1"/>
+        <Individual URI="&Application-KB;JavaModuleDef_2"/>
+    </ObjectPropertyAssertion>
+    <Declaration>
+        <Individual URI="&Application-KB;JavaModuleDef_1"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Application-KB;Sequence"/>
+        <Individual URI="&Application-KB;JavaModuleDef_2"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasHead"/>
+        <Individual URI="&Application-KB;JavaModuleDef_2"/>
+        <Individual URI="&Application-KB;methodReference"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasTail"/>
+        <Individual URI="&Application-KB;JavaModuleDef_2"/>
+        <Individual URI="&Application-KB;JavaModuleDef_3"/>
+    </ObjectPropertyAssertion>
+    <Declaration>
+        <Individual URI="&Application-KB;JavaModuleDef_2"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Application-KB;Sequence"/>
+        <Individual URI="&Application-KB;JavaModuleDef_3"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasHead"/>
+        <Individual URI="&Application-KB;JavaModuleDef_3"/>
+        <Individual URI="&Application-KB;classBlockClose"/>
+    </ObjectPropertyAssertion>
+    <Declaration>
+        <Individual URI="&Application-KB;JavaModuleDef_3"/>
+    </Declaration>
+    <EntityAnnotation>
+        <Individual URI="&Application-KB;Method_save"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant
+                >Language for .NET WEB Application</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <Declaration>
+        <Individual URI="&Application-KB;Method_save"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Application-KB;ModuleCompleteDefinition"/>
+        <Individual URI="&Application-KB;ModuleDefinition_javaClass"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasLanguage"/>
+        <Individual URI="&Application-KB;ModuleDefinition_javaClass"/>
+        <Individual URI="&Application-KB;Java"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasSequence"/>
+        <Individual URI="&Application-KB;ModuleDefinition_javaClass"/>
+        <Individual URI="&Application-KB;JavaModuleDef_0"/>
+    </ObjectPropertyAssertion>
+    <Declaration>
+        <Individual URI="&Application-KB;ModuleDefinition_javaClass"/>
+    </Declaration>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasLanguage"/>
+        <Individual URI="&Application-KB;ModuleDefinition_javaHibernateClass"/>
+        <Individual URI="&Application-KB;Java"/>
+    </ObjectPropertyAssertion>
+    <Declaration>
+        <Individual URI="&Application-KB;ModuleDefinition_javaHibernateClass"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Application-KB;ModuleWithoutMethods"/>
+        <Individual URI="&Application-KB;ModuleDefinition_jspPage"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasLanguage"/>
+        <Individual URI="&Application-KB;ModuleDefinition_jspPage"/>
+        <Individual URI="&Application-KB;JSP"/>
+    </ObjectPropertyAssertion>
+    <Declaration>
+        <Individual URI="&Application-KB;ModuleDefinition_jspPage"/>
+    </Declaration>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasLanguage"/>
+        <Individual URI="&Application-KB;ModuleDefinition_mysqlTable"/>
+        <Individual URI="&Application-KB;SQL"/>
+    </ObjectPropertyAssertion>
+    <Declaration>
+        <Individual URI="&Application-KB;ModuleDefinition_mysqlTable"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Application-KB;Module"/>
+        <Individual URI="&Application-KB;Module_Customer"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasMethod"/>
+        <Individual URI="&Application-KB;Module_Customer"/>
+        <Individual URI="&Application-KB;Module_CustomerModel.java"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasMethod"/>
+        <Individual URI="&Application-KB;Module_Customer"/>
+        <Individual URI="&Application-KB;Module_CustomerTable"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasMethod"/>
+        <Individual URI="&Application-KB;Module_Customer"/>
+        <Individual URI="&Application-KB;Module_Customer.jsp"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasMethod"/>
+        <Individual URI="&Application-KB;Module_Customer"/>
+        <Individual URI="&Application-KB;Module_Customer.java"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Application-KB;hasValue"/>
+        <Individual URI="&Application-KB;Module_Customer"/>
+        <Constant datatypeURI="&xsd;string">Customer</Constant>
+    </DataPropertyAssertion>
+    <Declaration>
+        <Individual URI="&Application-KB;Module_Customer"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Application-KB;Module"/>
+        <Individual URI="&Application-KB;Module_Customer.java"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasDefinition"/>
+        <Individual URI="&Application-KB;Module_Customer.java"/>
+        <Individual URI="&Application-KB;ModuleDefinition_javaClass"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasField"/>
+        <Individual URI="&Application-KB;Module_Customer.java"/>
+        <Individual URI="&Application-KB;Field_Name"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasField"/>
+        <Individual URI="&Application-KB;Module_Customer.java"/>
+        <Individual URI="&Application-KB;Field_Surname"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasFile"/>
+        <Individual URI="&Application-KB;Module_Customer.java"/>
+        <Individual URI="&Application-KB;File_Customer.java"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasMethod"/>
+        <Individual URI="&Application-KB;Module_Customer.java"/>
+        <Individual URI="&Application-KB;Method_save"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasReference"/>
+        <Individual URI="&Application-KB;Module_Customer.java"/>
+        <Individual URI="&Application-KB;Module_CustomerModel.java"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Application-KB;hasValue"/>
+        <Individual URI="&Application-KB;Module_Customer.java"/>
+        <Constant datatypeURI="&xsd;string">Customer</Constant>
+    </DataPropertyAssertion>
+    <Declaration>
+        <Individual URI="&Application-KB;Module_Customer.java"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Application-KB;Module"/>
+        <Individual URI="&Application-KB;Module_Customer.jsp"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasDefinition"/>
+        <Individual URI="&Application-KB;Module_Customer.jsp"/>
+        <Individual URI="&Application-KB;ModuleDefinition_jspPage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasField"/>
+        <Individual URI="&Application-KB;Module_Customer.jsp"/>
+        <Individual URI="&Application-KB;Field_Surname"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasField"/>
+        <Individual URI="&Application-KB;Module_Customer.jsp"/>
+        <Individual URI="&Application-KB;Field_Name"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasFile"/>
+        <Individual URI="&Application-KB;Module_Customer.jsp"/>
+        <Individual URI="&Application-KB;File_Customer.jsp"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasReference"/>
+        <Individual URI="&Application-KB;Module_Customer.jsp"/>
+        <Individual URI="&Application-KB;Module_Customer.java"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Application-KB;hasValue"/>
+        <Individual URI="&Application-KB;Module_Customer.jsp"/>
+        <Constant datatypeURI="&xsd;string">Customer page</Constant>
+    </DataPropertyAssertion>
+    <Declaration>
+        <Individual URI="&Application-KB;Module_Customer.jsp"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Application-KB;Module"/>
+        <Individual URI="&Application-KB;Module_CustomerModel.java"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasDefinition"/>
+        <Individual URI="&Application-KB;Module_CustomerModel.java"/>
+        <Individual URI="&Application-KB;ModuleDefinition_javaHibernateClass"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasField"/>
+        <Individual URI="&Application-KB;Module_CustomerModel.java"/>
+        <Individual URI="&Application-KB;Field_Name"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasField"/>
+        <Individual URI="&Application-KB;Module_CustomerModel.java"/>
+        <Individual URI="&Application-KB;Field_Surname"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasFile"/>
+        <Individual URI="&Application-KB;Module_CustomerModel.java"/>
+        <Individual URI="&Application-KB;File_CustomerModel.java"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasMethod"/>
+        <Individual URI="&Application-KB;Module_CustomerModel.java"/>
+        <Individual URI="&Application-KB;Method_save"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasReference"/>
+        <Individual URI="&Application-KB;Module_CustomerModel.java"/>
+        <Individual URI="&Application-KB;Module_CustomerTable"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Application-KB;hasValue"/>
+        <Individual URI="&Application-KB;Module_CustomerModel.java"/>
+        <Constant datatypeURI="&xsd;string">CustomerModel</Constant>
+    </DataPropertyAssertion>
+    <EntityAnnotation>
+        <Individual URI="&Application-KB;Module_CustomerModel.java"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant datatypeURI="&xsd;string"
+                >This is Hibernate Model</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <Declaration>
+        <Individual URI="&Application-KB;Module_CustomerModel.java"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Application-KB;Module"/>
+        <Individual URI="&Application-KB;Module_CustomerTable"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasDefinition"/>
+        <Individual URI="&Application-KB;Module_CustomerTable"/>
+        <Individual URI="&Application-KB;ModuleDefinition_mysqlTable"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasField"/>
+        <Individual URI="&Application-KB;Module_CustomerTable"/>
+        <Individual URI="&Application-KB;Field_Surname"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasField"/>
+        <Individual URI="&Application-KB;Module_CustomerTable"/>
+        <Individual URI="&Application-KB;Field_Id"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasField"/>
+        <Individual URI="&Application-KB;Module_CustomerTable"/>
+        <Individual URI="&Application-KB;Field_Name"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasFile"/>
+        <Individual URI="&Application-KB;Module_CustomerTable"/>
+        <Individual URI="&Application-KB;File_CustomerTable"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Application-KB;hasValue"/>
+        <Individual URI="&Application-KB;Module_CustomerTable"/>
+        <Constant datatypeURI="&xsd;string">Customer</Constant>
+    </DataPropertyAssertion>
+    <Declaration>
+        <Individual URI="&Application-KB;Module_CustomerTable"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Application-KB;Framework"/>
+        <Individual URI="&Application-KB;NET20"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&Application-KB;NET20"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Application-KB;Project"/>
+        <Individual URI="&Application-KB;Project_example"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasModule"/>
+        <Individual URI="&Application-KB;Project_example"/>
+        <Individual URI="&Application-KB;Module_CustomerTable"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasModule"/>
+        <Individual URI="&Application-KB;Project_example"/>
+        <Individual URI="&Application-KB;Module_Customer.jsp"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasModule"/>
+        <Individual URI="&Application-KB;Project_example"/>
+        <Individual URI="&Application-KB;Module_CustomerModel.java"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasModule"/>
+        <Individual URI="&Application-KB;Project_example"/>
+        <Individual URI="&Application-KB;Module_Customer.java"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasModule"/>
+        <Individual URI="&Application-KB;Project_example"/>
+        <Individual URI="&Application-KB;Module_Customer"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Application-KB;hasValue"/>
+        <Individual URI="&Application-KB;Project_example"/>
+        <Constant datatypeURI="&xsd;string">example</Constant>
+    </DataPropertyAssertion>
+    <Declaration>
+        <Individual URI="&Application-KB;Project_example"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Application-KB;ProgrammingLanguage"/>
+        <Individual URI="&Application-KB;SQL"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&Application-KB;SQL"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Application-KB;Framework"/>
+        <Individual URI="&Application-KB;Seam"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&Application-KB;Seam"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Application-KB;DatatypeDefinition"/>
+        <Individual URI="&Application-KB;StringDatatype"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&Application-KB;StringDatatype"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Application-KB;ProgrammingLanguage"/>
+        <Individual URI="&Application-KB;XML"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&Application-KB;XML"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Application-KB;Field"/>
+        <Individual URI="&Application-KB;anyField"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Application-KB;hasValue"/>
+        <Individual URI="&Application-KB;anyField"/>
+        <Constant datatypeURI="&xsd;string">anyField</Constant>
+    </DataPropertyAssertion>
+    <Declaration>
+        <Individual URI="&Application-KB;anyField"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Application-KB;Method"/>
+        <Individual URI="&Application-KB;anyMethod"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Application-KB;hasValue"/>
+        <Individual URI="&Application-KB;anyMethod"/>
+        <Constant datatypeURI="&xsd;string">anyMethod</Constant>
+    </DataPropertyAssertion>
+    <Declaration>
+        <Individual URI="&Application-KB;anyMethod"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Application-KB;Module"/>
+        <Individual URI="&Application-KB;anyModule"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Application-KB;hasValue"/>
+        <Individual URI="&Application-KB;anyModule"/>
+        <Constant datatypeURI="&xsd;string">anyModule</Constant>
+    </DataPropertyAssertion>
+    <Declaration>
+        <Individual URI="&Application-KB;anyModule"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Application-KB;DatatypeDefinition"/>
+        <Individual URI="&Application-KB;booleanDataType"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&Application-KB;booleanDataType"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Application-KB;Operator"/>
+        <Individual URI="&Application-KB;class"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasLanguage"/>
+        <Individual URI="&Application-KB;class"/>
+        <Individual URI="&Application-KB;Java"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasLanguage"/>
+        <Individual URI="&Application-KB;class"/>
+        <Individual URI="&Application-KB;CSharp"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Application-KB;hasValue"/>
+        <Individual URI="&Application-KB;class"/>
+        <Constant datatypeURI="&xsd;string">class</Constant>
+    </DataPropertyAssertion>
+    <Declaration>
+        <Individual URI="&Application-KB;class"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Application-KB;Expression"/>
+        <Individual URI="&Application-KB;classBlockClose"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasOperator"/>
+        <Individual URI="&Application-KB;classBlockClose"/>
+        <Individual URI="&Application-KB;javaCloseBlock"/>
+    </ObjectPropertyAssertion>
+    <Declaration>
+        <Individual URI="&Application-KB;classBlockClose"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Application-KB;Expression"/>
+        <Individual URI="&Application-KB;classModuleName"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasOperator"/>
+        <Individual URI="&Application-KB;classModuleName"/>
+        <Individual URI="&Application-KB;class"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasRightOperand"/>
+        <Individual URI="&Application-KB;classModuleName"/>
+        <Individual URI="&Application-KB;moduleReference"/>
+    </ObjectPropertyAssertion>
+    <Declaration>
+        <Individual URI="&Application-KB;classModuleName"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Application-KB;Expression"/>
+        <Individual URI="&Application-KB;classModuleNameBlock"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasLeftOperand"/>
+        <Individual URI="&Application-KB;classModuleNameBlock"/>
+        <Individual URI="&Application-KB;classModuleName"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasOperator"/>
+        <Individual URI="&Application-KB;classModuleNameBlock"/>
+        <Individual URI="&Application-KB;javaOpenBlock"/>
+    </ObjectPropertyAssertion>
+    <Declaration>
+        <Individual URI="&Application-KB;classModuleNameBlock"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Application-KB;Expression"/>
+        <Individual URI="&Application-KB;fieldReference"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasLanguage"/>
+        <Individual URI="&Application-KB;fieldReference"/>
+        <Individual URI="&Application-KB;Java"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;isRefenece"/>
+        <Individual URI="&Application-KB;fieldReference"/>
+        <Individual URI="&Application-KB;anyField"/>
+    </ObjectPropertyAssertion>
+    <Declaration>
+        <Individual URI="&Application-KB;fieldReference"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Application-KB;Operator"/>
+        <Individual URI="&Application-KB;import"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasLanguage"/>
+        <Individual URI="&Application-KB;import"/>
+        <Individual URI="&Application-KB;Java"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Application-KB;hasValue"/>
+        <Individual URI="&Application-KB;import"/>
+        <Constant>import</Constant>
+    </DataPropertyAssertion>
+    <Declaration>
+        <Individual URI="&Application-KB;import"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Application-KB;DatatypeDefinition"/>
+        <Individual URI="&Application-KB;int"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&Application-KB;int"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Application-KB;Operator"/>
+        <Individual URI="&Application-KB;javaCloseBlock"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasLanguage"/>
+        <Individual URI="&Application-KB;javaCloseBlock"/>
+        <Individual URI="&Application-KB;Java"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Application-KB;hasValue"/>
+        <Individual URI="&Application-KB;javaCloseBlock"/>
+        <Constant datatypeURI="&xsd;string">}</Constant>
+    </DataPropertyAssertion>
+    <Declaration>
+        <Individual URI="&Application-KB;javaCloseBlock"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Application-KB;Operator"/>
+        <Individual URI="&Application-KB;javaOpenBlock"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasLanguage"/>
+        <Individual URI="&Application-KB;javaOpenBlock"/>
+        <Individual URI="&Application-KB;Java"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Application-KB;hasValue"/>
+        <Individual URI="&Application-KB;javaOpenBlock"/>
+        <Constant datatypeURI="&xsd;string">{</Constant>
+    </DataPropertyAssertion>
+    <Declaration>
+        <Individual URI="&Application-KB;javaOpenBlock"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Application-KB;Expression"/>
+        <Individual URI="&Application-KB;methodReference"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasLanguage"/>
+        <Individual URI="&Application-KB;methodReference"/>
+        <Individual URI="&Application-KB;Java"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;isRefenece"/>
+        <Individual URI="&Application-KB;methodReference"/>
+        <Individual URI="&Application-KB;anyMethod"/>
+    </ObjectPropertyAssertion>
+    <Declaration>
+        <Individual URI="&Application-KB;methodReference"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Application-KB;Expression"/>
+        <Individual URI="&Application-KB;moduleReference"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;hasLanguage"/>
+        <Individual URI="&Application-KB;moduleReference"/>
+        <Individual URI="&Application-KB;Java"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Application-KB;isRefenece"/>
+        <Individual URI="&Application-KB;moduleReference"/>
+        <Individual URI="&Application-KB;anyModule"/>
+    </ObjectPropertyAssertion>
+    <Declaration>
+        <Individual URI="&Application-KB;moduleReference"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Application-KB;Operator"/>
+        <Individual URI="&Application-KB;public"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&Application-KB;public"/>
+    </Declaration>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

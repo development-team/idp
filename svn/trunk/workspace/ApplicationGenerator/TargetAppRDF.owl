@@ -1,0 +1,507 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY TargetApp "http://idp.org/ontologies/2009/10/TargetApp.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://idp.org/ontologies/2009/10/TargetApp.owl#"
+     xml:base="http://idp.org/ontologies/2009/10/TargetApp.owl"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:TargetApp="http://idp.org/ontologies/2009/10/TargetApp.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#">
+    <owl:Ontology rdf:about=""/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#Database -->
+
+    <owl:ObjectProperty rdf:about="#Database"/>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#hasField -->
+
+    <owl:ObjectProperty rdf:about="#hasField"/>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#hasProperty -->
+
+    <owl:ObjectProperty rdf:about="#hasProperty"/>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#is -->
+
+    <owl:ObjectProperty rdf:about="#is"/>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#isDataType -->
+
+    <owl:ObjectProperty rdf:about="#isDataType"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#sqlString -->
+
+    <owl:DatatypeProperty rdf:about="#sqlString"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#BLL -->
+
+    <owl:Class rdf:about="#BLL"/>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#ClassMethod -->
+
+    <owl:Class rdf:about="#ClassMethod">
+        <rdfs:subClassOf rdf:resource="#LanguageKB"/>
+    </owl:Class>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#ClassProperty -->
+
+    <owl:Class rdf:about="#ClassProperty">
+        <rdfs:subClassOf rdf:resource="#LanguageKB"/>
+    </owl:Class>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#CommandExecutor -->
+
+    <owl:Class rdf:about="#CommandExecutor">
+        <rdfs:subClassOf rdf:resource="#command"/>
+    </owl:Class>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#CommonStructure -->
+
+    <owl:Class rdf:about="#CommonStructure">
+        <rdfs:subClassOf rdf:resource="#Database"/>
+    </owl:Class>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#Configs -->
+
+    <owl:Class rdf:about="#Configs">
+        <rdfs:subClassOf rdf:resource="#Presentation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#CreateCustomer -->
+
+    <owl:Class rdf:about="#CreateCustomer">
+        <rdfs:subClassOf rdf:resource="#command"/>
+    </owl:Class>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#CreateCustomerServlet -->
+
+    <owl:Class rdf:about="#CreateCustomerServlet">
+        <rdfs:subClassOf rdf:resource="#servlet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#CreateOrder -->
+
+    <owl:Class rdf:about="#CreateOrder">
+        <rdfs:subClassOf rdf:resource="#command"/>
+    </owl:Class>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#Customer.jsp -->
+
+    <owl:Class rdf:about="#Customer.jsp">
+        <rdfs:subClassOf rdf:resource="#Pages"/>
+    </owl:Class>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#Customer_created -->
+
+    <owl:Class rdf:about="#Customer_created">
+        <rdfs:subClassOf rdf:resource="#Pages"/>
+    </owl:Class>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#DBDataType -->
+
+    <owl:Class rdf:about="#DBDataType">
+        <rdfs:subClassOf rdf:resource="#CommonStructure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#sqlString"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#Database -->
+
+    <owl:Class rdf:about="#Database">
+        <rdfs:comment
+            >Contains description of Data structure</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#DatabaseCommand -->
+
+    <owl:Class rdf:about="#DatabaseCommand">
+        <rdfs:subClassOf rdf:resource="#command"/>
+    </owl:Class>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#Field -->
+
+    <owl:Class rdf:about="#Field">
+        <rdfs:subClassOf rdf:resource="#CommonStructure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#isDataType"/>
+                <owl:someValuesFrom rdf:resource="#DBDataType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#LanguageKB -->
+
+    <owl:Class rdf:about="#LanguageKB">
+        <rdfs:subClassOf rdf:resource="#BLL"/>
+    </owl:Class>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#ListCustomerOrders -->
+
+    <owl:Class rdf:about="#ListCustomerOrders">
+        <rdfs:subClassOf rdf:resource="#command"/>
+    </owl:Class>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#ListCustomers -->
+
+    <owl:Class rdf:about="#ListCustomers">
+        <rdfs:subClassOf rdf:resource="#command"/>
+    </owl:Class>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#Methods -->
+
+    <owl:Class rdf:about="#Methods">
+        <rdfs:subClassOf rdf:resource="#CommandExecutor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#OrderCreated -->
+
+    <owl:Class rdf:about="#OrderCreated">
+        <rdfs:subClassOf rdf:resource="#Pages"/>
+    </owl:Class>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#Orders -->
+
+    <owl:Class rdf:about="#Orders">
+        <rdfs:subClassOf rdf:resource="#Pages"/>
+    </owl:Class>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#Packages -->
+
+    <owl:Class rdf:about="#Packages">
+        <rdfs:subClassOf rdf:resource="#BLL"/>
+    </owl:Class>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#Pages -->
+
+    <owl:Class rdf:about="#Pages">
+        <rdfs:subClassOf rdf:resource="#Presentation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#Presentation -->
+
+    <owl:Class rdf:about="#Presentation"/>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#Property -->
+
+    <owl:Class rdf:about="#Property">
+        <rdfs:subClassOf rdf:resource="#Field"/>
+    </owl:Class>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#Tables -->
+
+    <owl:Class rdf:about="#Tables">
+        <rdfs:subClassOf rdf:resource="#Database"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasField"/>
+                <owl:someValuesFrom rdf:resource="#Field"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#command -->
+
+    <owl:Class rdf:about="#command">
+        <rdfs:subClassOf rdf:resource="#Packages"/>
+    </owl:Class>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#core -->
+
+    <owl:Class rdf:about="#core">
+        <rdfs:subClassOf rdf:resource="#Packages"/>
+    </owl:Class>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#servlet -->
+
+    <owl:Class rdf:about="#servlet">
+        <rdfs:subClassOf rdf:resource="#Packages"/>
+    </owl:Class>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#web.xml -->
+
+    <owl:Class rdf:about="#web.xml">
+        <rdfs:subClassOf rdf:resource="#Configs"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#Customer -->
+
+    <owl:Thing rdf:about="#Customer">
+        <rdf:type rdf:resource="#Tables"/>
+        <hasField rdf:resource="#customer_address"/>
+        <hasField rdf:resource="#customer_id"/>
+        <hasField rdf:resource="#customer_name"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#Integer -->
+
+    <owl:Thing rdf:about="#Integer">
+        <rdf:type rdf:resource="#DBDataType"/>
+        <sqlString>int</sqlString>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#Method -->
+
+    <owl:Thing rdf:about="#Method"/>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#Order -->
+
+    <owl:Thing rdf:about="#Order">
+        <rdf:type rdf:resource="#Tables"/>
+        <hasField rdf:resource="#amount"/>
+        <hasField rdf:resource="#date_place"/>
+        <hasField rdf:resource="#order_id"/>
+        <hasField rdf:resource="#user_id"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#amount -->
+
+    <owl:Thing rdf:about="#amount">
+        <isDataType rdf:resource="#Integer"/>
+        <hasProperty rdf:resource="#isprimary"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#customer_address -->
+
+    <owl:Thing rdf:about="#customer_address">
+        <hasProperty rdf:resource="#isprimary"/>
+        <isDataType rdf:resource="#string"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#customer_id -->
+
+    <owl:Thing rdf:about="#customer_id">
+        <isDataType rdf:resource="#Integer"/>
+        <hasProperty rdf:resource="#isprimary"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#customer_name -->
+
+    <Field rdf:about="#customer_name">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <hasProperty rdf:resource="#isprimary"/>
+        <isDataType rdf:resource="#string"/>
+    </Field>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#datatype -->
+
+    <owl:Thing rdf:about="#datatype">
+        <rdf:type rdf:resource="#Property"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#date_place -->
+
+    <owl:Thing rdf:about="#date_place">
+        <isDataType rdf:resource="#datetime"/>
+        <hasProperty rdf:resource="#isprimary"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#datetime -->
+
+    <DBDataType rdf:about="#datetime">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <sqlString>datetime</sqlString>
+    </DBDataType>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#getConnection -->
+
+    <Methods rdf:about="#getConnection">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </Methods>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#isprimary -->
+
+    <Property rdf:about="#isprimary">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </Property>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#order_id -->
+
+    <owl:Thing rdf:about="#order_id">
+        <isDataType rdf:resource="#Integer"/>
+        <hasProperty rdf:resource="#isprimary"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#string -->
+
+    <owl:Thing rdf:about="#string">
+        <rdf:type rdf:resource="#DBDataType"/>
+        <sqlString>nvarchar(MAX)</sqlString>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#user_id -->
+
+    <owl:Thing rdf:about="#user_id">
+        <isDataType rdf:resource="#Integer"/>
+        <hasProperty rdf:resource="#datatype"/>
+    </owl:Thing>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

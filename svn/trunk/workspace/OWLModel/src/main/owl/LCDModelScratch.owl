@@ -1,0 +1,717 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY kaon "http://kaon.semanticweb.org/2001/11/kaon-lexical#" >
+    <!ENTITY models "file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#" >
+]>
+
+
+<rdf:RDF xmlns="file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#"
+     xml:base="file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon"
+     xmlns:models="file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:kaon="http://kaon.semanticweb.org/2001/11/kaon-lexical#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>132</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#actionProperty -->
+
+    <owl:ObjectProperty rdf:about="#actionProperty"/>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#hasAntecedent -->
+
+    <owl:ObjectProperty rdf:about="#hasAntecedent">
+        <rdfs:label xml:lang="en">hasAntecedent</rdfs:label>
+        <rdfs:range rdf:resource="#Antecedent"/>
+        <rdfs:domain rdf:resource="#Decision"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#hasAnyCogitative -->
+
+    <owl:ObjectProperty rdf:about="#hasAnyCogitative">
+        <rdfs:label xml:lang="en"
+            >hasAnyCommunicational</rdfs:label>
+        <rdfs:range rdf:resource="#AnyCogitative"/>
+        <rdfs:range rdf:resource="#AnyCommunicational"/>
+        <rdfs:domain rdf:resource="#Hypothesis"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#hasAnyDomain -->
+
+    <owl:ObjectProperty rdf:about="#hasAnyDomain">
+        <rdfs:label xml:lang="en">hasAnyDomain</rdfs:label>
+        <rdfs:range rdf:resource="#AnyDomain"/>
+        <rdfs:domain rdf:resource="#HypothesisWorld"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#hasAnyDomainConcept -->
+
+    <owl:ObjectProperty rdf:about="#hasAnyDomainConcept">
+        <rdfs:label xml:lang="en"
+            >hasAnyDamainConcept</rdfs:label>
+        <rdfs:range rdf:resource="#AnyDomain"/>
+        <rdfs:domain rdf:resource="#Comprehension"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#hasAnyLinguistic -->
+
+    <owl:ObjectProperty rdf:about="#hasAnyLinguistic">
+        <rdfs:label xml:lang="en">hasStatement</rdfs:label>
+        <rdfs:domain rdf:resource="#HypothesisLinguistic"/>
+        <rdfs:range rdf:resource="#Statement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#hasComprehension -->
+
+    <owl:ObjectProperty rdf:about="#hasComprehension">
+        <rdfs:label xml:lang="en"
+            >hasComprehension</rdfs:label>
+        <rdfs:range rdf:resource="#Comprehension"/>
+        <rdfs:domain rdf:resource="#ComprehensionalContext"/>
+        <rdfs:domain rdf:resource="#Consequent"/>
+        <rdfs:domain rdf:resource="#Statement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#hasComprehensionalContext -->
+
+    <owl:ObjectProperty rdf:about="#hasComprehensionalContext">
+        <rdfs:label xml:lang="en"
+            >hasComprehensionalContext</rdfs:label>
+        <rdfs:domain rdf:resource="#Antecedent"/>
+        <rdfs:range rdf:resource="#ComprehensionalContext"/>
+        <rdfs:domain rdf:resource="#Conversation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#hasConsequent -->
+
+    <owl:ObjectProperty rdf:about="#hasConsequent">
+        <rdfs:label xml:lang="en">hasConsequent</rdfs:label>
+        <rdfs:range rdf:resource="#Consequent"/>
+        <rdfs:domain rdf:resource="#Decision"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#hasDecision -->
+
+    <owl:ObjectProperty rdf:about="#hasDecision">
+        <rdfs:label xml:lang="en">hasDecision</rdfs:label>
+        <rdfs:domain rdf:resource="#Consequent"/>
+        <rdfs:range rdf:resource="#Decision"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#hasHypothesis -->
+
+    <owl:ObjectProperty rdf:about="#hasHypothesis">
+        <rdfs:label xml:lang="en">hasHypothesis</rdfs:label>
+        <rdfs:range rdf:resource="#AnyHypothesis"/>
+        <rdfs:domain rdf:resource="#History"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#hasInformationSource -->
+
+    <owl:ObjectProperty rdf:about="#hasInformationSource">
+        <rdfs:label xml:lang="en"
+            >hasInformationSource</rdfs:label>
+        <rdfs:range rdf:resource="#InformationSource"/>
+        <rdfs:domain rdf:resource="#Request"/>
+        <rdfs:domain rdf:resource="#Responce"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#hasLanguage -->
+
+    <owl:ObjectProperty rdf:about="#hasLanguage">
+        <rdfs:label xml:lang="en">hasLanguage</rdfs:label>
+        <rdfs:range rdf:resource="#Language"/>
+        <rdfs:domain rdf:resource="#Word"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#hasObjectWhat -->
+
+    <owl:ObjectProperty rdf:about="#hasObjectWhat">
+        <rdfs:subPropertyOf rdf:resource="#actionProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#hasObjectWhere -->
+
+    <owl:ObjectProperty rdf:about="#hasObjectWhere">
+        <rdfs:subPropertyOf rdf:resource="#actionProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#hasPOS -->
+
+    <owl:ObjectProperty rdf:about="#hasPOS">
+        <rdfs:label xml:lang="en">hasPOS</rdfs:label>
+        <rdfs:range rdf:resource="#PartOfSpeach"/>
+        <rdfs:domain rdf:resource="#Word"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#hasPair -->
+
+    <owl:ObjectProperty rdf:about="#hasPair">
+        <rdfs:label xml:lang="en">hasPair</rdfs:label>
+        <rdfs:domain rdf:resource="#Conversation"/>
+        <rdfs:range rdf:resource="#PairRequestResponce"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#hasPhrase -->
+
+    <owl:ObjectProperty rdf:about="#hasPhrase">
+        <rdfs:label xml:lang="en">hasPhrase</rdfs:label>
+        <rdfs:domain rdf:resource="#Context"/>
+        <rdfs:range rdf:resource="#Phrase"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#hasPrecendingContext -->
+
+    <owl:ObjectProperty rdf:about="#hasPrecendingContext">
+        <rdfs:label xml:lang="en"
+            >hasPrecendingContext</rdfs:label>
+        <rdfs:range rdf:resource="#Context"/>
+        <rdfs:domain rdf:resource="#Statement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#hasRepresentation -->
+
+    <owl:ObjectProperty rdf:about="#hasRepresentation">
+        <rdfs:label xml:lang="en"
+            >hasRepresentation</rdfs:label>
+        <rdfs:domain rdf:resource="#AnyDomain"/>
+        <rdfs:range rdf:resource="#Representation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#hasRequest -->
+
+    <owl:ObjectProperty rdf:about="#hasRequest">
+        <rdfs:label xml:lang="en">hasRequest</rdfs:label>
+        <rdfs:domain rdf:resource="#PairRequestResponce"/>
+        <rdfs:range rdf:resource="#Request"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#hasResponce -->
+
+    <owl:ObjectProperty rdf:about="#hasResponce">
+        <rdfs:label xml:lang="en">hasResponce</rdfs:label>
+        <rdfs:domain rdf:resource="#PairRequestResponce"/>
+        <rdfs:range rdf:resource="#Responce"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#hasStat -->
+
+    <owl:ObjectProperty rdf:about="#hasStat">
+        <rdfs:label xml:lang="en">hasStatement</rdfs:label>
+        <rdfs:domain rdf:resource="#Representation"/>
+        <rdfs:range rdf:resource="#Statement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#hasStatement -->
+
+    <owl:ObjectProperty rdf:about="#hasStatement">
+        <rdfs:label xml:lang="en"
+            >hasSentenceStatement</rdfs:label>
+        <rdfs:domain rdf:resource="#Sentence"/>
+        <rdfs:range rdf:resource="#Statement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#hasStatementPhrase -->
+
+    <owl:ObjectProperty rdf:about="#hasStatementPhrase">
+        <rdfs:label xml:lang="en"
+            >hasStatementPhrase</rdfs:label>
+        <rdfs:range rdf:resource="#Phrase"/>
+        <rdfs:domain rdf:resource="#Statement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#hasSubject -->
+
+    <owl:ObjectProperty rdf:about="#hasSubject">
+        <rdfs:subPropertyOf rdf:resource="#actionProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#hasTrailingContext -->
+
+    <owl:ObjectProperty rdf:about="#hasTrailingContext">
+        <rdfs:label xml:lang="en"
+            >hasTrailingContext</rdfs:label>
+        <rdfs:range rdf:resource="#Context"/>
+        <rdfs:domain rdf:resource="#Statement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#hasWord -->
+
+    <owl:ObjectProperty rdf:about="#hasWord">
+        <rdfs:label xml:lang="en">hasWord</rdfs:label>
+        <rdfs:domain rdf:resource="#Phrase"/>
+        <rdfs:range rdf:resource="#Word"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#resultOf -->
+
+    <owl:ObjectProperty rdf:about="#resultOf">
+        <rdfs:label xml:lang="en">resultOf</rdfs:label>
+        <rdfs:domain rdf:resource="#AnyHypothesis"/>
+        <rdfs:range rdf:resource="#AnyLearning"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#id -->
+
+    <owl:DatatypeProperty rdf:about="#id">
+        <rdfs:label xml:lang="en">id</rdfs:label>
+        <rdfs:domain rdf:resource="#AnyHypothesis"/>
+        <rdfs:domain rdf:resource="#AnyLearning"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#probability -->
+
+    <owl:DatatypeProperty rdf:about="#probability">
+        <rdfs:label xml:lang="en">probability</rdfs:label>
+        <rdfs:domain rdf:resource="#AnyHypothesis"/>
+        <rdfs:domain rdf:resource="#AnyLearning"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#Antecedent -->
+
+    <owl:Class rdf:about="#Antecedent">
+        <rdfs:label xml:lang="en">Antecedent</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyLearning"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasComprehensionalContext"/>
+                <owl:someValuesFrom rdf:resource="#ComprehensionalContext"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#AnyAbstract -->
+
+    <owl:Class rdf:about="#AnyAbstract">
+        <rdfs:label xml:lang="en">AnyAbstract</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyDomain"/>
+    </owl:Class>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#AnyAction -->
+
+    <owl:Class rdf:about="#AnyAction">
+        <rdfs:subClassOf rdf:resource="#CRDomain"/>
+    </owl:Class>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#AnyCogitative -->
+
+    <owl:Class rdf:about="#AnyCogitative">
+        <rdfs:label xml:lang="en">AnyCogitative</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#AnyCommunicational -->
+
+    <owl:Class rdf:about="#AnyCommunicational">
+        <rdfs:label xml:lang="en"
+            >AnyCommunicational</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyCogitative"/>
+    </owl:Class>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#AnyDomain -->
+
+    <owl:Class rdf:about="#AnyDomain">
+        <rdfs:label xml:lang="en">AnyDomain</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#AnyHypothesis -->
+
+    <owl:Class rdf:about="#AnyHypothesis">
+        <rdfs:label xml:lang="en">AnyHypothesis</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyCogitative"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#resultOf"/>
+                <owl:someValuesFrom rdf:resource="#AnyLearning"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#AnyLearning -->
+
+    <owl:Class rdf:about="#AnyLearning">
+        <rdfs:label xml:lang="en">AnyLearning</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyCogitative"/>
+    </owl:Class>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#AnyLinguistic -->
+
+    <owl:Class rdf:about="#AnyLinguistic">
+        <rdfs:label xml:lang="en">AnyLinguistic</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#CRDomain -->
+
+    <owl:Class rdf:about="#CRDomain">
+        <rdfs:subClassOf rdf:resource="#AnyDomain"/>
+    </owl:Class>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#Comprehension -->
+
+    <owl:Class rdf:about="#Comprehension">
+        <rdfs:label xml:lang="en">Comprehension</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyCommunicational"/>
+    </owl:Class>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#ComprehensionalContext -->
+
+    <owl:Class rdf:about="#ComprehensionalContext">
+        <rdfs:label xml:lang="en"
+            >ComprehensionalContext</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyCommunicational"/>
+    </owl:Class>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#Consequent -->
+
+    <owl:Class rdf:about="#Consequent">
+        <rdfs:label xml:lang="en">Consequent</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyLearning"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasComprehension"/>
+                        <owl:someValuesFrom rdf:resource="#Comprehension"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasDecision"/>
+                        <owl:someValuesFrom rdf:resource="#Decision"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#Context -->
+
+    <owl:Class rdf:about="#Context">
+        <rdfs:label xml:lang="en">Context</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyLinguistic"/>
+    </owl:Class>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#Conversation -->
+
+    <owl:Class rdf:about="#Conversation">
+        <rdfs:label xml:lang="en">Conversation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyAbstract"/>
+    </owl:Class>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#Decision -->
+
+    <owl:Class rdf:about="#Decision">
+        <rdfs:label xml:lang="en">Decision</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyLearning"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasConsequent"/>
+                <owl:someValuesFrom rdf:resource="#Consequent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasAntecedent"/>
+                <owl:someValuesFrom rdf:resource="#Antecedent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#History -->
+
+    <owl:Class rdf:about="#History">
+        <rdfs:label xml:lang="en">History</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyCogitative"/>
+    </owl:Class>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#Hypothesis -->
+
+    <owl:Class rdf:about="#Hypothesis">
+        <rdfs:label xml:lang="en"
+            >HypothesisCogitative</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyHypothesis"/>
+    </owl:Class>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#HypothesisLinguistic -->
+
+    <owl:Class rdf:about="#HypothesisLinguistic">
+        <rdfs:label xml:lang="en"
+            >HypothesisLinguistic</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyHypothesis"/>
+    </owl:Class>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#HypothesisWorld -->
+
+    <owl:Class rdf:about="#HypothesisWorld">
+        <rdfs:label xml:lang="en"
+            >HypothesisDomain</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyHypothesis"/>
+    </owl:Class>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#InformationSource -->
+
+    <owl:Class rdf:about="#InformationSource">
+        <rdfs:label xml:lang="en"
+            >InformationSource</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyAbstract"/>
+    </owl:Class>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#Language -->
+
+    <owl:Class rdf:about="#Language">
+        <rdfs:label xml:lang="en">Language</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyLinguistic"/>
+    </owl:Class>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#Object -->
+
+    <owl:Class rdf:about="#Object">
+        <rdfs:subClassOf rdf:resource="#CRDomain"/>
+    </owl:Class>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#PairRequestResponce -->
+
+    <owl:Class rdf:about="#PairRequestResponce">
+        <rdfs:label xml:lang="en"
+            >PairRequestResponce</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyAbstract"/>
+    </owl:Class>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#PartOfSpeach -->
+
+    <owl:Class rdf:about="#PartOfSpeach">
+        <rdfs:label xml:lang="en">PartOfSpeach</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyLinguistic"/>
+    </owl:Class>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#Phrase -->
+
+    <owl:Class rdf:about="#Phrase">
+        <rdfs:label xml:lang="en">Phrase</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyLinguistic"/>
+    </owl:Class>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#Representation -->
+
+    <owl:Class rdf:about="#Representation">
+        <rdfs:label xml:lang="en">Representation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyCommunicational"/>
+    </owl:Class>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#Request -->
+
+    <owl:Class rdf:about="#Request">
+        <rdfs:label xml:lang="en">Request</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyAbstract"/>
+    </owl:Class>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#Responce -->
+
+    <owl:Class rdf:about="#Responce">
+        <rdfs:label xml:lang="en">Responce</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyAbstract"/>
+    </owl:Class>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#Sentence -->
+
+    <owl:Class rdf:about="#Sentence">
+        <rdfs:label xml:lang="en">Sentence</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyLinguistic"/>
+    </owl:Class>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#Statement -->
+
+    <owl:Class rdf:about="#Statement">
+        <rdfs:label xml:lang="en">Statement</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyLinguistic"/>
+    </owl:Class>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#Subject -->
+
+    <owl:Class rdf:about="#Subject">
+        <rdfs:subClassOf rdf:resource="#CRDomain"/>
+    </owl:Class>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#Word -->
+
+    <owl:Class rdf:about="#Word">
+        <rdfs:label xml:lang="en">Word</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyLinguistic"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1101) http://owlapi.sourceforge.net -->
+

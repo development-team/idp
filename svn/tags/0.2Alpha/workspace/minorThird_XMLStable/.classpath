@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/LibsCommon"/>
+	<classpathentry kind="lib" path="/LibsCommon/libs/minorthird/trove.jar"/>
+	<classpathentry kind="lib" path="/LibsCommon/libs/minorthird/bsh.jar"/>
+	<classpathentry kind="lib" path="/LibsCommon/libs/minorthird/colt.jar"/>
+	<classpathentry kind="lib" path="/LibsCommon/libs/minorthird/com.jar"/>
+	<classpathentry kind="lib" path="/LibsCommon/libs/minorthird/CRF.jar"/>
+	<classpathentry kind="lib" path="/LibsCommon/libs/minorthird/jcommon-0.8.8.jar"/>
+	<classpathentry kind="lib" path="/LibsCommon/libs/minorthird/jfreechart-0.9.13.jar"/>
+	<classpathentry kind="lib" path="/LibsCommon/libs/minorthird/junit.jar"/>
+	<classpathentry kind="lib" path="/LibsCommon/libs/minorthird/jwf.jar"/>
+	<classpathentry kind="lib" path="/LibsCommon/libs/minorthird/LBFGS.jar"/>
+	<classpathentry kind="lib" path="/LibsCommon/libs/minorthird/libsvm.jar"/>
+	<classpathentry kind="lib" path="/LibsCommon/libs/minorthird/log4j-1.2.8.jar"/>
+	<classpathentry kind="lib" path="/LibsCommon/libs/minorthird/montylingua.jar"/>
+	<classpathentry kind="lib" path="/LibsCommon/libs/minorthird/secondstring.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

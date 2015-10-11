@@ -1,0 +1,108 @@
+\documentclass{beamer}
+
+
+\usepackage{beamerthemesplit}
+\usepackage{graphicx}
+
+\usepackage{tikz}
+%\usetikzlibrary{arrows}
+%\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+\mode<presentation>
+{
+  \usetheme{Warsaw}
+  % or ...
+
+  \setbeamercovered{transparent}
+  % or whatever (possibly just delete it)
+}
+
+
+\title{IDP intellectual document processing}
+\author{Max Talanov}
+\date{\today}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\section[Outline]{}
+\frame{\tableofcontents}
+
+\section{Information extraction place in AI}
+\frame
+{
+  \frametitle{Information extraction place in AI}
+  \begin{description}
+  \item [AI]
+    \begin{itemize}
+    \item Natural language processing
+      \begin{itemize}
+      \item Text mining
+        \begin{itemize}
+          \item Information Extraction
+        \end{itemize}
+      \end{itemize}
+    \end{itemize}
+  \end{description}
+}
+\section{Information Extraction Parts}
+\frame{
+  \frametitle{Information Extraction Parts}
+  \begin{itemize}
+    \item Train
+    \item Test (Evaluate)
+    \item Apply
+  \end{itemize}
+      
+}
+\section{IDP application structure and evolutions}
+\subsection{Application structure}
+\frame {
+  \frametitle{Application structure}
+  \begin{center}
+    \includegraphics[scale=0.5]{struct}
+  \end{center}
+}
+\subsection{idp.Trainer and idp.Evaluator evolution}
+\frame{
+  \frametitle{idp.Trainer and id.Evaluator evolution}
+  \begin{center}
+    \includegraphics[scale=0.45]{trainer_evaluator}
+  \end{center}
+}
+\subsection{idp.Applier evolution}
+\frame {
+  \frametitle{idp.Applier evolution}
+  \begin{center}
+    \includegraphics[scale=0.5]{applier}
+  \end{center}
+}
+\section{Technologies}
+\subsection{Technologies overview}
+\frame{
+  \frametitle{Technologies overview}
+  \begin{itemize}
+    \item Natural language processing
+      \begin{description}
+      \item [UIMA] IBM
+      \item [GATE] Sheffield
+      \item [Minorthird] CMU
+      \end{description}
+    \item Machine learning
+      \begin{description}
+        \item [Weka] Waikato
+        \item [Rapid miner] rapid-i
+      \end{description}
+  \end{itemize}
+}
+\subsection{Trainer technology}
+\frame{
+  \frametitle{Trainer technology}
+  \begin{center}
+    \includegraphics[scale=0.5]{trainer_technology}
+  \end{center}
+}
+
+
+\end{document}

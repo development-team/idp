@@ -1,0 +1,341 @@
+<?xml version="1.0"?>
+<project name="idp" default="dist">
+
+	<!-- Scala setup -->
+	<property environment="env" />
+	<property name="scala.home" value="${env.SCALA_HOME}" />
+
+	<!-- properties of current build project -->
+	<property name="ver" value="0.21beta" />
+	<property name="baseDir" value="." />
+	<property name="libsDir" location="../LibsCommon/libs" />
+	<property name="binDir" value="bin" />
+	<property name="docDir" location="doc" />
+	<property name="docJavaDir" location="${docDir}/java" />
+	<property name="docScalaDir" location="${docDir}/scala" />
+
+	<property name="binImagesDir" value="${binDir}/idp/sandBox/client/resource" />
+	<property name="distDir" value="dist" />
+	<property name="distServerDir" value="${distDir}/server" />
+	<property name="distServerLibsDir" value="${distServerDir}/lib" />
+	<property name="distServerPrjDir" value="${distServerDir}/prj" />
+	<property name="distClientDir" value="${distDir}/client" />
+	<property name="distClientExample1Dir" value="${distClientDir}/example_1" />
+	<property name="distServerExample1Dir" value="${distServerPrjDir}/example_1" />
+	<property name="distClientDocsDir" value="${distClientDir}/doc" />
+
+	<property name="scriptsDir" location="scripts" />
+	<property name="example1Dir" value="example_1" />
+	<property name="prjDir" value="prj" />
+
+	<property name="scriptsServerDir" location="${scriptsDir}/server" />
+	<property name="scriptsClientDir" location="${scriptsDir}/client" />
+
+	<property name="srcDir" value="src" />
+	<property name="imagesDir" location="../SandBoxClient/src/idp/sandBox/client/resource" />
+
+	<!-- Projects dirs -->
+	<property name="serverProjectDir" location="../SandBoxServerImpl" />
+	<property name="clientProjectDir" location="../SandBoxClient" />
+	<property name="docsProjectDir" location="../docs" />
+
+	<property name="minorThirdDir" location="../minorThird_XMLStable" />
+	<property name="minorThird.jar" location="${minorThirdDir}/dist/minorThird.jar" />
+	<property name="idpJarName" value="idp-${ver}-standalone.jar" />
+	<property name="serverJarName" value="idpServer-${ver}.jar" />
+	<property name="clientJarName" value="idpClient-${ver}.jar" />
+	<property name="serverZipName" value="idpServer-${ver}.zip" />
+	<property name="clientZipName" value="idpClient-${ver}.zip" />
+	<property name="srcZipName" value="idp-${ver}-src.zip" />
+	<property name="docZipName" value="idp-${ver}-doc.zip" />
+
+
+
+	<!-- Library properties -->
+	<property name="scala-library.jar" value="${libsDir}/scala-library.jar" />
+	<property name="scala-compiler.jar" location="${libsDir}/scala-compiler.jar" />
+	<property name="prolog-cafe.jar" location="${libsDir}/plcafe.jar" />
+	<property name="log4j.jar" location="${libsDir}/log4j.jar" />
+	<property name="jgap.jar" location="${libsDir}/jgap.jar" />
+	<property name="swingx.jar" location="${libsDir}/swingx.jar" />
+
+	<!-- Client and server properties files paths -->
+	<property name="server.properties" value="${serverProjectDir}/sandBoxServer.properties" />
+	<property name="client.properties" value="${clientProjectDir}/SandBoxClient.properties" />
+	<property name="log4j.server.properties" value="${scriptsServerDir}/log4j.properties" />
+
+	<!-- paths to sources for idp to compile -->
+	<path id="idpProjectsSrc">
+		<pathelement location="../DateNormGA/${srcDir}" />
+		<pathelement location="../idpBatchProcessor/${srcDir}" />
+		<pathelement location="../idpProcessingState/${srcDir}" />
+		<pathelement location="../LibsCommon/${srcDir}" />
+		<pathelement location="../prologRulesGeneration/${srcDir}" />
+	</path>
+
+	<!-- paths to sources for SB server -->
+	<path id="serverProjectsSrc">
+		<pathelement location="../SandBoxModels/${srcDir}" />
+		<pathelement location="../SandBoxServer/${srcDir}" />
+		<pathelement location="../SandBoxServerImpl/${srcDir}" />
+		<path refid="idpProjectsSrc" />
+	</path>
+
+	<!-- paths to sources for SB client -->
+	<path id="clientProjecsSrc">
+		<pathelement location="../idpProcessingState/${srcDir}" />
+		<pathelement location="../SandBoxModels/${srcDir}" />
+		<pathelement location="../SandBoxServer/${srcDir}" />
+		<pathelement location="../SandBoxClient/${srcDir}" />
+	</path>
+
+	<!-- fileset for sources package -->
+	<fileset id="srcProjects" dir="../">
+		<include name="Build/" />
+		<include name="DateNormGA/" />
+		<include name="DateNormGATest/" />
+		<include name="idpBatchProcessor/" />
+		<include name="idpProcessingState/" />
+		<include name="LibsCommon/" />
+		<include name="minorThird_XMLStable/" />
+		<include name="NormalizerTest/" />
+		<include name="prologRulesGeneration/" />
+		<include name="SandBoxClient/" />
+		<include name="SandBoxModels/" />
+		<include name="SandBoxServer/" />
+		<include name="SandBoxServerImpl/" />
+		<include name="SandBoxServerImplTest/" />
+		<not>
+			<filename name="**/bin/**" />
+		</not>
+		<not>
+			<filename name="**/.svn/**" />
+		</not>
+	</fileset>
+
+	<!-- paths to jars to include -->
+	<path id="jars">
+		<fileset dir="${libsDir}">
+			<include name="**/*.jar" />
+		</fileset>
+		<pathelement location="../minorThird_XMLStable/dist/minorThird.jar" />
+	</path>
+
+	<!-- path to resuting jars for scaladoc -->
+	<path id="resJars">
+		<pathelement location="${distClientDir}/${clientJarName}" />
+		<pathelement location="${distServerDir}/${serverJarName}" />
+		<path refid="jars" />
+	</path>
+
+	<fileset dir="${libsDir}" id="clientJars">
+		<include name="swingx.jar" />
+	</fileset>
+
+	<!-- Scala compiler initialisation -->
+	<target name="scalaInit">
+
+		<taskdef resource="scala/tools/ant/antlib.xml">
+			<classpath>
+				<pathelement location="${scala-compiler.jar}" />
+				<pathelement location="${scala-library.jar}" />
+			</classpath>
+		</taskdef>
+		<!-- Create the time stamp -->
+		<tstamp />
+	</target>
+
+	<!-- Copy libs -->
+
+	<!-- - - - - - - - - - - - - - - - - - 
+          target: copyLibs                      
+         - - - - - - - - - - - - - - - - - -->
+	<target name="copyLibs">
+		<!-- Coping scala libs -->
+		<mkdir dir="${binDir}" />
+		<mkdir dir="${distServerLibsDir}" />
+		<copy todir="${distServerLibsDir}" file="${scala-compiler.jar}" />
+		<copy todir="${distServerLibsDir}" file="${scala-library.jar}" />
+		<copy todir="${distServerLibsDir}" file="${prolog-cafe.jar}" />
+		<copy todir="${distServerLibsDir}" file="${log4j.jar}" />
+		<copy todir="${distServerLibsDir}" file="${jgap.jar}" />
+	</target>
+
+	<!-- - - - - - - - - - - - - - - - - - 
+          target: copyClientLibs                      
+         - - - - - - - - - - - - - - - - - -->
+	<target name="copyClientLibs">
+		<mkdir dir="${distClientDir}" />
+		<copy todir="${distClientDir}" file="${log4j.jar}" />
+		<copy todir="${distClientDir}" file="${swingx.jar}" />
+	</target>
+
+
+	<!-- ================================= 
+          target: minorthird              
+         ================================= -->
+	<target name="minorthird">
+		<ant dir="${minorThirdDir}" antfile="build_idp.xml" target="dist" />
+		<copy todir="${distServerDir}" file="${minorThird.jar}" />
+	</target>
+
+	<!-- ================================= 
+          target: idp batchprocessor              
+         ================================= -->
+	<target name="idp" depends="scalaInit, minorthird,cleanBin" description="--> builds all core idp projects">
+		<javac destdir="${binDir}" classpathref="jars" debug="on">
+			<src refid="idpProjectsSrc" />
+		</javac>
+		<scalac destdir="${binDir}" classpathref="jars" force="changed">
+			<src refid="idpProjectsSrc" />
+		</scalac>
+		<jar destfile="${distDir}/${idpJarName}" basedir="${binDir}" />
+	</target>
+
+	<!-- ================================= 
+          target: server              
+         ================================= -->
+	<target name="server" depends="scalaInit, minorthird, copyLibs, cleanBin" description="--> builds all projects for SB server">
+		<mkdir dir="${binDir}" />
+		<javac destdir="${binDir}" classpathref="jars" debug="on">
+			<src refid="serverProjectsSrc" />
+			<!-- classpath location="${distDir}/${idpJarName}" / -->
+		</javac>
+		<scalac destdir="${binDir}" classpathref="jars" force="changed">
+			<src refid="serverProjectsSrc" />
+			<!-- classpath location="${distDir}/${idpJarName}" / -->
+		</scalac>
+		<mkdir dir="${distServerDir}" />
+		<jar destfile="${distServerDir}/${serverJarName}" basedir="${binDir}" />
+		<delete dir="${binDir}" />
+	</target>
+
+
+	<!-- ================================= 
+          target: client              
+         ================================= -->
+	<target name="client" depends="cleanBin, copyClientLibs" description="--> builds all projects for SB cilent">
+		<mkdir dir="${binDir}" />
+		<mkdir dir="${binImagesDir}" />
+		<copy todir="${binImagesDir}">
+			<fileset dir="${imagesDir}">
+				<include name="*.png" />
+				<include name="*.PNG" />
+				<include name="*.jpg" />
+				<include name="*.JPG" />
+			</fileset>
+		</copy>
+		<javac destdir="${binDir}" classpathref="jars" debug="on">
+			<src refid="clientProjecsSrc" />
+		</javac>
+		<mkdir dir="${distClientDir}" />
+		<jar destfile="${distClientDir}/${clientJarName}" basedir="${binDir}" />
+
+	</target>
+
+	<!-- ================================= 
+          target: clean bin directory              
+         ================================= -->
+	<target name="cleanBin" description="--> clins binary directory, but saves jars">
+		<delete dir="${binDir}" />
+		<mkdir dir="${binDir}" />
+	</target>
+
+	<!-- ================================= 
+          target: dist              
+         ================================= -->
+	<target name="dist" depends="server,client" description="--> creates zip files that contains proper scripts and jars for server and client">
+		<!-- server -->
+		<copy todir="${distServerDir}">
+			<fileset dir="${scriptsServerDir}">
+				<include name="**/*.bat" />
+				<include name="**/*.sh" />
+				<include name="**/*.properties" />
+				<include name="**/*.txt" />
+				<include name="**/*.htm" />
+				<include name="**/*.html" />
+			</fileset>
+		</copy>
+		<copy todir="${distServerDir}" file="${server.properties}" />
+		<mkdir dir="${distServerPrjDir}" />
+		<copy todir="${distServerPrjDir}">
+			<fileset dir="${prjDir}" />
+		</copy>
+		<zip basedir="${distServerDir}" destfile="${distDir}/${serverZipName}" />
+		<!-- client -->
+		<copy todir="${distClientDir}">
+			<fileset dir="${scriptsClientDir}">
+				<include name="**/*.bat" />
+				<include name="**/*.sh" />
+				<include name="**/*.properties" />
+				<include name="**/*.txt" />
+			</fileset>
+		</copy>
+		<copy todir="${distClientDir}" file="${client.properties}" />
+		<mkdir dir="${distClientExample1Dir}" />
+		<copydir dest="${distClientExample1Dir}" src="${example1Dir}" />
+		<mkdir dir="${distClientDocsDir}" />
+		<copy todir="${distClientDocsDir}">
+			<fileset dir="${docsProjectDir}">
+				<include name="**/*.pdf" />
+				<include name="**/*.rtf" />
+			</fileset>
+		</copy>
+		<zip basedir="${distClientDir}" destfile="${distDir}/${clientZipName}" />
+	</target>
+
+	<!-- ================================= 
+          target: src              
+         ================================= -->
+	<target name="src" depends="cleanBin" description="--> creates zip files of all sources">
+		<zip destfile="../${srcZipName}">
+			<zipfileset refid="srcProjects" />
+		</zip>
+		<copy todir="${distDir}" file="../${srcZipName}" />
+		<delete file="../${srcZipName}" />
+	</target>
+
+	<!-- ================================= 
+          target: doc              
+         ================================= -->
+	<target name="doc" depends="cleanDoc, scalaInit, dist" description="--> creates javadoc and scaladoc and put this in zip archive">
+		<javadoc destdir="${docJavaDir}" sourcepathref="serverProjectsSrc" classpathref="jars" windowtitle="IDP ver.${ver} documentation" doctitle="&lt;div&gt;idp ${ver} &lt;/div&gt;" />
+		<javadoc destdir="${docJavaDir}" sourcepathref="clientProjecsSrc" classpathref="jars" windowtitle="IDP ver.${ver} documentation" doctitle="&lt;div&gt;idp ${ver} &lt;/div&gt;" />
+		<scaladoc destdir="${docScalaDir}" classpathref="resJars" windowtitle="IDP ver.${ver} documentation" doctitle="&lt;div&gt;idp ${ver} &lt;/div&gt;">
+			<src refid="serverProjectsSrc" />
+			<include name="**/*.scala" />
+		</scaladoc>
+		<zip destfile="${distDir}/${docZipName}" basedir="${docDir}" />
+	</target>
+
+	<!-- ================================= 
+          target: cleanDoc              
+         ================================= -->
+	<target name="cleanDoc" description="--> Cleans doc directory">
+		<delete dir="${docJavaDir}" includeemptydirs="true">
+			<include name="**/*" />
+		</delete>
+		<delete dir="${docScalaDir}" includeemptydirs="true">
+			<include name="**/*" />
+		</delete>
+	</target>
+
+
+	<!-- ================================= 
+          target: clean              
+         ================================= -->
+	<target name="clean" depends="cleanBin" description="--> description">
+		<delete includeemptydirs="true">
+			<fileset dir="${distDir}">
+				<include name="*.jar" />
+				<include name="*.zip" />
+				<include name="client/**/*" />
+				<include name="server/**/*" />
+			</fileset>
+		</delete>
+		<mkdir dir="${distServerLibsDir}" />
+		<mkdir dir="${distClientDir}" />
+	</target>
+
+
+</project>

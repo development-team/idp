@@ -1,0 +1,4 @@
+﻿subject eq "Menta" => 
+	$anyVerb hasVerb "place" => $anyVerb -> AddAction
+	$anyObject hasObjectType "prep" => $anyObject -> anyDestination
+	$anyObject hasObjectType "dobj" => $anyObject -> anyField

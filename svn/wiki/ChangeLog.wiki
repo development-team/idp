@@ -1,0 +1,8 @@
+#summary IDP Change log.
+#labels Deprecated
+
+=IDP project significant changes.=
+
+
+==Version 0.21:==
+  * FIXED issues from [http://code.google.com/p/idp/issues/detail?id=113 #113] to [http://code.google.com/p/idp/issues/detail?id=210 #210] remains [http://code.google.com/p/idp/issues/detail?id=180 #180], [http://code.google.com/p/idp/issues/detail?id=184 #184], [http://code.google.com/p/idp/issues/detail?id=185 #185], [http://code.google.com/p/idp/issues/detail?id=192 #192]

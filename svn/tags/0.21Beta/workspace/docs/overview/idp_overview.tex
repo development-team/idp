@@ -1,0 +1,202 @@
+\documentclass{beamer}
+
+
+\usepackage{beamerthemesplit}
+\usepackage{graphicx}
+
+\usepackage{tikz}
+
+
+\mode<presentation>
+{
+  \usetheme{Warsaw}
+  % or ...
+
+  \setbeamercovered{transparent}
+  % or whatever (possibly just delete it)
+}
+
+
+\title{IDP intellectual document processing}
+\author{Max Talanov}
+\date{\today}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\section[Outline]{}
+\frame{\tableofcontents}
+
+\section{Domain}
+\frame
+{
+  \frametitle{Domain}
+  80\% of information is unstructured. UnQueriable - this means that
+    you have this information in your computer but you can not
+    create any analysis based on it. This information lies as sheets
+    of paper in documents of various formats.
+}
+
+\section{Solution}
+\subsection{Technologies overview}
+\frame{
+  \frametitle{Technologies overview}
+  \begin{itemize}
+    \item Natural language processing
+      \begin{description}
+      \item [UIMA] IBM (Unstructured information management architecture)
+      \item [GATE] University of Sheffield (General architecture for text
+        engineering)
+      \item [Minorthird] CMU (Toolkit for storing text, annotating text, and learning to extract entities and categorize text)
+      \end{description}
+    \item Machine learning
+      \begin{description}
+        \item [Weka] University of  Waikato (Weka is a collection of machine learning algorithms for solving real-world data mining problems.)
+        \item [Rapid miner] rapid-i (Open-source data mining solution,
+          built on base of Weka)
+      \end{description}
+  \end{itemize}
+}
+
+\subsection{Real life example}
+\frame{
+  Let's consider simple example of structuring the job offer text in
+  XML format.
+
+\emph{
+
+Newsgroups: austin.jobs
+
+Subject: COMPUTER TECHNITION NEEDED FOR RETAIL STORE 451-2489
+
+Date: Thu, 28 Aug 1997 17:16:14 GMT
+
+Organization: Jump Point Communications, Inc.
+
+Message-ID: 3405a5f4.92436695@NEWS.JUMPNET.COM$>$
+
+The computer and photo industries have merged into CompuImage
+"where photos \& computers meet". This exciting concept holds
+tremendous growth opportunitines. We are looking for a customer
+friendly person expienced with the Internet, Networking, Windows 95,
+Windows NT,  Foxpro, general troubleshooting and product titles. Call
+Clifford @ 451-2489 or E-mail cliff@compu-image.com.
+
+}
+
+}
+
+\subsection{Information structure}
+\frame{
+
+  We are going to get following structure of XML document:
+
+  \begin{description}
+  \item[root] for XML wellformness
+    \begin{description}
+    \item[header] The supplemental information section
+      \begin{description}
+      \item[newsgroup] austin.jobs
+      \item[subject] COMPUTER TECHNITION NEEDED FOR RETAIL STORE 451-2489
+      \item[post date] 28 Aug 1997
+      \item[id] 3405a5f4.92436 ...
+      \end{description}
+    \item[body] Main part of an offer
+    \end{description}
+  \end{description}
+
+}
+
+
+\subsection{Information Extraction}
+\frame{
+  \frametitle{Information Extraction Description}
+
+  We are going to use Information Extraction approach to
+  structure the text document in XML. 
+
+ There are tree parts of information extraction task: 
+ \begin{itemize}
+    \item Train (Create annotators)
+    \item Test (Evaluate)
+    \item Apply (Most important for us)
+  \end{itemize}
+  
+  First of all we will train the annotators (programs that can mark
+  proper parts of the text) on positive examples, then we are going
+  to let them annotate plain text examples and put results in XML file.
+  
+%  \emph{ Start train_apply.en }
+}
+\section{Application}
+\subsection{Application structure}
+\frame {
+  \frametitle{Application structure}
+  \begin{center}
+    \includegraphics[scale=0.45]{struct}
+  \end{center}
+}
+\frame{
+  \frametitle{Application structure description}
+  \begin{description}
+  \item[idp.Trainer] input is Annotated (XML) documents - training set
+  \item[idp.Trainer] output is Annotators - serialized Java objects,
+    that are learned to annotate
+  \item[idp.Evaluator] input is Annotators, output is Precision,
+    Recall, F-measure parameters
+  \item[idp.Applier] input is Annotators and text to structure - test
+    set
+  \item[idp.Applier] output is structured documents
+  \end{description}
+}
+
+\subsection{Result example}
+\frame{
+  $<$root$>$
+
+  $<$\_predicted\_i\_header$>$
+
+  Newsgroups:
+  $<$\_predicted\_i\_newsgroup$>$austin.jobs$<$/\_predicted\_i\_newsgroup$>$
+
+  Subject: $<$\_predicted\_i\_subject$>$COMPUTER TECHNITION NEEDED
+  FOR RETAIL STORE 451-2489$<$/\_predicted\_i\_subject$>$
+
+  Date: Thu, $<$\_predicted\_i\_post\_date$>$28 Aug
+  1997$<$/\_predicted\_i\_post\_date$>$17:16:14 GMT
+
+  Message-ID:
+  $<$\_predicted\_i\_id$>$3405a5f4...$<$/\_predicted\_i\_id$>$
+
+  $<$/\_predicted\_i\_header$>$
+
+  $<$\_predicted\_i\_body$>$
+
+  The computer and photo industries have merged into CompuImage
+  "where photos \& computers meet". This exciting concept holds
+  tremendous growth opportunitines. ...
+
+  $<$/\_predicted\_i\_body$>$
+
+  $<$/root$>$
+  
+}
+\frame{
+This looks much better, we can form analytical report about
+number of specialist are required by company, skills that are required
+average salary that is suggested during 1997 year. We can track
+trends of average salary fluctuation for different skill set through
+1997 year. All this information could be retrieved by XQuery for
+example.
+}
+\section{Dictionary}
+\frame{
+  \begin{description}
+  \item[Annotation] Process of marking up some parts of the text
+    according to some rule(learned in case of Machine learning)
+  \item [Annotator] Some program that makes annotation
+  \end{description}
+}
+
+\end{document}

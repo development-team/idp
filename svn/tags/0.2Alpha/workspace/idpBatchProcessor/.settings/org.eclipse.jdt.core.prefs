@@ -1,0 +1,4 @@
+#Tue May 06 16:28:44 MSD 2008
+eclipse.preferences.version=1
+instance/org.eclipse.core.net/org.eclipse.core.net.hasMigrated=true
+org.eclipse.jdt.core.builder.resourceCopyExclusionFilter=*.launch,*.scala,*.scala

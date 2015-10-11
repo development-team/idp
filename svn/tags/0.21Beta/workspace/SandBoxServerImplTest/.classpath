@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="ch.epfl.lamp.sdt.launching.SCALA_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/SandBoxServerImpl"/>
+	<classpathentry kind="lib" path="/LibsCommon/libs/log4j.jar"/>
+	<classpathentry kind="lib" path="/LibsCommon/libs/ScalaCheck-1.1.1.jar"/>
+	<classpathentry kind="lib" path="/LibsCommon/libs/scalatest-0.9.3.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/SandBoxServer"/>
+	<classpathentry kind="lib" path="/LibsCommon/libs/junit-4.4.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/idpProcessingState"/>
+	<classpathentry kind="lib" path="/LibsCommon/libs/specs-1.3.0.jar"/>
+	<classpathentry kind="lib" path="binj"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

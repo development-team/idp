@@ -1,0 +1,1586 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY p1 "#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY owl2 "http://www.w3.org/2006/12/owl2#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY LiguisticCogitativeDomainModelShallow "http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#" >
+]>
+
+
+<rdf:RDF xmlns="http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#"
+     xml:base="http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:p1="#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:LiguisticCogitativeDomainModelShallow="http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#"
+     xmlns:owl2="http://www.w3.org/2006/12/owl2#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo rdf:datatype="&xsd;int">245</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="&xsd;integer">246</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="&xsd;int">247</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="&xsd;int">248</owl:versionInfo>
+        <owl:versionInfo>244</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- #hasObject -->
+
+    <owl:ObjectProperty rdf:about="#hasObject"/>
+    
+
+
+    <!-- #hasObjectType -->
+
+    <owl:ObjectProperty rdf:about="#hasObjectType"/>
+    
+
+
+    <!-- #hasPhrase -->
+
+    <owl:ObjectProperty rdf:about="#hasPhrase"/>
+    
+
+
+    <!-- #hasSubject -->
+
+    <owl:ObjectProperty rdf:about="#hasSubject"/>
+    
+
+
+    <!-- #hasVerb -->
+
+    <owl:ObjectProperty rdf:about="#hasVerb"/>
+    
+
+
+    <!-- #hasWord -->
+
+    <owl:ObjectProperty rdf:about="#hasWord"/>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#anyObjectWithType -->
+
+    <owl:ObjectProperty rdf:about="#anyObjectWithType">
+        <rdfs:domain rdf:resource="#Comprehension"/>
+        <rdfs:range rdf:resource="#ObjectType"/>
+        <rdfs:subPropertyOf rdf:resource="#comprehensionProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#cogitativeProperty -->
+
+    <owl:ObjectProperty rdf:about="#cogitativeProperty"/>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#communicationalProperty -->
+
+    <owl:ObjectProperty rdf:about="#communicationalProperty">
+        <rdfs:subPropertyOf rdf:resource="#cogitativeProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#comprehensionProperty -->
+
+    <owl:ObjectProperty rdf:about="#comprehensionProperty">
+        <rdfs:subPropertyOf rdf:resource="#cogitativeProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#domainProperty -->
+
+    <owl:ObjectProperty rdf:about="#domainProperty"/>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#hasActoionObject -->
+
+    <owl:ObjectProperty rdf:about="#hasActoionObject">
+        <rdfs:label xml:lang="en"
+            >hasActoionObject</rdfs:label>
+        <rdfs:range rdf:resource="#ActionObject"/>
+        <rdfs:domain rdf:resource="#AddAction"/>
+        <rdfs:subPropertyOf rdf:resource="#domainProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#hasAntecedent -->
+
+    <owl:ObjectProperty rdf:about="#hasAntecedent">
+        <rdfs:label xml:lang="en">hasAntecedent</rdfs:label>
+        <rdfs:domain rdf:resource="#Implication"/>
+        <rdfs:subPropertyOf rdf:resource="#learningProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#hasAnyCommunicational -->
+
+    <owl:ObjectProperty rdf:about="#hasAnyCommunicational">
+        <rdfs:subPropertyOf rdf:resource="#communicationalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#hasAnyDomain -->
+
+    <owl:ObjectProperty rdf:about="#hasAnyDomain">
+        <rdfs:label xml:lang="en">hasAnyDomain</rdfs:label>
+        <rdfs:range rdf:resource="#AnyDomain"/>
+        <rdfs:domain rdf:resource="#Comprehension"/>
+        <rdfs:subPropertyOf rdf:resource="#cogitativeProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#hasComprehension -->
+
+    <owl:ObjectProperty rdf:about="#hasComprehension">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:label xml:lang="en"
+            >hasComprehension</rdfs:label>
+        <rdfs:domain rdf:resource="#AnyCommunicational"/>
+        <rdfs:domain rdf:resource="#CogitativeHipothesis"/>
+        <rdfs:range rdf:resource="#Comprehension"/>
+        <rdfs:subPropertyOf rdf:resource="#cogitativeProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#hasConsequent -->
+
+    <owl:ObjectProperty rdf:about="#hasConsequent">
+        <rdfs:label xml:lang="en">hasConsequent</rdfs:label>
+        <rdfs:range rdf:resource="#Concequent"/>
+        <rdfs:domain rdf:resource="#Implication"/>
+        <rdfs:subPropertyOf rdf:resource="#learningProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#hasCreteria -->
+
+    <owl:ObjectProperty rdf:about="#hasCreteria">
+        <rdfs:label xml:lang="en">hasCreteria</rdfs:label>
+        <rdfs:range rdf:resource="#Creteria"/>
+        <rdfs:domain rdf:resource="#Request"/>
+        <rdfs:subPropertyOf rdf:resource="#communicationalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#hasDestination -->
+
+    <owl:ObjectProperty rdf:about="#hasDestination">
+        <rdfs:label xml:lang="en">hasDestination</rdfs:label>
+        <rdfs:domain rdf:resource="#AddAction"/>
+        <rdfs:range rdf:resource="#Destination"/>
+        <rdfs:subPropertyOf rdf:resource="#domainProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#hasExpression -->
+
+    <owl:ObjectProperty rdf:about="#hasExpression">
+        <rdfs:label xml:lang="en">hasExpression</rdfs:label>
+        <rdfs:range rdf:resource="#Expression"/>
+        <rdfs:subPropertyOf rdf:resource="#learningProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#hasExpressionObject -->
+
+    <owl:ObjectProperty rdf:about="#hasExpressionObject">
+        <rdfs:label xml:lang="en"
+            >hasExpressionObject</rdfs:label>
+        <rdfs:domain rdf:resource="#Expression"/>
+        <rdfs:range rdf:resource="#ExpressionObject"/>
+        <rdfs:subPropertyOf rdf:resource="#learningProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#hasHipothesis -->
+
+    <owl:ObjectProperty rdf:about="#hasHipothesis">
+        <rdfs:label xml:lang="en">hasHypothesis</rdfs:label>
+        <rdfs:range rdf:resource="#CogitativeHipothesis"/>
+        <rdfs:domain rdf:resource="#Concequent"/>
+        <rdfs:subPropertyOf rdf:resource="#learningProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#hasImplication -->
+
+    <owl:ObjectProperty rdf:about="#hasImplication">
+        <rdfs:subPropertyOf rdf:resource="#learningProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#hasLanguage -->
+
+    <owl:ObjectProperty rdf:about="#hasLanguage">
+        <rdfs:label xml:lang="en">hasLanguage</rdfs:label>
+        <rdfs:range rdf:resource="#Language"/>
+        <rdfs:domain rdf:resource="#Word"/>
+        <rdfs:subPropertyOf rdf:resource="#linguisticProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#hasObject -->
+
+    <owl:ObjectProperty rdf:about="#hasObject">
+        <rdfs:label xml:lang="en">hasObject</rdfs:label>
+        <rdfs:range rdf:resource="#Object"/>
+        <rdfs:domain rdf:resource="#Request"/>
+        <rdfs:domain rdf:resource="#Statement"/>
+        <rdfs:subPropertyOf rdf:resource="#communicationalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#hasObjectType -->
+
+    <owl:ObjectProperty rdf:about="#hasObjectType">
+        <rdfs:label xml:lang="en">hasObjectType</rdfs:label>
+        <rdfs:domain rdf:resource="#Object"/>
+        <rdfs:range rdf:resource="#ObjectType"/>
+        <rdfs:subPropertyOf rdf:resource="#communicationalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#hasObjectValue -->
+
+    <owl:ObjectProperty rdf:about="#hasObjectValue">
+        <rdfs:subPropertyOf rdf:resource="#comprehensionProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#hasOperand -->
+
+    <owl:ObjectProperty rdf:about="#hasOperand">
+        <rdfs:label xml:lang="en">hasOperand</rdfs:label>
+        <rdfs:domain rdf:resource="#Expression"/>
+        <rdfs:range rdf:resource="#Operand"/>
+        <rdfs:subPropertyOf rdf:resource="#learningProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#hasOperator -->
+
+    <owl:ObjectProperty rdf:about="#hasOperator">
+        <rdfs:label xml:lang="en">hasOperator</rdfs:label>
+        <rdfs:domain rdf:resource="#Expression"/>
+        <rdfs:range rdf:resource="#Operator"/>
+        <rdfs:subPropertyOf rdf:resource="#learningProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#hasPOS -->
+
+    <owl:ObjectProperty rdf:about="#hasPOS">
+        <rdfs:label xml:lang="en">hasPOS</rdfs:label>
+        <rdfs:range rdf:resource="#PartOfSpeach"/>
+        <rdfs:domain rdf:resource="#Word"/>
+        <rdfs:subPropertyOf rdf:resource="#linguisticProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#hasPhrase -->
+
+    <owl:ObjectProperty rdf:about="#hasPhrase">
+        <rdfs:label xml:lang="en">hasPhrase</rdfs:label>
+        <rdfs:domain rdf:resource="#Object"/>
+        <rdfs:range rdf:resource="#Phrase"/>
+        <rdfs:domain rdf:resource="#Sentence"/>
+        <rdfs:domain rdf:resource="#Statement"/>
+        <rdfs:domain rdf:resource="#Subject"/>
+        <rdfs:subPropertyOf rdf:resource="#linguisticProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#hasRepresentation -->
+
+    <owl:ObjectProperty rdf:about="#hasRepresentation">
+        <rdfs:label xml:lang="en"
+            >hasRepresentation</rdfs:label>
+        <rdfs:domain rdf:resource="#AnyDomain"/>
+        <rdfs:domain rdf:resource="#AnyHipothesis"/>
+        <rdfs:range rdf:resource="#Representation"/>
+        <rdfs:subPropertyOf rdf:resource="#cogitativeProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#hasStatement -->
+
+    <owl:ObjectProperty rdf:about="#hasStatement">
+        <rdfs:label xml:lang="en">hasStatement</rdfs:label>
+        <rdfs:domain rdf:resource="#Creteria"/>
+        <rdfs:range rdf:resource="#Statement"/>
+        <rdfs:subPropertyOf rdf:resource="#communicationalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#hasSubject -->
+
+    <owl:ObjectProperty rdf:about="#hasSubject">
+        <rdfs:label xml:lang="en">hasSubject</rdfs:label>
+        <rdfs:domain rdf:resource="#Statement"/>
+        <rdfs:range rdf:resource="#Subject"/>
+        <rdfs:subPropertyOf rdf:resource="#communicationalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#hasSubjectValue -->
+
+    <owl:ObjectProperty rdf:about="#hasSubjectValue">
+        <rdfs:subPropertyOf rdf:resource="#comprehensionProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#hasValue -->
+
+    <owl:ObjectProperty rdf:about="#hasValue">
+        <rdfs:label xml:lang="en">hasValue</rdfs:label>
+        <rdfs:range rdf:resource="#AnyCommunicational"/>
+        <rdfs:domain rdf:resource="#ExpressionObject"/>
+        <rdfs:domain rdf:resource="#Operand"/>
+        <rdfs:subPropertyOf rdf:resource="#learningProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#hasVerb -->
+
+    <owl:ObjectProperty rdf:about="#hasVerb">
+        <rdfs:subPropertyOf rdf:resource="#communicationalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#hasWord -->
+
+    <owl:ObjectProperty rdf:about="#hasWord">
+        <rdfs:label xml:lang="en">hasWord</rdfs:label>
+        <rdfs:domain rdf:resource="#Phrase"/>
+        <rdfs:range rdf:resource="#Word"/>
+        <rdfs:subPropertyOf rdf:resource="#linguisticProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#learningProperty -->
+
+    <owl:ObjectProperty rdf:about="#learningProperty">
+        <rdfs:subPropertyOf rdf:resource="#cogitativeProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#linguisticProperty -->
+
+    <owl:ObjectProperty rdf:about="#linguisticProperty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#probability -->
+
+    <owl:DatatypeProperty rdf:about="#probability">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#ActionObject -->
+
+    <owl:Class rdf:about="#ActionObject">
+        <rdfs:label xml:lang="en">ActionObject</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyAction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#AddAction -->
+
+    <owl:Class rdf:about="#AddAction">
+        <rdfs:label xml:lang="en">AddAction</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyAction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasActoionObject"/>
+                <owl:someValuesFrom rdf:resource="#ActionObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasDestination"/>
+                <owl:someValuesFrom rdf:resource="#Destination"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#AnyAction -->
+
+    <owl:Class rdf:about="#AnyAction">
+        <rdfs:label xml:lang="en">AnyAction</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyDomain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#AnyBoolean -->
+
+    <owl:Class rdf:about="#AnyBoolean">
+        <rdfs:subClassOf rdf:resource="#AnyFromRequest"/>
+    </owl:Class>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#AnyCogitative -->
+
+    <owl:Class rdf:about="#AnyCogitative">
+        <rdfs:label xml:lang="en">AnyCogitative</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#AnyCommunicational -->
+
+    <owl:Class rdf:about="#AnyCommunicational">
+        <rdfs:label xml:lang="en"
+            >AnyCommunicational</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyCogitative"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasComprehension"/>
+                <owl:allValuesFrom rdf:resource="#Comprehension"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#AnyDomain -->
+
+    <owl:Class rdf:about="#AnyDomain">
+        <rdfs:label xml:lang="en">AnyDomain</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasRepresentation"/>
+                <owl:someValuesFrom rdf:resource="#Representation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#AnyExperession -->
+
+    <owl:Class rdf:about="#AnyExperession">
+        <rdfs:subClassOf rdf:resource="#AnyLearning"/>
+    </owl:Class>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#AnyFromRequest -->
+
+    <owl:Class rdf:about="#AnyFromRequest">
+        <rdfs:label xml:lang="en">AnyFromRequest</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyCommunicational"/>
+    </owl:Class>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#AnyFromStament -->
+
+    <owl:Class rdf:about="#AnyFromStament">
+        <rdfs:label xml:lang="en">AnyFromStament</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyCommunicational"/>
+    </owl:Class>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#AnyHipothesis -->
+
+    <owl:Class rdf:about="#AnyHipothesis">
+        <rdfs:label xml:lang="en">AnyHypothesis</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyCogitative"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#probability"/>
+                <owl:someValuesFrom rdf:resource="&xsd;double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasRepresentation"/>
+                <owl:allValuesFrom rdf:resource="#Representation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasComprehension"/>
+                <owl:allValuesFrom rdf:resource="#Comprehension"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#AnyLearning -->
+
+    <owl:Class rdf:about="#AnyLearning">
+        <rdfs:label xml:lang="en">AnyLearning</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyCogitative"/>
+    </owl:Class>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#AnyLinguistic -->
+
+    <owl:Class rdf:about="#AnyLinguistic">
+        <rdfs:label xml:lang="en">AnyLinguistic</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#AnyObject -->
+
+    <owl:Class rdf:about="#AnyObject">
+        <rdfs:label xml:lang="en">AnyObject</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyCommunicational"/>
+    </owl:Class>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#AnyObjectType -->
+
+    <owl:Class rdf:about="#AnyObjectType">
+        <rdfs:label xml:lang="en">AnyObjectType</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyCommunicational"/>
+    </owl:Class>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#AnyStatement -->
+
+    <owl:Class rdf:about="#AnyStatement">
+        <rdfs:subClassOf rdf:resource="#AnyFromStament"/>
+    </owl:Class>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#AnySubject -->
+
+    <owl:Class rdf:about="#AnySubject">
+        <rdfs:label xml:lang="en">AnySubject</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyFromStament"/>
+    </owl:Class>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#Boolean -->
+
+    <owl:Class rdf:about="#Boolean">
+        <rdfs:subClassOf rdf:resource="#AnyBoolean"/>
+    </owl:Class>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#CogitativeHipothesis -->
+
+    <owl:Class rdf:about="#CogitativeHipothesis">
+        <rdfs:label xml:lang="en"
+            >CogitativeHypothesis</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyHipothesis"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasImplication"/>
+                <owl:someValuesFrom rdf:resource="#Implication"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#Comprehension -->
+
+    <owl:Class rdf:about="#Comprehension">
+        <rdfs:label xml:lang="en">Comprehension</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyCogitative"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasObjectValue"/>
+                <owl:allValuesFrom rdf:resource="#Object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasAnyDomain"/>
+                <owl:someValuesFrom rdf:resource="#AnyDomain"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasSubjectValue"/>
+                <owl:allValuesFrom rdf:resource="#Subject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#anyObjectWithType"/>
+                <owl:allValuesFrom rdf:resource="#ObjectType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#Concequent -->
+
+    <owl:Class rdf:about="#Concequent">
+        <rdfs:label xml:lang="en">Consequent</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyLearning"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasRepresentation"/>
+                <owl:allValuesFrom rdf:resource="#Representation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasImplication"/>
+                <owl:allValuesFrom rdf:resource="#Implication"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasComprehension"/>
+                <owl:allValuesFrom rdf:resource="#Comprehension"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#Creteria -->
+
+    <owl:Class rdf:about="#Creteria">
+        <rdfs:label xml:lang="en">Creteria</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyFromRequest"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasStatement"/>
+                <owl:someValuesFrom rdf:resource="#Statement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#Destination -->
+
+    <owl:Class rdf:about="#Destination">
+        <rdfs:label xml:lang="en">Destination</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyAction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#Expression -->
+
+    <owl:Class rdf:about="#Expression">
+        <rdfs:label xml:lang="en">Expression</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyExperession"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasOperand"/>
+                <owl:someValuesFrom rdf:resource="#Operand"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasExpressionObject"/>
+                <owl:someValuesFrom rdf:resource="#ExpressionObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasOperator"/>
+                <owl:someValuesFrom rdf:resource="#Operator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#ExpressionObject -->
+
+    <owl:Class rdf:about="#ExpressionObject">
+        <rdfs:label xml:lang="en"
+            >ExpressionObject</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyLearning"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasValue"/>
+                <owl:someValuesFrom rdf:resource="#AnyCommunicational"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#Implication -->
+
+    <owl:Class rdf:about="#Implication">
+        <rdfs:subClassOf rdf:resource="#AnyLearning"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasAntecedent"/>
+                <owl:someValuesFrom rdf:resource="#Expression"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasHipothesis"/>
+                <owl:allValuesFrom rdf:resource="#CogitativeHipothesis"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#probability"/>
+                <owl:someValuesFrom rdf:resource="&xsd;double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasConsequent"/>
+                <owl:someValuesFrom rdf:resource="#Concequent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >Implication is the special type of expressions, must bee root.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#Language -->
+
+    <owl:Class rdf:about="#Language">
+        <rdfs:label xml:lang="en">Language</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyLinguistic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#Object -->
+
+    <owl:Class rdf:about="#Object">
+        <rdfs:label xml:lang="en">Object</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyObject"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasObjectType"/>
+                <owl:someValuesFrom rdf:resource="#AnyObjectType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasPhrase"/>
+                <owl:someValuesFrom rdf:resource="#Phrase"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#ObjectType -->
+
+    <owl:Class rdf:about="#ObjectType">
+        <rdfs:label xml:lang="en">ObjectType</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyObjectType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#Operand -->
+
+    <owl:Class rdf:about="#Operand">
+        <rdfs:label xml:lang="en">Operand</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyExperession"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasValue"/>
+                <owl:someValuesFrom rdf:resource="#AnyCommunicational"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#Operator -->
+
+    <owl:Class rdf:about="#Operator">
+        <rdfs:label xml:lang="en">Operator</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyLearning"/>
+    </owl:Class>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#PartOfSpeach -->
+
+    <owl:Class rdf:about="#PartOfSpeach">
+        <rdfs:label xml:lang="en">PartOfSpeach</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyLinguistic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#Phrase -->
+
+    <owl:Class rdf:about="#Phrase">
+        <rdfs:label xml:lang="en">Phrase</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyLinguistic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasWord"/>
+                <owl:someValuesFrom rdf:resource="#Word"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#Representation -->
+
+    <owl:Class rdf:about="#Representation">
+        <rdfs:label xml:lang="en">Representation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyCogitative"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasAnyCommunicational"/>
+                <owl:someValuesFrom rdf:resource="#AnyCommunicational"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#Request -->
+
+    <owl:Class rdf:about="#Request">
+        <rdfs:label xml:lang="en">Request</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyFromRequest"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasCreteria"/>
+                <owl:someValuesFrom rdf:resource="#Creteria"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasObject"/>
+                <owl:someValuesFrom rdf:resource="#AnyObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#Sentence -->
+
+    <owl:Class rdf:about="#Sentence">
+        <rdfs:label xml:lang="en">Sentence</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyLinguistic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasPhrase"/>
+                <owl:someValuesFrom rdf:resource="#Phrase"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#Source -->
+
+    <owl:Class rdf:about="#Source">
+        <rdfs:subClassOf rdf:resource="#AnyAction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#Statement -->
+
+    <owl:Class rdf:about="#Statement">
+        <rdfs:label xml:lang="en">Statement</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyStatement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasVerb"/>
+                <owl:someValuesFrom rdf:resource="#Word"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasSubject"/>
+                <owl:someValuesFrom rdf:resource="#AnySubject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasObject"/>
+                <owl:someValuesFrom rdf:resource="#AnyObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#Subject -->
+
+    <owl:Class rdf:about="#Subject">
+        <rdfs:label xml:lang="en">Subject</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnySubject"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasPhrase"/>
+                <owl:someValuesFrom rdf:resource="#Phrase"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#Word -->
+
+    <owl:Class rdf:about="#Word">
+        <rdfs:label xml:lang="en">Word</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyLinguistic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasPOS"/>
+                <owl:someValuesFrom rdf:resource="#PartOfSpeach"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasLanguage"/>
+                <owl:someValuesFrom rdf:resource="#Language"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#AnyDestination -->
+
+    <Destination rdf:about="#AnyDestination">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <rdfs:label xml:lang="en">anyDestination</rdfs:label>
+    </Destination>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#Object.Phrase.Word.field_Word.Login -->
+
+    <owl:Thing rdf:about="#Object.Phrase.Word.field_Word.Login">
+        <rdf:type rdf:resource="#Object"/>
+        <p1:hasObjectType rdf:resource="#ObjectType.dobj"/>
+        <p1:hasPhrase rdf:resource="#Phrase.Word.field_Word.Login"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#Object.Phrase.Word.page_Word.Customer -->
+
+    <owl:Thing rdf:about="#Object.Phrase.Word.page_Word.Customer">
+        <rdf:type rdf:resource="#Object"/>
+        <p1:hasObjectType rdf:resource="#ObjectType.prep"/>
+        <p1:hasPhrase rdf:resource="#Phrase.Word.page_Word.Customer"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#ObjectType.dobj -->
+
+    <owl:Thing rdf:about="#ObjectType.dobj">
+        <rdf:type rdf:resource="#ObjectType"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#ObjectType.prep -->
+
+    <owl:Thing rdf:about="#ObjectType.prep">
+        <rdf:type rdf:resource="#ObjectType"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#Operotor.hasObjectType -->
+
+    <owl:Thing rdf:about="#Operotor.hasObjectType">
+        <rdf:type rdf:resource="#Operator"/>
+        <rdfs:label xml:lang="en">hasType</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#Phrase.Word.field_Word.Login -->
+
+    <Phrase rdf:about="#Phrase.Word.field_Word.Login">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <p1:hasWord rdf:resource="#Word.Login"/>
+        <p1:hasWord rdf:resource="#Word.field"/>
+    </Phrase>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#Phrase.Word.page_Word.Customer -->
+
+    <owl:Thing rdf:about="#Phrase.Word.page_Word.Customer">
+        <rdf:type rdf:resource="#Phrase"/>
+        <p1:hasWord rdf:resource="#Word.Customer"/>
+        <p1:hasWord rdf:resource="#Word.page"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#Phrase.Word.place_Word.Menta -->
+
+    <Phrase rdf:about="#Phrase.Word.place_Word.Menta">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <p1:hasWord rdf:resource="#Word.Menta"/>
+        <p1:hasWord rdf:resource="#Word.place"/>
+    </Phrase>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#Statement.Word.place_Subject.Phrase.Word.place_Word.Menta_Object.Phrase.Word.field_Word.Login_Object.Phrase.Word.page_Word.Customer_ -->
+
+    <Statement rdf:about="#Statement.Word.place_Subject.Phrase.Word.place_Word.Menta_Object.Phrase.Word.field_Word.Login_Object.Phrase.Word.page_Word.Customer_">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <p1:hasObject rdf:resource="#Object.Phrase.Word.field_Word.Login"/>
+        <p1:hasObject rdf:resource="#Object.Phrase.Word.page_Word.Customer"/>
+        <p1:hasSubject rdf:resource="#Subject.Phrase.Word.place_Word.Menta"/>
+        <p1:hasVerb rdf:resource="#Word.place"/>
+    </Statement>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#Subject.Phrase.Word.place_Word.Menta -->
+
+    <owl:Thing rdf:about="#Subject.Phrase.Word.place_Word.Menta">
+        <rdf:type rdf:resource="#Subject"/>
+        <p1:hasPhrase rdf:resource="#Phrase.Word.place_Word.Menta"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#Word.Customer -->
+
+    <Word rdf:about="#Word.Customer">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </Word>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#Word.Login -->
+
+    <Word rdf:about="#Word.Login">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </Word>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#Word.Menta -->
+
+    <owl:Thing rdf:about="#Word.Menta">
+        <rdf:type rdf:resource="#Word"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#Word.field -->
+
+    <owl:Thing rdf:about="#Word.field">
+        <rdf:type rdf:resource="#Word"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#Word.page -->
+
+    <owl:Thing rdf:about="#Word.page">
+        <rdf:type rdf:resource="#Word"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#Word.place -->
+
+    <owl:Thing rdf:about="#Word.place">
+        <rdf:type rdf:resource="#Word"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#actionComprehension -->
+
+    <Comprehension rdf:about="#actionComprehension">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <hasSubjectValue rdf:resource="#Subject.Phrase.Word.place_Word.Menta"/>
+        <hasAnyDomain rdf:resource="#addFieldAction"/>
+    </Comprehension>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#actionObjectComprehension -->
+
+    <owl:Thing rdf:about="#actionObjectComprehension">
+        <rdf:type rdf:resource="#Comprehension"/>
+        <rdfs:comment
+            >actionObjectComprehension</rdfs:comment>
+        <hasObjectValue rdf:resource="#Object.Phrase.Word.field_Word.Login"/>
+        <hasAnyDomain rdf:resource="#anyActionObject"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#add -->
+
+    <Word rdf:about="#add">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <rdfs:label xml:lang="en">add</rdfs:label>
+    </Word>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#addFieldAction -->
+
+    <AddAction rdf:about="#addFieldAction">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </AddAction>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#andObject -->
+
+    <Operator rdf:about="#andObject">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <rdfs:label xml:lang="en">eq</rdfs:label>
+    </Operator>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#anyActionObject -->
+
+    <ActionObject rdf:about="#anyActionObject">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </ActionObject>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#anyBoolean -->
+
+    <owl:Thing rdf:about="#anyBoolean">
+        <rdf:type rdf:resource="#AnyBoolean"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#anyObject -->
+
+    <owl:Thing rdf:about="#anyObject">
+        <rdf:type rdf:resource="#AnyObject"/>
+        <rdfs:label xml:lang="en">anyObject</rdfs:label>
+        <hasComprehension rdf:resource="#destinationComprehension"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#anyObjectType -->
+
+    <AnyObjectType rdf:about="#anyObjectType">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <rdfs:label xml:lang="en">anyObjectType</rdfs:label>
+    </AnyObjectType>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#con_prep_to -->
+
+    <owl:Thing rdf:about="#con_prep_to">
+        <rdf:type rdf:resource="#Concequent"/>
+        <rdfs:label xml:lang="en">con_prep_to</rdfs:label>
+        <hasComprehension rdf:resource="#destinationComprehension"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#customer -->
+
+    <Word rdf:about="#customer">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <rdfs:label xml:lang="en">customer</rdfs:label>
+    </Word>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#decision_prep_to -->
+
+    <Implication rdf:about="#decision_prep_to">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <rdfs:label xml:lang="en"
+            >decision_prep_to</rdfs:label>
+        <hasConsequent rdf:resource="#con_prep_to"/>
+        <hasExpression rdf:resource="#expr_prep_to"/>
+    </Implication>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#destinationComprehension -->
+
+    <Comprehension rdf:about="#destinationComprehension">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <rdfs:label xml:lang="en"
+            >destinationComprehension</rdfs:label>
+        <hasAnyDomain rdf:resource="#AnyDestination"/>
+        <anyObjectWithType rdf:resource="#ObjectType.prep"/>
+    </Comprehension>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#destinationComprehension_obj_1 -->
+
+    <owl:Thing rdf:about="#destinationComprehension_obj_1">
+        <rdf:type rdf:resource="#Comprehension"/>
+        <rdfs:label xml:lang="en"
+            >destinationComprehension_obj_1</rdfs:label>
+        <hasAnyDomain rdf:resource="#pageDestination"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#destinationHipothesis -->
+
+    <owl:Thing rdf:about="#destinationHipothesis">
+        <rdf:type rdf:resource="#CogitativeHipothesis"/>
+        <rdfs:label xml:lang="en"
+            >destinationHipothesis</rdfs:label>
+        <probability rdf:datatype="&xsd;double">1</probability>
+        <hasImplication rdf:resource="#decision_prep_to"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#expr_prep_to -->
+
+    <owl:Thing rdf:about="#expr_prep_to">
+        <rdf:type rdf:resource="#Expression"/>
+        <rdfs:label xml:lang="en">expr_prep_to</rdfs:label>
+        <hasOperator rdf:resource="#Operotor.hasObjectType"/>
+        <hasExpressionObject rdf:resource="#obj_prep_to"/>
+        <hasOperand rdf:resource="#operand_prep_to"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#false -->
+
+    <Boolean rdf:about="#false">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </Boolean>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#field -->
+
+    <Word rdf:about="#field">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <rdfs:label xml:lang="en">field</rdfs:label>
+    </Word>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#menta -->
+
+    <Word rdf:about="#menta">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <rdfs:label xml:lang="en">menta</rdfs:label>
+    </Word>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#noun_pharase_2 -->
+
+    <Phrase rdf:about="#noun_pharase_2">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <rdfs:label xml:lang="en">noun_pharase_1</rdfs:label>
+        <hasWord rdf:resource="#field"/>
+        <hasWord rdf:resource="#surname"/>
+    </Phrase>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#noun_phrase_3 -->
+
+    <owl:Thing rdf:about="#noun_phrase_3">
+        <rdf:type rdf:resource="#Phrase"/>
+        <rdfs:label xml:lang="en">noun_phrase_2</rdfs:label>
+        <hasWord rdf:resource="#customer"/>
+        <hasWord rdf:resource="#page"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#noun_prase_1 -->
+
+    <Phrase rdf:about="#noun_prase_1">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <rdfs:label xml:lang="en">noun_prase_0</rdfs:label>
+        <hasWord rdf:resource="#menta"/>
+    </Phrase>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#obj_0 -->
+
+    <owl:Thing rdf:about="#obj_0">
+        <rdf:type rdf:resource="#Object"/>
+        <rdfs:label xml:lang="en">obj_0</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#obj_1 -->
+
+    <owl:Thing rdf:about="#obj_1">
+        <rdf:type rdf:resource="#Object"/>
+        <rdfs:label xml:lang="en">obj_1</rdfs:label>
+        <hasComprehension rdf:resource="#destinationComprehension_obj_1"/>
+        <hasObjectType rdf:resource="#prep_to"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#obj_prep_to -->
+
+    <owl:Thing rdf:about="#obj_prep_to">
+        <rdf:type rdf:resource="#ExpressionObject"/>
+        <rdfs:label xml:lang="en">obj_prep_to</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#operand_prep_to -->
+
+    <Operand rdf:about="#operand_prep_to">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <rdfs:label xml:lang="en">operand_prep_to</rdfs:label>
+        <hasValue rdf:resource="#prep_to"/>
+    </Operand>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#page -->
+
+    <owl:Thing rdf:about="#page">
+        <rdf:type rdf:resource="#Word"/>
+        <rdfs:label xml:lang="en">page</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#pageDestination -->
+
+    <owl:Thing rdf:about="#pageDestination">
+        <rdf:type rdf:resource="#Destination"/>
+        <rdfs:label xml:lang="en">pageDestination</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#prep_phrase_0 -->
+
+    <Phrase rdf:about="#prep_phrase_0">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <rdfs:label xml:lang="en">prep_phrase_0</rdfs:label>
+        <hasWord rdf:resource="#customer"/>
+        <hasWord rdf:resource="#page"/>
+        <hasWord rdf:resource="#to"/>
+    </Phrase>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#prep_to -->
+
+    <owl:Thing rdf:about="#prep_to">
+        <rdf:type rdf:resource="#ObjectType"/>
+        <rdfs:label xml:lang="en">prep_to</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#sen_0 -->
+
+    <Sentence rdf:about="#sen_0">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <rdfs:label xml:lang="en">sen_0</rdfs:label>
+    </Sentence>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#statement_0 -->
+
+    <owl:Thing rdf:about="#statement_0">
+        <rdf:type rdf:resource="#Statement"/>
+        <rdfs:label xml:lang="en">statement_0</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#subj_0 -->
+
+    <owl:Thing rdf:about="#subj_0">
+        <rdf:type rdf:resource="#Subject"/>
+        <rdfs:label xml:lang="en">subj_0</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#surname -->
+
+    <owl:Thing rdf:about="#surname">
+        <rdf:type rdf:resource="#Word"/>
+        <rdfs:label xml:lang="en">surname</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#testComp -->
+
+    <owl:Thing rdf:about="#testComp">
+        <rdf:type rdf:resource="#Comprehension"/>
+        <hasObjectValue rdf:resource="#AnyDestination"/>
+        <hasSubjectValue rdf:resource="#AnyDestination"/>
+        <hasAnyDomain rdf:resource="#AnyDestination"/>
+        <anyObjectWithType rdf:resource="#ObjectType.dobj"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#to -->
+
+    <Word rdf:about="#to">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <rdfs:label xml:lang="en">to</rdfs:label>
+    </Word>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#true -->
+
+    <owl:Thing rdf:about="#true">
+        <rdf:type rdf:resource="#Boolean"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#verb_phrase -->
+
+    <Phrase rdf:about="#verb_phrase">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <rdfs:label xml:lang="en">verb_phrase_0</rdfs:label>
+        <hasWord rdf:resource="#add"/>
+    </Phrase>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

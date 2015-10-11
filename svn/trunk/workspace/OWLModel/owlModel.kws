@@ -1,0 +1,22 @@
+#Sun Jul 26 01:11:15 MSD 2009
+0.anchor.y=0
+0.defaultEvolutionParameters.domainRangeShape=0
+0.anchor.height=934
+0.anchor.x=0
+0.defaultEvolutionParameters.orphanedInstances=1
+0.connection.0.value=edu.unika.aifb.kaon.apionrdf.KAONConnectionImpl
+0.moduleName=OIModelerModule
+0.defaultEvolutionParameters.propertyRangeEmpty=1
+count=1
+0.defaultEvolutionParameters.instanceConsistency=0
+0.defaultEvolutionParameters.propertyDomainEmpty=1
+0.physicalURI=file\:/C\:/idpWorkspace/OWLModel/src/main/kaon/LinguisticCogitativeDomainModelShort.kaon
+0.anchor.width=1280
+0.defaultEvolutionParameters.orphanedConcepts=2
+0.defaultEvolutionParameters.conceptHierarchyShape=0
+0.languageURI=http\://kaon.semanticweb.org/2001/11/kaon-lexical\#en
+0.defaultEvolutionParameters.orphanedProperties=2
+0.connection.count=1
+0.connection.0.key=KAON_CONNECTION
+0.defaultEvolutionParameters.propertyPropagation=0
+0.defaultEvolutionParameters.orphanedPropertyInstances=1

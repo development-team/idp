@@ -1,0 +1,954 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE rdf:RDF [
+    <!ENTITY rdf 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'>
+    <!ENTITY kaon 'http://kaon.semanticweb.org/2001/11/kaon-lexical#'>
+    <!ENTITY a 'http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow#'>
+    <!ENTITY rdfs 'http://www.w3.org/2000/01/rdf-schema#'>
+]>
+
+<?include-rdf logicalURI="http://kaon.semanticweb.org/2001/11/kaon-root" physicalURI="jar:file:/C:/kaon/lib/kaonapi.jar!/edu/unika/aifb/kaon/api/res/kaon-root.xml"?>
+<?include-rdf logicalURI="http://kaon.semanticweb.org/2001/11/kaon-lexical" physicalURI="jar:file:/C:/kaon/lib/kaonapi.jar!/edu/unika/aifb/kaon/api/res/kaon-lexical.xml"?>
+
+<?model-attribute key="OIModel.version" value="313"?>
+
+<rdf:RDF xml:base="http://.idp.org/ontologies/2009/7/LiguisticCogitativeDomainModelShallow"
+    xmlns:rdf="&rdf;"
+    xmlns:kaon="&kaon;"
+    xmlns:a="&a;"
+    xmlns:rdfs="&rdfs;">
+
+<rdfs:Class rdf:ID="ActionObject">
+    <rdfs:subClassOf rdf:resource="#AnyAction"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="AddAction">
+    <rdfs:subClassOf rdf:resource="#AnyAction"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="AnyAction">
+    <rdfs:subClassOf rdf:resource="#AnyDomain"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="AnyBoolean">
+    <rdfs:subClassOf rdf:resource="#AnyFromRequest"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="AnyCogitative">
+    <rdfs:subClassOf rdf:resource="&kaon;Root"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="AnyCommunicational">
+    <rdfs:subClassOf rdf:resource="#AnyCogitative"/>
+</rdfs:Class>
+<a:Destination rdf:ID="AnyDestination"/>
+<rdfs:Class rdf:ID="AnyDomain">
+    <rdfs:subClassOf rdf:resource="&kaon;Root"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="AnyExpression">
+    <rdfs:subClassOf rdf:resource="#AnyLearning"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="AnyFromRequest">
+    <rdfs:subClassOf rdf:resource="#AnyCommunicational"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="AnyHipothesis">
+    <rdfs:subClassOf rdf:resource="#AnyCogitative"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="AnyLearning">
+    <rdfs:subClassOf rdf:resource="#AnyCogitative"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="AnyLinguistic">
+    <rdfs:subClassOf rdf:resource="&kaon;Root"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="AnyObject">
+    <rdfs:subClassOf rdf:resource="#AnyCommunicational"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="AnyObjectType">
+    <rdfs:subClassOf rdf:resource="#AnyStament"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="AnyOperand">
+    <rdfs:subClassOf rdf:resource="#AnyExpression"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="AnyPlace">
+    <rdfs:subClassOf rdf:resource="#AnyAction"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="AnyStament">
+    <rdfs:subClassOf rdf:resource="#AnyCommunicational"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="AnyStatement">
+    <rdfs:subClassOf rdf:resource="#AnyStament"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="AnySubject">
+    <rdfs:subClassOf rdf:resource="#AnyStament"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Boolean">
+    <rdfs:subClassOf rdf:resource="#AnyBoolean"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="CogitativeHipothesis">
+    <rdfs:subClassOf rdf:resource="#AnyHipothesis"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Comprehension">
+    <rdfs:subClassOf rdf:resource="#AnyCogitative"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Concequent">
+    <rdfs:subClassOf rdf:resource="#AnyLearning"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Creteria">
+    <rdfs:subClassOf rdf:resource="#AnyFromRequest"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Decision">
+    <rdfs:subClassOf rdf:resource="#AnyLearning"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Destination">
+    <rdfs:subClassOf rdf:resource="#AnyPlace"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Expression">
+    <rdfs:subClassOf rdf:resource="#AnyExpression"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="ExpressionObject">
+    <rdfs:subClassOf rdf:resource="#AnyExpression"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Language">
+    <rdfs:subClassOf rdf:resource="#AnyLinguistic"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Object">
+    <rdfs:subClassOf rdf:resource="#AnyObject"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="ObjectType">
+    <rdfs:subClassOf rdf:resource="#AnyObjectType"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Operator">
+    <rdfs:subClassOf rdf:resource="#AnyLearning"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="PartOfSpeach">
+    <rdfs:subClassOf rdf:resource="#AnyLinguistic"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Phrase">
+    <rdfs:subClassOf rdf:resource="#AnyLinguistic"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Predicate">
+    <rdfs:subClassOf rdf:resource="#AnyStatement"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="RemoveAction">
+    <rdfs:subClassOf rdf:resource="#AnyAction"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Representation">
+    <rdfs:subClassOf rdf:resource="#AnyCogitative"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Request">
+    <rdfs:subClassOf rdf:resource="#AnyFromRequest"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Sentence">
+    <rdfs:subClassOf rdf:resource="#AnyLinguistic"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Source">
+    <rdfs:subClassOf rdf:resource="#AnyPlace"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Subject">
+    <rdfs:subClassOf rdf:resource="#AnySubject"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Word">
+    <rdfs:subClassOf rdf:resource="#AnyLinguistic"/>
+</rdfs:Class>
+<a:Word rdf:ID="add"/>
+<a:Operator rdf:ID="and"/>
+<a:AnyBoolean rdf:ID="anyBoolean"/>
+<rdf:Property rdf:ID="anyHipothesisHasRepresentation">
+    <rdfs:domain rdf:resource="#AnyHipothesis"/>
+    <rdfs:range rdf:resource="#Representation"/>
+</rdf:Property>
+<rdf:Property rdf:ID="anyObject">
+    <rdf:type rdf:resource="#AnyObject"/>
+    <rdfs:domain rdf:resource="#Comprehension"/>
+    <rdfs:range rdf:resource="#AnyObject"/>
+</rdf:Property>
+<a:AnyObjectType rdf:ID="anyObjectType"/>
+<rdf:Property rdf:ID="anyObjectWithType">
+    <rdfs:domain rdf:resource="#Comprehension"/>
+    <rdfs:range rdf:resource="#ObjectType"/>
+</rdf:Property>
+<rdf:Property rdf:ID="anySubject">
+    <rdfs:domain rdf:resource="#Comprehension"/>
+    <rdfs:range rdf:resource="#AnySubject"/>
+</rdf:Property>
+<rdf:Property rdf:ID="cogitativeHipothesisHasComprehension">
+    <rdfs:domain rdf:resource="#AnyHipothesis"/>
+    <rdfs:range rdf:resource="#Comprehension"/>
+</rdf:Property>
+<rdfs:Class rdf:ID="compoundAction">
+    <rdfs:subClassOf rdf:resource="#AnyAction"/>
+</rdfs:Class>
+<a:Concequent rdf:ID="con_prep_to"/>
+<rdfs:Class rdf:ID="createAction">
+    <rdfs:subClassOf rdf:resource="#AnyAction"/>
+</rdfs:Class>
+<a:Word rdf:ID="customer"/>
+<a:Decision rdf:ID="decision_prep_to">
+    <a:hasConsequent rdf:resource="#con_prep_to"/>
+</a:Decision>
+<a:Comprehension rdf:ID="destinationComprehension">
+    <a:hasAnyDomain rdf:resource="#AnyDestination"/>
+</a:Comprehension>
+<a:Comprehension rdf:ID="destinationComprehension_obj_1">
+    <a:hasAnyDomain rdf:resource="#pageDestination"/>
+</a:Comprehension>
+<a:CogitativeHipothesis rdf:ID="destinationHipothesis">
+    <a:cogitativeHipothesisHasComprehension rdf:resource="#destinationComprehension"/>
+</a:CogitativeHipothesis>
+<a:Expression rdf:ID="expr_prep_to">
+    <a:hasExpressionObject rdf:resource="#obj_prep_to"/>
+    <a:hasOperand rdf:resource="#operand_prep_to"/>
+    <a:hasOperator rdf:resource="#hasType"/>
+</a:Expression>
+<rdf:Property rdf:ID="expressionObjectHasValue">
+    <rdfs:domain rdf:resource="#ExpressionObject"/>
+    <rdfs:range rdf:resource="#AnyCommunicational"/>
+</rdf:Property>
+<a:Boolean rdf:ID="false"/>
+<a:Word rdf:ID="field"/>
+<rdf:Property rdf:ID="hasAction">
+    <rdfs:domain rdf:resource="#compoundAction"/>
+    <rdfs:range rdf:resource="#AnyAction"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasActoionObject">
+    <rdfs:domain rdf:resource="#AddAction"/>
+    <rdfs:domain rdf:resource="#RemoveAction"/>
+    <rdfs:domain rdf:resource="#createAction"/>
+    <rdfs:range rdf:resource="#ActionObject"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasAnyDomain">
+    <rdfs:domain rdf:resource="#Comprehension"/>
+    <rdfs:range rdf:resource="#AnyDomain"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasComprehension">
+    <rdfs:domain rdf:resource="#AnyCommunicational"/>
+    <rdfs:domain rdf:resource="#Concequent"/>
+    <rdfs:range rdf:resource="#Comprehension"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasConsequent">
+    <rdfs:domain rdf:resource="#Decision"/>
+    <rdfs:range rdf:resource="#Concequent"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasCreteria">
+    <rdfs:domain rdf:resource="#Request"/>
+    <rdfs:range rdf:resource="#Creteria"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasDecision">
+    <rdfs:domain rdf:resource="#CogitativeHipothesis"/>
+    <rdfs:domain rdf:resource="#Concequent"/>
+    <rdfs:range rdf:resource="#Decision"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasDestination">
+    <rdfs:domain rdf:resource="#AddAction"/>
+    <rdfs:domain rdf:resource="#createAction"/>
+    <rdfs:range rdf:resource="#Destination"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasExpression">
+    <rdfs:domain rdf:resource="#Decision"/>
+    <rdfs:range rdf:resource="#Expression"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasExpressionObject">
+    <rdfs:domain rdf:resource="#Expression"/>
+    <rdfs:range rdf:resource="#ExpressionObject"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasLanguage">
+    <rdfs:domain rdf:resource="#Word"/>
+    <rdfs:range rdf:resource="#Language"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasObject">
+    <rdfs:domain rdf:resource="#Predicate"/>
+    <rdfs:domain rdf:resource="#Request"/>
+    <rdfs:range rdf:resource="#Object"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasObjectType">
+    <rdfs:domain rdf:resource="#Object"/>
+    <rdfs:range rdf:resource="#ObjectType"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasObjectValue">
+    <rdfs:domain rdf:resource="#Comprehension"/>
+    <rdfs:range rdf:resource="#Object"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasOperand">
+    <rdfs:domain rdf:resource="#Expression"/>
+    <rdfs:range rdf:resource="#AnyOperand"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasOperator">
+    <rdfs:domain rdf:resource="#Expression"/>
+    <rdfs:range rdf:resource="#Operator"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasPOS">
+    <rdfs:domain rdf:resource="#Word"/>
+    <rdfs:range rdf:resource="#PartOfSpeach"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasPhrase">
+    <rdfs:domain rdf:resource="#Sentence"/>
+    <rdfs:range rdf:resource="#Phrase"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasRepresentation">
+    <rdfs:domain rdf:resource="#AnyDomain"/>
+    <rdfs:domain rdf:resource="#Concequent"/>
+    <rdfs:range rdf:resource="#Representation"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasSource">
+    <rdfs:domain rdf:resource="#RemoveAction"/>
+    <rdfs:range rdf:resource="#Source"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasStatement">
+    <rdfs:domain rdf:resource="#Representation"/>
+    <rdfs:range rdf:resource="#AnyCommunicational"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasStatement1">
+    <rdfs:domain rdf:resource="#Creteria"/>
+    <rdfs:range rdf:resource="#Predicate"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasSubject">
+    <rdfs:domain rdf:resource="#Predicate"/>
+    <rdfs:range rdf:resource="#Subject"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasSubjectValue">
+    <rdfs:domain rdf:resource="#Comprehension"/>
+    <rdfs:range rdf:resource="#Subject"/>
+</rdf:Property>
+<a:Operator rdf:ID="hasType"/>
+<rdf:Property rdf:ID="hasValue">
+    <rdfs:domain rdf:resource="#AnyOperand"/>
+    <rdfs:range rdf:resource="#AnyCommunicational"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasVerb">
+    <rdfs:domain rdf:resource="#Predicate"/>
+    <rdfs:range rdf:resource="#Word"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasWord">
+    <rdfs:domain rdf:resource="#Phrase"/>
+    <rdfs:range rdf:resource="#Word"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1248545940290-1446930553"
+    kaon:value="AnyLinguistic">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#AnyLinguistic"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248546038112-2105356089"
+    kaon:value="AnyDomain">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#AnyDomain"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248546195612-1947698657"
+    kaon:value="AnyCogitative">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#AnyCogitative"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248546489770-2007408996"
+    kaon:value="Word">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Word"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248546528503-1961598700"
+    kaon:value="Phrase">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Phrase"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248546872689-1040756333"
+    kaon:value="PartOfSpeach">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#PartOfSpeach"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248546889598-1634442335"
+    kaon:value="Language">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Language"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248547310651-50931412"
+    kaon:value="AnyLearning">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#AnyLearning"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248547970136-1604633100"
+    kaon:value="AnyFromStament">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#AnyStament"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248547991944-737587631"
+    kaon:value="Statement">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Predicate"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248548054906-2050877825"
+    kaon:value="Subject">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Subject"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248548064032-118412750"
+    kaon:value="Object">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Object"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248548104686-713573828"
+    kaon:value="hasSubject">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasSubject"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248548121393-459549189"
+    kaon:value="hasObject">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasObject"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248548166493-541761816"
+    kaon:value="hasWord">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasWord"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248548182576-219372727"
+    kaon:value="hasPOS">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasPOS"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248548199128-1829643191"
+    kaon:value="hasLanguage">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasLanguage"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248548231092-1225313554"
+    kaon:value="Sentence">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Sentence"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248548250312-49365666"
+    kaon:value="hasPhrase">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasPhrase"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248549847966-718719471"
+    kaon:value="Operand">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#AnyOperand"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248549896972-888810527"
+    kaon:value="Operator">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Operator"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248549905671-572749525"
+    kaon:value="Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Expression"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248549944279-237279094"
+    kaon:value="ExpressionObject">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#ExpressionObject"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248550025325-1003690975"
+    kaon:value="ObjectType">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#ObjectType"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248550035716-226139993"
+    kaon:value="hasObjectType">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasObjectType"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248550264203-1874923409"
+    kaon:value="hasValue">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasValue"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248550416446-1700527329"
+    kaon:value="hasExpressionObject">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasExpressionObject"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248550430608-1845215936"
+    kaon:value="hasOperator">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasOperator"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248550514873-417535608"
+    kaon:value="hasOperand">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasOperand"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248550654570-1931791903"
+    kaon:value="AnyObject">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#AnyObject"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248550724968-798277199"
+    kaon:value="AnyObjectType">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#AnyObjectType"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248550815201-952911068"
+    kaon:value="AnySubject">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#AnySubject"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248551094531-1011501406"
+    kaon:value="Implication">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Decision"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248551139053-1109368512"
+    kaon:value="Consequent">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Concequent"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248551192802-115692424"
+    kaon:value="hasConsequent">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasConsequent"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248551220601-1363438142"
+    kaon:value="AnyCommunicational">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#AnyCommunicational"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248551243000-2074898384"
+    kaon:value="Comprehension">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Comprehension"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248551256210-133546753"
+    kaon:value="Representation">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Representation"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248551474396-131518824"
+    kaon:value="hasComprehension">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasComprehension"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248551508047-444055877"
+    kaon:value="hasAnyDomain">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasAnyDomain"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248551540801-1198049336"
+    kaon:value="hasRepresentation">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasRepresentation"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248551569935-1096102923"
+    kaon:value="hasAnyCommunicational">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasStatement"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248551857125-1730760959"
+    kaon:value="AnyFromRequest">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#AnyFromRequest"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248551900938-656030408"
+    kaon:value="Creteria">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Creteria"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248551949419-44315179"
+    kaon:value="Request">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Request"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248551964817-100785664"
+    kaon:value="hasCreteria">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasCreteria"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248552634353-752115968"
+    kaon:value="hasStatement">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasStatement1"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248553125971-404750708"
+    kaon:value="menta">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#menta"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248553141077-679918847"
+    kaon:value="field">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#field"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248553154631-1466969389"
+    kaon:value="surname">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#surname"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248553180725-409521428"
+    kaon:value="add">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#add"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248553228615-1516421593"
+    kaon:value="to">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#to"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248553239630-1034825193"
+    kaon:value="customer">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#customer"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248553255654-1167776707"
+    kaon:value="page">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#page"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248553295147-1686844544"
+    kaon:value="noun_prase_0">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#noun_prase_1"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248553335564-1682295990"
+    kaon:value="noun_pharase_1">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#noun_pharase_2"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248553375467-254969714"
+    kaon:value="noun_phrase_2">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#noun_phrase_3"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248553461071-1861596071"
+    kaon:value="verb_phrase_0">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#verb_phrase"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248553564901-1832760210"
+    kaon:value="prep_phrase_0">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#prep_phrase_0"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248553718097-1603662702"
+    kaon:value="subj_0">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#subj_0"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248553972127-126702375"
+    kaon:value="sen_0">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#sen_0"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248554033279-1178537183"
+    kaon:value="subjectHasPhrase">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#subjectHasPhrase"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248554069587-1950330448"
+    kaon:value="objectHasPhrase">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#objectHasPhrase"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248554202875-1394774513"
+    kaon:value="statement_0">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#statement_0"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248554265860-266121766"
+    kaon:value="obj_0">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#obj_0"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248554289868-1326807513"
+    kaon:value="obj_1">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#obj_1"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248554303957-388176667"
+    kaon:value="prep_to">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#prep_to"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248554474464-1730328801"
+    kaon:value="AnyAction">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#AnyAction"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248554496970-14229294"
+    kaon:value="AddAction">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#AddAction"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248554556150-2002819405"
+    kaon:value="ActionObject">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#ActionObject"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248554570099-1680978169"
+    kaon:value="Destination">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Destination"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248554594623-609251390"
+    kaon:value="hasDestination">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasDestination"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248554614377-497183674"
+    kaon:value="hasActoionObject">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasActoionObject"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248554709899-1484755762"
+    kaon:value="AnyHypothesis">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#AnyHipothesis"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248554748350-366675152"
+    kaon:value="CogitativeHypothesis">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#CogitativeHipothesis"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248554923273-1992470340"
+    kaon:value="anyHipothesisComprehension">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#cogitativeHipothesisHasComprehension"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248555026461-544752455"
+    kaon:value="anyHipothesisHasRepresentation">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#anyHipothesisHasRepresentation"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248555108694-1134767962"
+    kaon:value="expr_prep_to">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#expr_prep_to"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248555146752-676950033"
+    kaon:value="eq">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#and"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248555301822-1967621610"
+    kaon:value="obj_prep_to">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#obj_prep_to"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248555314602-390835893"
+    kaon:value="anyObject">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#anyObject"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248555343797-961344998"
+    kaon:value="expressionObjectHasValue">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#expressionObjectHasValue"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248555549775-1946956576"
+    kaon:value="operand_prep_to">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#operand_prep_to"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248555657588-228086313"
+    kaon:value="anyObjectType">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#anyObjectType"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248555783637-2000227912"
+    kaon:value="destinationHipothesis">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#destinationHipothesis"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248555848895-2105521530"
+    kaon:value="destinationComprehension">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#destinationComprehension"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248555926257-1070543696"
+    kaon:value="implication_prep_to">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#decision_prep_to"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248555950044-926584959"
+    kaon:value="con_prep_to">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#con_prep_to"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248556043100-774985019"
+    kaon:value="anyDestination">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#AnyDestination"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248556178060-666205512"
+    kaon:value="destinationComprehension_obj_1">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#destinationComprehension_obj_1"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248556232733-1025709765"
+    kaon:value="pageDestination">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#pageDestination"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1248637154280-284167539"
+    kaon:value="hasType">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasType"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1251836194500-289077610"
+    kaon:value="hasImplication">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasDecision"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1252433186347-497230578"
+    kaon:value="hasVerb">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasVerb"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1252433486921-949319398"
+    kaon:value="AnyExpression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#AnyExpression"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1252439313318-1695460368"
+    kaon:value="AnyStatement">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#AnyStatement"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1252524812848-1703207569"
+    kaon:value="AnyBoolean">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#AnyBoolean"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1252524824785-1881395560"
+    kaon:value="anyBoolean">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#anyBoolean"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1252524837098-1984032666"
+    kaon:value="Boolean">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Boolean"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1252524847428-982760992"
+    kaon:value="true">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#true"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1252524857105-1885972172"
+    kaon:value="false">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#false"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1254855913087-1323425411"
+    kaon:value="hasAntecedent">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasExpression"/>
+</kaon:Label>
+<kaon:Documentation rdf:ID="i-1254856260249-154063596">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Decision"/>
+    <kaon:value><![CDATA[Implication is special type of expression, should be migrated to expression in future versions, currently left as is, not to implement syntax check of logical expressions in prototype.
+Implication is top level expression always.]]></kaon:value>
+</kaon:Documentation>
+<kaon:Label rdf:ID="i-1257324443053-1274081963"
+    kaon:value="RemoveAction">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#RemoveAction"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1257324562944-1422935661"
+    kaon:value="AnyPlace">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#AnyPlace"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1257324581364-1093686493"
+    kaon:value="Source">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Source"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1257324597691-494613313"
+    kaon:value="hasSource">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasSource"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1257324745202-1558785177"
+    kaon:value="createAction">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#createAction"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1257324837441-475662910"
+    kaon:value="CompoundAction">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#compoundAction"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1257324861175-1653582648"
+    kaon:value="hasAction">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasAction"/>
+</kaon:Label>
+<kaon:Documentation rdf:ID="i-1257324923079-1103347749"
+    kaon:value="it is some kind of expressions of actions">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#compoundAction"/>
+</kaon:Documentation>
+<kaon:Label rdf:ID="i-1257497403415-1126998284"
+    kaon:value="anyObjectWithType">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#anyObjectWithType"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1257497447169-1629269446"
+    kaon:value="anyObject">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#anyObject"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1257497485411-531542549"
+    kaon:value="anySubject">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#anySubject"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1257497668761-1774784191"
+    kaon:value="hasObjectValue">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasObjectValue"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1257497715230-1192948111"
+    kaon:value="hasSubjectValue">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasSubjectValue"/>
+</kaon:Label>
+<a:Word rdf:ID="menta"/>
+<a:Phrase rdf:ID="noun_pharase_2">
+    <a:hasWord rdf:resource="#field"/>
+    <a:hasWord rdf:resource="#surname"/>
+</a:Phrase>
+<a:Phrase rdf:ID="noun_phrase_3">
+    <a:hasWord rdf:resource="#customer"/>
+    <a:hasWord rdf:resource="#page"/>
+</a:Phrase>
+<a:Phrase rdf:ID="noun_prase_1">
+    <a:hasWord rdf:resource="#menta"/>
+</a:Phrase>
+<a:Object rdf:ID="obj_0">
+    <a:objectHasPhrase rdf:resource="#noun_pharase_2"/>
+</a:Object>
+<a:Object rdf:ID="obj_1">
+    <a:hasComprehension rdf:resource="#destinationComprehension_obj_1"/>
+    <a:hasObjectType rdf:resource="#prep_to"/>
+    <a:objectHasPhrase rdf:resource="#prep_phrase_0"/>
+</a:Object>
+<a:ExpressionObject rdf:ID="obj_prep_to">
+    <a:expressionObjectHasValue rdf:resource="#anyObject"/>
+</a:ExpressionObject>
+<rdf:Property rdf:ID="objectHasPhrase">
+    <rdfs:domain rdf:resource="#Object"/>
+    <rdfs:range rdf:resource="#Phrase"/>
+</rdf:Property>
+<a:AnyOperand rdf:ID="operand_prep_to">
+    <a:hasValue rdf:resource="#prep_to"/>
+</a:AnyOperand>
+<a:Word rdf:ID="page"/>
+<a:Destination rdf:ID="pageDestination"/>
+<a:Phrase rdf:ID="prep_phrase_0">
+    <a:hasWord rdf:resource="#customer"/>
+    <a:hasWord rdf:resource="#page"/>
+    <a:hasWord rdf:resource="#to"/>
+</a:Phrase>
+<a:ObjectType rdf:ID="prep_to"/>
+<a:Sentence rdf:ID="sen_0"/>
+<a:Predicate rdf:ID="statement_0"/>
+<a:Subject rdf:ID="subj_0">
+    <a:subjectHasPhrase rdf:resource="#noun_prase_1"/>
+</a:Subject>
+<rdf:Property rdf:ID="subjectHasPhrase">
+    <rdfs:domain rdf:resource="#Subject"/>
+    <rdfs:range rdf:resource="#Phrase"/>
+</rdf:Property>
+<a:Word rdf:ID="surname"/>
+<a:Word rdf:ID="to"/>
+<a:Boolean rdf:ID="true"/>
+<a:Phrase rdf:ID="verb_phrase">
+    <a:hasWord rdf:resource="#add"/>
+</a:Phrase>
+
+</rdf:RDF>

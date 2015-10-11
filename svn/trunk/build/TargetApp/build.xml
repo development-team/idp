@@ -1,0 +1,80 @@
+<project name="TargetApp" default="deploy" basedir=".">
+
+    <target name="init" description="Build initialization">
+        <property file="build.properties"/>
+
+        <path id="libs">
+            <fileset dir="${lib.dir}">
+                <include name="**/*.jar"/>
+            </fileset>
+        </path>
+    </target>
+
+    <target name="clean" depends="init">
+        <delete dir="${module.build.dir}"/>
+	<delete> 
+		<fileset dir="${build.dir}"> 
+			<include name="**/*.jar"/>
+			<include name="**/*.war"/>
+		</fileset>
+	</delete>
+        <delete dir="${module.web.dir}/WEB-INF/classes"/>
+        <delete dir="${module.web.dir}/WEB-INF/lib"/>
+    </target>
+
+    <target name="deploy" depends="init">
+        <mkdir dir="${module.build.dir}"/>
+
+        <javac srcdir="${module.src.dir}"
+               destdir="${module.build.dir}"
+               debug="${compiler.debug}"
+               optimize="${compiler.optimize}"
+               deprecation="${compiler.deprecation}"
+               encoding="${compiler.encoding}">
+            <classpath refid="libs"/>
+        </javac>
+
+        <copy todir="${module.build.dir}">
+            <fileset dir="${module.src.dir}">
+                <include name="**/*"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+
+        <mkdir dir="${module.web.dir}/WEB-INF/classes"/>
+    	<copy todir="${module.web.dir}/WEB-INF/classes">
+            <fileset dir="${module.build.dir}"/>
+        </copy>
+    	<mkdir dir="${module.web.dir}/WEB-INF/classes/META-INF" />       
+
+    	<mkdir dir="${module.web.dir}/WEB-INF/lib"/>
+    	<copy todir="${module.web.dir}/WEB-INF/lib">
+    	    <fileset dir="${lib.dir}"/>
+    	</copy>
+    	
+        <jar jarfile="${module.dist.dir}/${module.name}">
+            <fileset dir="${module.web.dir}"/>
+        </jar>
+    </target>
+
+    <target name="deployToMySQL" depends="deploy">
+        <exec executable="cmd.exe" os="Windows 2000" output="dir.txt">
+            <arg line="mysql -u root -h localhost -P [port] orders &lt; src\sql\Customer.sql"/>
+        </exec>
+    </target>
+
+    <target name="deployToServer" depends="deploy, deployToMySQL">
+        <copy todir="${server.dir}">
+            <fileset dir="${module.dist.dir}">
+                <include name="**/*.jar"/>
+                <include name="**/*.war"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>	
+        <!-- unzip src="${module.dist.dir}/${module.name}.war" dest="${server.dir}/${module.name}.war"/-->
+
+    </target>
+
+    <target name="all" depends="clean, deployToServer"/>
+
+</project>

@@ -1,0 +1,10 @@
+#labels Featured,Phase-Requirements
+#The list of current features.
+
+= Current features =
+  * Parse simple (1 sentence) CR, (ex.: Menta place Surname field on Customer page.) and create a predicate.
+  * Associate predicate with the domain class(action) from application domain
+    * Find most probable association rule
+    * Create the domain individual based on rule (action)
+  * Run the action
+    * Create/delete proper individuals(fields) in the domain model(modules description)

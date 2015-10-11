@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Welcome Page</title>
+
+<script language="Javascript">
+
+function testCreateCustomer() {
+
+	if (document.forms[0].first_name.value.length == 0) {
+		alert("Empty first name");
+		return false;
+	}
+	
+	if (document.forms[0].last_name.value.length == 0) {
+		alert("Empty last name");
+		return false;
+	}
+	
+	if (document.forms[0].address.value.length == 0) {
+		alert("Empty address");
+		return false;
+	}
+	
+	return true;
+
+}
+
+
+function testCreateOrder() {
+
+	if (document.forms[1].cust_id.value.length == 0) {
+		alert("Empty customer id field");
+		return false;
+	}
+	
+	if (document.forms[1].date_placed.value.length == 0) {
+		alert("Empty date placed");
+		return false;
+	}
+	
+	if (document.forms[1].order_amount.value.length == 0) {
+		alert("Empty order amount");
+		return false;
+	}
+	
+	return true;
+}
+
+function testListOrders() {
+
+	if (document.forms[2].cust_id.value.length == 0) {
+		alert("Empty customer id field");
+		return false;
+	}
+	return true;
+}
+
+</script>
+
+</head>
+<body>
+
+<a href="/Orders/ListCustomers">List Registered Customer</a><p>
+
+<hr>
+
+<form method="get" action="/Orders/CreateCustomer">
+<b>Customer Registration</b><p>
+First Name: <input type="text" name="first_name" size="30"><br>
+Last Name:  <input type="text" name="last_name" size="30"><br>
+Address:   <input type="text" name="address" size="60"><br>
+<input type="submit" value="Create Customer" onClick="return testCreateCustomer();">
+
+</form>
+
+<hr>
+
+<form method="get" action="/Orders/CreateOrder">
+<b>Create new order for customer:</b><br>
+Customer id: <input name="cust_id" type="text" size="10"><br>
+Order date: <input name="date_placed" type="text" size="20"><br>
+Order amount: <input name="order_amount" type="text" size="20"><br>
+<input type="submit" value="Create Order" onClick="return testCreateOrder();">
+</form>
+
+<hr>
+
+<form method="get" action="/Orders/ListCustomerOrders">
+<b>List orders for customer:</b><br>
+Customer id: <input name="cust_id" type="text" size="10">
+<input type="submit" value="List Orders" onClick="return testListOrders();">
+</form>
+
+
+</body>
+</html>

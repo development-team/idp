@@ -1,0 +1,2523 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY TargetApp "http://idp.org/ontologies/2009/10/TargetApp.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://idp.org/ontologies/2009/10/TargetApp.owl#"
+     xml:base="http://idp.org/ontologies/2009/10/TargetApp.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:TargetApp="http://idp.org/ontologies/2009/10/TargetApp.owl#">
+    <owl:Ontology rdf:about=""/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#Database -->
+
+    <owl:ObjectProperty rdf:about="#Database"/>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#MethodProperties -->
+
+    <owl:ObjectProperty rdf:about="#MethodProperties"/>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#applicationProperties -->
+
+    <owl:ObjectProperty rdf:about="#applicationProperties"/>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#classDefinition -->
+
+    <owl:ObjectProperty rdf:about="#classDefinition"/>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#definitionProperties -->
+
+    <owl:ObjectProperty rdf:about="#definitionProperties"/>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#dependsOn -->
+
+    <owl:ObjectProperty rdf:about="#dependsOn">
+        <owl:inverseOf rdf:resource="#linkedToModule"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#extends -->
+
+    <owl:ObjectProperty rdf:about="#extends">
+        <rdfs:subPropertyOf rdf:resource="#classDefinition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#hasAccessModifier -->
+
+    <owl:ObjectProperty rdf:about="#hasAccessModifier">
+        <rdfs:subPropertyOf rdf:resource="#hasBehavior"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#hasBehavior -->
+
+    <owl:ObjectProperty rdf:about="#hasBehavior">
+        <rdfs:subPropertyOf rdf:resource="#MethodProperties"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#hasBody -->
+
+    <owl:ObjectProperty rdf:about="#hasBody">
+        <rdfs:subPropertyOf rdf:resource="#hasBehavior"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#hasContent -->
+
+    <owl:ObjectProperty rdf:about="#hasContent"/>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#hasContructorDefinition -->
+
+    <owl:ObjectProperty rdf:about="#hasContructorDefinition">
+        <rdfs:subPropertyOf rdf:resource="#hasMethodDefinition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#hasDefinition -->
+
+    <owl:ObjectProperty rdf:about="#hasDefinition"/>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#hasField -->
+
+    <owl:ObjectProperty rdf:about="#hasField"/>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#hasFieldDefinition -->
+
+    <owl:ObjectProperty rdf:about="#hasFieldDefinition">
+        <rdfs:subPropertyOf rdf:resource="#definitionProperties"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#hasFile -->
+
+    <owl:ObjectProperty rdf:about="#hasFile"/>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#hasInputParams -->
+
+    <owl:ObjectProperty rdf:about="#hasInputParams">
+        <rdfs:subPropertyOf rdf:resource="#hasBehavior"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#hasMemoryModifier -->
+
+    <owl:ObjectProperty rdf:about="#hasMemoryModifier">
+        <rdfs:subPropertyOf rdf:resource="#hasBehavior"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#hasMethod -->
+
+    <owl:ObjectProperty rdf:about="#hasMethod">
+        <rdfs:subPropertyOf rdf:resource="#applicationProperties"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#hasMethodDefinition -->
+
+    <owl:ObjectProperty rdf:about="#hasMethodDefinition">
+        <rdfs:subPropertyOf rdf:resource="#definitionProperties"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#hasModule -->
+
+    <owl:ObjectProperty rdf:about="#hasModule">
+        <rdfs:subPropertyOf rdf:resource="#applicationProperties"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#hasProject -->
+
+    <owl:ObjectProperty rdf:about="#hasProject">
+        <rdfs:subPropertyOf rdf:resource="#applicationProperties"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#hasProperty -->
+
+    <owl:ObjectProperty rdf:about="#hasProperty"/>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#hasReference -->
+
+    <owl:ObjectProperty rdf:about="#hasReference">
+        <rdfs:subPropertyOf rdf:resource="#definitionProperties"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#hasReturnType -->
+
+    <owl:ObjectProperty rdf:about="#hasReturnType">
+        <rdfs:subPropertyOf rdf:resource="#hasBehavior"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#hasType -->
+
+    <owl:ObjectProperty rdf:about="#hasType"/>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#implements -->
+
+    <owl:ObjectProperty rdf:about="#implements">
+        <rdfs:subPropertyOf rdf:resource="#classDefinition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#is -->
+
+    <owl:ObjectProperty rdf:about="#is"/>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#isDataType -->
+
+    <owl:ObjectProperty rdf:about="#isDataType"/>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#linkedToModule -->
+
+    <owl:ObjectProperty rdf:about="#linkedToModule">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#throws -->
+
+    <owl:ObjectProperty rdf:about="#throws">
+        <rdfs:subPropertyOf rdf:resource="#classDefinition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#address -->
+
+    <owl:DatatypeProperty rdf:about="#address"/>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#getterMethod -->
+
+    <owl:DatatypeProperty rdf:about="#getterMethod"/>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#isClass -->
+
+    <owl:DatatypeProperty rdf:about="#isClass"/>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#setterMethod -->
+
+    <owl:DatatypeProperty rdf:about="#setterMethod"/>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#sqlString -->
+
+    <owl:DatatypeProperty rdf:about="#sqlString"/>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#value -->
+
+    <owl:DatatypeProperty rdf:about="#value"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#AccessModifier -->
+
+    <owl:Class rdf:about="#AccessModifier">
+        <rdfs:subClassOf rdf:resource="#MethodAttributes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#AnyField -->
+
+    <owl:Class rdf:about="#AnyField">
+        <rdfs:subClassOf rdf:resource="#AnyFromApplication"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasDefinition"/>
+                <owl:allValuesFrom rdf:resource="#FieldDefinition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#AnyFromApplication -->
+
+    <owl:Class rdf:about="#AnyFromApplication">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasFile"/>
+                <owl:allValuesFrom rdf:resource="#File"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#value"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#Application -->
+
+    <owl:Class rdf:about="#Application">
+        <rdfs:subClassOf rdf:resource="#AnyFromApplication"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasProject"/>
+                <owl:allValuesFrom rdf:resource="#Project"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#BLL -->
+
+    <owl:Class rdf:about="#BLL">
+        <rdfs:subClassOf rdf:resource="#Module"/>
+    </owl:Class>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#CommonStructure -->
+
+    <owl:Class rdf:about="#CommonStructure">
+        <rdfs:subClassOf rdf:resource="#Database"/>
+    </owl:Class>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#Configs -->
+
+    <owl:Class rdf:about="#Configs">
+        <rdfs:subClassOf rdf:resource="#Presentation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#DBDataType -->
+
+    <owl:Class rdf:about="#DBDataType">
+        <rdfs:subClassOf rdf:resource="#CommonStructure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#sqlString"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#Data -->
+
+    <owl:Class rdf:about="#Data">
+        <rdfs:subClassOf rdf:resource="#Module"/>
+        <rdfs:subClassOf rdf:resource="#Tables"/>
+    </owl:Class>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#Database -->
+
+    <owl:Class rdf:about="#Database">
+        <rdfs:comment
+            >Contains description of Data structure</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#Definition -->
+
+    <owl:Class rdf:about="#Definition"/>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#Directory -->
+
+    <owl:Class rdf:about="#Directory">
+        <rdfs:subClassOf rdf:resource="#File"/>
+    </owl:Class>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#ExternalTypes -->
+
+    <owl:Class rdf:about="#ExternalTypes">
+        <rdfs:subClassOf rdf:resource="#FakeData"/>
+    </owl:Class>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#FakeData -->
+
+    <owl:Class rdf:about="#FakeData"/>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#Field -->
+
+    <owl:Class rdf:about="#Field">
+        <rdfs:subClassOf rdf:resource="#CommonStructure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#isDataType"/>
+                <owl:someValuesFrom rdf:resource="#DBDataType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#FieldDefinition -->
+
+    <owl:Class rdf:about="#FieldDefinition">
+        <rdfs:subClassOf rdf:resource="#Definition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#File -->
+
+    <owl:Class rdf:about="#File">
+        <rdfs:subClassOf rdf:resource="#FileSystem"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#address"/>
+                <owl:someValuesFrom rdf:resource="&xsd;anyURI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#FileSystem -->
+
+    <owl:Class rdf:about="#FileSystem"/>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#MemoryModifier -->
+
+    <owl:Class rdf:about="#MemoryModifier">
+        <rdfs:subClassOf rdf:resource="#MethodAttributes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#Method -->
+
+    <owl:Class rdf:about="#Method">
+        <rdfs:subClassOf rdf:resource="#AnyFromApplication"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasDefinition"/>
+                <owl:allValuesFrom rdf:resource="#MethodDefinition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#MethodAttributes -->
+
+    <owl:Class rdf:about="#MethodAttributes">
+        <rdfs:subClassOf rdf:resource="#FakeData"/>
+    </owl:Class>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#MethodBody -->
+
+    <owl:Class rdf:about="#MethodBody">
+        <rdfs:subClassOf rdf:resource="#FakeData"/>
+    </owl:Class>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#MethodDefinition -->
+
+    <owl:Class rdf:about="#MethodDefinition">
+        <rdfs:subClassOf rdf:resource="#Definition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#Module -->
+
+    <owl:Class rdf:about="#Module">
+        <rdfs:subClassOf rdf:resource="#AnyFromApplication"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasField"/>
+                <owl:allValuesFrom rdf:resource="#AnyField"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasDefinition"/>
+                <owl:allValuesFrom rdf:resource="#ModuleDefinition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasModule"/>
+                <owl:allValuesFrom rdf:resource="#Module"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasMethod"/>
+                <owl:allValuesFrom rdf:resource="#Method"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#linkedToModule"/>
+                <owl:someValuesFrom rdf:resource="#Module"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#ModuleComplete -->
+
+    <owl:Class rdf:about="#ModuleComplete">
+        <rdfs:subClassOf rdf:resource="#ModuleWithoutFields"/>
+        <rdfs:subClassOf rdf:resource="#ModuleWithoutMethods"/>
+    </owl:Class>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#ModuleDefinition -->
+
+    <owl:Class rdf:about="#ModuleDefinition">
+        <rdfs:subClassOf rdf:resource="#Definition"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasReference"/>
+                <owl:allValuesFrom rdf:resource="#ModuleDefinition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#ModuleWithoutFields -->
+
+    <owl:Class rdf:about="#ModuleWithoutFields">
+        <rdfs:subClassOf rdf:resource="#ModuleDefinition"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasMethodDefinition"/>
+                <owl:allValuesFrom rdf:resource="#MethodDefinition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#ModuleWithoutMethods -->
+
+    <owl:Class rdf:about="#ModuleWithoutMethods">
+        <rdfs:subClassOf rdf:resource="#ModuleDefinition"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasFieldDefinition"/>
+                <owl:allValuesFrom rdf:resource="#FieldDefinition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#ObjectTypes -->
+
+    <owl:Class rdf:about="#ObjectTypes">
+        <rdfs:subClassOf rdf:resource="#FakeData"/>
+    </owl:Class>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#Pages -->
+
+    <owl:Class rdf:about="#Pages">
+        <rdfs:subClassOf rdf:resource="#Module"/>
+        <rdfs:subClassOf rdf:resource="#Presentation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#Presentation -->
+
+    <owl:Class rdf:about="#Presentation"/>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#Project -->
+
+    <owl:Class rdf:about="#Project">
+        <rdfs:subClassOf rdf:resource="#AnyFromApplication"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasModule"/>
+                <owl:someValuesFrom rdf:resource="#Module"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#Property -->
+
+    <owl:Class rdf:about="#Property">
+        <rdfs:subClassOf rdf:resource="#Field"/>
+    </owl:Class>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#Tables -->
+
+    <owl:Class rdf:about="#Tables">
+        <rdfs:subClassOf rdf:resource="#BLL"/>
+        <rdfs:subClassOf rdf:resource="#Database"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasField"/>
+                <owl:someValuesFrom rdf:resource="#Field"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#CTorType -->
+
+    <owl:Thing rdf:about="#CTorType">
+        <rdf:type rdf:resource="#ExternalTypes"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#CommandExecutor -->
+
+    <owl:Thing rdf:about="#CommandExecutor">
+        <rdf:type rdf:resource="#BLL"/>
+        <hasFile rdf:resource="#CommandExecutor.java"/>
+        <hasMethodDefinition rdf:resource="#CommandExecutorCtr"/>
+        <hasFieldDefinition rdf:resource="#ds"/>
+        <hasMethodDefinition rdf:resource="#executeDatabaseCommand"/>
+        <hasMethodDefinition rdf:resource="#getConnection"/>
+        <hasMethodDefinition rdf:resource="#getDataSource"/>
+        <hasMethodDefinition rdf:resource="#getInstance"/>
+        <hasFieldDefinition rdf:resource="#myOnlyInstance"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#CommandExecutor.java -->
+
+    <owl:Thing rdf:about="#CommandExecutor.java"/>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#CommandExecutorCtr -->
+
+    <owl:Thing rdf:about="#CommandExecutorCtr">
+        <value></value>
+        <hasReturnType rdf:resource="#CTorType"/>
+        <hasBody rdf:resource="#CommandExecutor_Body"/>
+        <hasAccessModifier rdf:resource="#private"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#CommandExecutor_Body -->
+
+    <MethodBody rdf:about="#CommandExecutor_Body">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <value
+            >getDataSource();</value>
+    </MethodBody>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#ConnInputParameter -->
+
+    <owl:Thing rdf:about="#ConnInputParameter">
+        <value>conn</value>
+        <isDataType rdf:resource="#Connection"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#Connection -->
+
+    <owl:Thing rdf:about="#Connection">
+        <rdf:type rdf:resource="#ExternalTypes"/>
+        <isClass
+            >java.sql.Connection</isClass>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#CreateCusotmerCtor_Body -->
+
+    <owl:Thing rdf:about="#CreateCusotmerCtor_Body">
+        <value>this.cust = c;</value>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#CreateCustomer -->
+
+    <BLL rdf:about="#CreateCustomer">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <hasFile rdf:resource="#CreateCustomer.java"/>
+        <hasMethodDefinition rdf:resource="#CreateCustomerMethod"/>
+        <linkedToModule rdf:resource="#CreateCustomerServlet"/>
+        <hasContructorDefinition rdf:resource="#CreateCustomer_Constructor"/>
+        <hasFieldDefinition rdf:resource="#CreateCustomer_CustField"/>
+        <dependsOn rdf:resource="#CustomerObject"/>
+        <implements rdf:resource="#DatabaseCommand"/>
+        <dependsOn rdf:resource="#DatabaseCommand"/>
+    </BLL>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#CreateCustomer.java -->
+
+    <owl:Thing rdf:about="#CreateCustomer.java">
+        <address rdf:datatype="&xsd;string"
+            >src/command/CreateCustomer.java</address>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#CreateCustomerMethod -->
+
+    <owl:Thing rdf:about="#CreateCustomerMethod">
+        <rdf:type rdf:resource="#Method"/>
+        <value rdf:datatype="&xsd;string"
+            >executeDatabaseOperation</value>
+        <hasBody rdf:resource="#CreateCustomer_Body"/>
+        <hasReturnType rdf:resource="#Object"/>
+        <hasInputParams rdf:resource="#executeDatabaseCommandParam1"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#CreateCustomerServlet -->
+
+    <owl:Thing rdf:about="#CreateCustomerServlet">
+        <rdf:type rdf:resource="#BLL"/>
+        <rdf:type rdf:resource="#ModuleDefinition"/>
+        <dependsOn rdf:resource="#CreateCustomer"/>
+        <linkedToModule rdf:resource="#Customer_crated"/>
+        <hasFile rdf:resource="#File.CreateCustomerServlet.java"/>
+        <extends rdf:resource="#HttpServlet"/>
+        <hasMethodDefinition rdf:resource="#doGet"/>
+        <hasMethodDefinition rdf:resource="#doPost"/>
+        <linkedToModule rdf:resource="#index"/>
+        <hasMethodDefinition rdf:resource="#init"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#CreateCustomer_Body -->
+
+    <owl:Thing rdf:about="#CreateCustomer_Body">
+        <rdf:type rdf:resource="#MethodBody"/>
+        <value rdf:datatype="&xsd;string"
+            >PreparedStatement sta = conn.prepareStatement(&quot;INSERT INTO CUSTOMER (
+$Customer; separator=&quot;, &quot;$
+) VALUES (
+$Customer:{ ?, }$);
+	$Customer:{
+                       i=i+1 
+                       sta.setString(i,c.$it.getterMethodInvocation$)
+                           }$
+            
+	int rows_updated = sta.executeUpdate();
+	sta.close();
+		
+	return new Integer(rows_updated);</value>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#CreateCustomer_Constructor -->
+
+    <Method rdf:about="#CreateCustomer_Constructor">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <value rdf:datatype="&xsd;string">CreateCustomer</value>
+        <hasBody rdf:resource="#CreateCusotmerCtor_Body"/>
+    </Method>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#CreateCustomer_CustField -->
+
+    <owl:Thing rdf:about="#CreateCustomer_CustField">
+        <rdf:type rdf:resource="#AnyField"/>
+        <value>cust</value>
+        <isDataType rdf:resource="#CustomerObject"/>
+        <hasAccessModifier rdf:resource="#private"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#CreateOrder -->
+
+    <owl:Thing rdf:about="#CreateOrder">
+        <rdf:type rdf:resource="#BLL"/>
+        <hasFile rdf:resource="#CreateOrder.java"/>
+        <hasMethodDefinition rdf:resource="#CreateOrderMethod"/>
+        <hasContructorDefinition rdf:resource="#CreateOrder_Ctr"/>
+        <dependsOn rdf:resource="#DatabaseCommand"/>
+        <implements rdf:resource="#DatabaseCommand"/>
+        <hasField rdf:resource="#order"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#CreateOrder.java -->
+
+    <owl:Thing rdf:about="#CreateOrder.java"/>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#CreateOrderMethod -->
+
+    <owl:Thing rdf:about="#CreateOrderMethod">
+        <value
+            >executeDatabaseOperation</value>
+        <hasBody rdf:resource="#CreateOrder_body"/>
+        <hasReturnType rdf:resource="#Object"/>
+        <hasInputParams rdf:resource="#executeDatabaseCommandParam1"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#CreateOrderServlet -->
+
+    <owl:Thing rdf:about="#CreateOrderServlet">
+        <rdf:type rdf:resource="#BLL"/>
+        <rdf:type rdf:resource="#ModuleDefinition"/>
+        <hasMethodDefinition rdf:resource="#CreateOrderServlet_doGet"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#CreateOrderServlet_doGet -->
+
+    <owl:Thing rdf:about="#CreateOrderServlet_doGet">
+        <value>doGet</value>
+        <throws rdf:resource="#IOException"/>
+        <throws rdf:resource="#ServletException"/>
+        <hasBody rdf:resource="#createcustimerservler_doget"/>
+        <hasInputParams rdf:resource="#request"/>
+        <hasInputParams rdf:resource="#response"/>
+        <hasReturnType rdf:resource="#void"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#CreateOrder_Ctr -->
+
+    <owl:Thing rdf:about="#CreateOrder_Ctr">
+        <value>this.order = o;</value>
+        <hasContructorDefinition rdf:resource="#CreateOrder_Ctr_Body"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#CreateOrder_Ctr_Body -->
+
+    <owl:Thing rdf:about="#CreateOrder_Ctr_Body"/>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#CreateOrder_body -->
+
+    <owl:Thing rdf:about="#CreateOrder_body">
+        <value
+            >PreparedStatement sta = conn.prepareStatement(&quot;INSERT INTO ORDERS (
+$OrderObject.Fields:{
+       $it.value$,
+}$
+) VALUES (
+$OrderObject.Fields:{
+       ?,
+}$);
+	int i=1;
+	$OrderObject.Fields:{
+                           sta.setString(i,order.$it.getterMethod$);
+                     }$
+	int rows_updated = sta.executeUpdate();
+	sta.close();
+		
+	return new Integer(rows_updated);</value>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#Customer -->
+
+    <owl:Thing rdf:about="#Customer">
+        <rdf:type rdf:resource="#Tables"/>
+        <hasFile rdf:resource="#File.Customer.sql"/>
+        <hasFieldDefinition rdf:resource="#customer_address"/>
+        <hasField rdf:resource="#customer_address"/>
+        <hasFieldDefinition rdf:resource="#customer_id"/>
+        <hasField rdf:resource="#customer_id"/>
+        <hasField rdf:resource="#customer_name"/>
+        <hasFieldDefinition rdf:resource="#customer_name"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#Customer.java -->
+
+    <owl:Thing rdf:about="#Customer.java">
+        <address rdf:datatype="&xsd;string"
+            >src/core/Customer.java</address>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#Customer.jsp -->
+
+    <Pages rdf:about="#Customer.jsp">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <value rdf:datatype="&xsd;string"
+            >&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=ISO-8859-1&quot;
+    pageEncoding=&quot;ISO-8859-1&quot;%&gt;
+&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=ISO-8859-1&quot;&gt;
+&lt;title&gt;Customers list&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;jsp:useBean id=&quot;customers&quot; type=&quot;java.util.ArrayList&lt;core.Customer&gt;&quot; scope=&quot;request&quot;/&gt;
+
+&lt;b&gt;Registered Customers:&lt;/b&gt;&lt;br&gt;
+&lt;table border=&quot;1&quot;&gt;
+&lt;tr&gt;
+	$CustomerObject:{
+&lt;td&gt;		
+$it$;
+&lt;/td&gt;		
+	}$
+&lt;/tr&gt;
+&lt;% for(core.Customer c : customers) { %&gt;
+&lt;tr&gt;
+$CustomerObject:{
+&lt;td&gt;		
+$it.getterMethodInvocation$();
+&lt;/td&gt;		
+	}$
+
+	
+	&lt;td&gt;&lt;a href=&quot;/Orders/ListCustomerOrders?cust_id=&lt;%= c.getId() %&gt;&quot;&gt;Orders&lt;/a&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;% } %&gt;
+
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</value>
+        <hasContent rdf:resource="#Customer.jsp.Content"/>
+        <hasFile rdf:resource="#File.Customer.jsp"/>
+        <linkedToModule rdf:resource="#ListCustomerServlet"/>
+    </Pages>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#Customer.jsp.Content -->
+
+    <owl:Thing rdf:about="#Customer.jsp.Content">
+        <value
+            >&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=ISO-8859-1&quot;
+    pageEncoding=&quot;ISO-8859-1&quot;%&gt;
+&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=ISO-8859-1&quot;&gt;
+&lt;title&gt;Customers list&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;jsp:useBean id=&quot;customers&quot; type=&quot;java.util.ArrayList&lt;core.Customer&gt;&quot; scope=&quot;request&quot;/&gt;
+
+&lt;b&gt;Registered Customers:&lt;/b&gt;&lt;br&gt;
+&lt;table border=&quot;1&quot;&gt;
+&lt;tr&gt;
+	$Customer.Fields:{
+&lt;td&gt;		
+$it$;
+&lt;/td&gt;		
+	}$
+&lt;/tr&gt;
+&lt;% for(core.Customer c : customers) { %&gt;
+&lt;tr&gt;
+$Customer.Fields:{
+&lt;td&gt;		
+$it.getterMethodInvocation$();
+&lt;/td&gt;		
+	}$
+
+	
+	&lt;td&gt;&lt;a href=&quot;/Orders/ListCustomerOrders?cust_id=&lt;%= c.getId() %&gt;&quot;&gt;Orders&lt;/a&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;% } %&gt;
+
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</value>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#CustomerObject -->
+
+    <BLL rdf:about="#CustomerObject">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <value>Customer</value>
+        <dependsOn rdf:resource="#Customer"/>
+        <hasFile rdf:resource="#Customer.java"/>
+        <hasFieldDefinition rdf:resource="#Firstname"/>
+        <hasFieldDefinition rdf:resource="#Lastname"/>
+        <hasFieldDefinition rdf:resource="#address_field"/>
+        <hasFieldDefinition rdf:resource="#id"/>
+    </BLL>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#Customer_Created.jsp -->
+
+    <owl:Thing rdf:about="#Customer_Created.jsp">
+        <rdf:type rdf:resource="#File"/>
+        <address rdf:datatype="&xsd;string"
+            >WebContent\Customer_created.jsp</address>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#Customer_Created_Content -->
+
+    <owl:Thing rdf:about="#Customer_Created_Content">
+        <value
+            >&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=ISO-8859-1&quot;
+    pageEncoding=&quot;ISO-8859-1&quot;%&gt;
+&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=ISO-8859-1&quot;&gt;
+&lt;title&gt;Customer Created&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;B&gt;New Customer has been created!&lt;/B&gt;
+
+&lt;a href=&quot;javascript:history.go(-1)&quot;&gt;Go Back&lt;/a&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</value>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#Customer_crated -->
+
+    <owl:Thing rdf:about="#Customer_crated">
+        <rdf:type rdf:resource="#Pages"/>
+        <value rdf:datatype="&xsd;string"
+            >&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=ISO-8859-1&quot;
+    pageEncoding=&quot;ISO-8859-1&quot;%&gt;
+&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=ISO-8859-1&quot;&gt;
+&lt;title&gt;Customer Created&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;B&gt;New Customer has been created!&lt;/B&gt;
+
+&lt;a href=&quot;javascript:history.go(-1)&quot;&gt;Go Back&lt;/a&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</value>
+        <dependsOn rdf:resource="#CreateCustomerServlet"/>
+        <hasFile rdf:resource="#Customer_Created.jsp"/>
+        <hasContent rdf:resource="#Customer_Created_Content"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#DataSource -->
+
+    <ExternalTypes rdf:about="#DataSource">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <isClass
+            >java.sql.Connection</isClass>
+    </ExternalTypes>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#DatabaseCommand -->
+
+    <BLL rdf:about="#DatabaseCommand">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <hasFile rdf:resource="#DatabaseCommand.java"/>
+        <is rdf:resource="#Interface"/>
+        <hasMethod rdf:resource="#executeDatabaseOperation"/>
+        <hasAccessModifier rdf:resource="#public"/>
+    </BLL>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#DatabaseCommand.java -->
+
+    <owl:Thing rdf:about="#DatabaseCommand.java"/>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#Directory.webapp -->
+
+    <Directory rdf:about="#Directory.webapp">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <address>/webapp</address>
+    </Directory>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#File.CreateCustomerServlet.java -->
+
+    <owl:Thing rdf:about="#File.CreateCustomerServlet.java">
+        <rdf:type rdf:resource="#File"/>
+        <address rdf:datatype="&xsd;string"
+            >src\servlet\CreateCustomerServlet.java</address>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#File.Customer.jsp -->
+
+    <owl:Thing rdf:about="#File.Customer.jsp">
+        <rdf:type rdf:resource="#File"/>
+        <address
+            >/webapp/Customer.jsp</address>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#File.Customer.sql -->
+
+    <owl:Thing rdf:about="#File.Customer.sql">
+        <address rdf:datatype="&xsd;string"
+            >/src/sql/Customer.sql</address>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#File.Order.sql -->
+
+    <owl:Thing rdf:about="#File.Order.sql">
+        <address rdf:datatype="&xsd;string"
+            >/src/sql/Order.sql</address>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#File.Orders.jsp -->
+
+    <File rdf:about="#File.Orders.jsp">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <address
+            >/webapp/Orders.jsp</address>
+    </File>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#Firstname -->
+
+    <AnyField rdf:about="#Firstname">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <getterMethod>getFirstname</getterMethod>
+        <setterMethod>setFirstname</setterMethod>
+        <isDataType rdf:resource="#string"/>
+    </AnyField>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#HttpServlet -->
+
+    <ObjectTypes rdf:about="#HttpServlet">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <isClass
+            >javax.servlet.http.HttpServlet</isClass>
+    </ObjectTypes>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#HttpServletRequest -->
+
+    <owl:Thing rdf:about="#HttpServletRequest">
+        <isClass
+            >javax.servlet.http.HttpServletRequest</isClass>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#HttpServletResponse -->
+
+    <owl:Thing rdf:about="#HttpServletResponse">
+        <isClass
+            >javax.servlet.http.HttpServletResponse</isClass>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#IOException -->
+
+    <owl:Thing rdf:about="#IOException">
+        <isClass
+            >java.io.IOException</isClass>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#Integer -->
+
+    <owl:Thing rdf:about="#Integer">
+        <rdf:type rdf:resource="#DBDataType"/>
+        <rdf:type rdf:resource="#ObjectTypes"/>
+        <sqlString>int</sqlString>
+        <isClass>int</isClass>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#Interface -->
+
+    <ObjectTypes rdf:about="#Interface">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <value>interface</value>
+    </ObjectTypes>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#Lastname -->
+
+    <AnyField rdf:about="#Lastname">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <getterMethod>getLastname</getterMethod>
+        <setterMethod>setLastname</setterMethod>
+        <isDataType rdf:resource="#String"/>
+    </AnyField>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#ListCustimerOrders_List -->
+
+    <owl:Thing rdf:about="#ListCustimerOrders_List">
+        <rdf:type rdf:resource="#Method"/>
+        <value
+            >executeDatabaseOperation</value>
+        <hasBody rdf:resource="#ListCustomers_Body"/>
+        <hasReturnType rdf:resource="#Object"/>
+        <hasInputParams rdf:resource="#executeDatabaseCommandParam1"/>
+        <hasAccessModifier rdf:resource="#public"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#ListCustomerOrders -->
+
+    <BLL rdf:about="#ListCustomerOrders">
+        <rdf:type rdf:resource="#ModuleDefinition"/>
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <implements rdf:resource="#DatabaseCommand"/>
+        <dependsOn rdf:resource="#DatabaseCommand"/>
+        <hasMethodDefinition rdf:resource="#ListCustimerOrders_List"/>
+        <hasFile rdf:resource="#ListCustomerOrders.java"/>
+        <hasContructorDefinition rdf:resource="#ListCustomerOrdersCtr"/>
+        <hasFieldDefinition rdf:resource="#cust_id"/>
+    </BLL>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#ListCustomerOrders.java -->
+
+    <owl:Thing rdf:about="#ListCustomerOrders.java"/>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#ListCustomerOrdersCtr -->
+
+    <owl:Thing rdf:about="#ListCustomerOrdersCtr">
+        <rdf:type rdf:resource="#MethodDefinition"/>
+        <value
+            >ListCustomerOrders</value>
+        <hasInputParams rdf:resource="#ListCustomerOrdersParam1"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#ListCustomerOrdersParam1 -->
+
+    <owl:Thing rdf:about="#ListCustomerOrdersParam1">
+        <value>i</value>
+        <hasReturnType rdf:resource="#CTorType"/>
+        <isDataType rdf:resource="#Integer"/>
+        <hasBody rdf:resource="#ListCustomerOrders_Body"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#ListCustomerOrders_Body -->
+
+    <owl:Thing rdf:about="#ListCustomerOrders_Body">
+        <rdf:type rdf:resource="#MethodBody"/>
+        <value
+            >this.cust_id = i;</value>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#ListCustomerServlet -->
+
+    <ModuleDefinition rdf:about="#ListCustomerServlet">
+        <rdf:type rdf:resource="#BLL"/>
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <dependsOn rdf:resource="#ListCustomers"/>
+        <linkedToModule rdf:resource="#index"/>
+    </ModuleDefinition>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#ListCustomer_Body -->
+
+    <owl:Thing rdf:about="#ListCustomer_Body">
+        <value
+            >// List customers in the database
+		
+		ArrayList&lt;Customer&gt; list = new ArrayList&lt;Customer&gt;();
+		Statement sta = conn.createStatement();
+		ResultSet rs = sta.executeQuery(&quot;SELECT * FROM CUSTOMER&quot;);
+		while(rs.next()) {
+			Customer cust = new Customer();
+int i=1;			
+$OrderObject.Fields:{
+		$it.setterMethod$(rs.getString(i));
+		i=i+1;
+	}$
+			list.add(cust);
+		}
+		
+		rs.close();
+		sta.close();
+		
+		return list;</value>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#ListCustomers -->
+
+    <BLL rdf:about="#ListCustomers">
+        <rdf:type rdf:resource="#ModuleDefinition"/>
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <dependsOn rdf:resource="#CustomerObject"/>
+        <implements rdf:resource="#DatabaseCommand"/>
+        <hasMethodDefinition rdf:resource="#ListCustomersMethod"/>
+    </BLL>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#ListCustomersMethod -->
+
+    <owl:Thing rdf:about="#ListCustomersMethod">
+        <rdf:type rdf:resource="#Method"/>
+        <value
+            >executeDatabaseOperation</value>
+        <hasInputParams rdf:resource="#ConnInputParameter"/>
+        <implements rdf:resource="#DatabaseCommand"/>
+        <hasBody rdf:resource="#ListCustomer_Body"/>
+        <hasReturnType rdf:resource="#Object"/>
+        <hasAccessModifier rdf:resource="#public"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#ListCustomers_Body -->
+
+    <MethodBody rdf:about="#ListCustomers_Body">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <value
+            >ArrayList&lt;Order&gt; list = new ArrayList&lt;Order&gt;();
+		PreparedStatement sta = conn.prepareStatement(&quot;SELECT ID, CUST_ID, DATE_PLACED, AMOUNT FROM ORDERS WHERE CUST_ID = ?&quot;);
+		sta.setInt(1, this.cust_id);
+		ResultSet rs = sta.executeQuery();
+		while(rs.next()) {
+			Order o = new Order();
+                                           int i=0;
+                                           $OrderObject.Fields:{
+                                                  $it.setterMethod$(rs.getString(1),i);
+                                                 i++;
+                                           }$                                                               
+
+			
+			list.add(o);			
+		}
+		
+		rs.close();
+		sta.close();
+		
+		return list;</value>
+    </MethodBody>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#Method -->
+
+    <owl:Thing rdf:about="#Method"/>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#Object -->
+
+    <ExternalTypes rdf:about="#Object">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <isClass rdf:datatype="&xsd;string">Object</isClass>
+    </ExternalTypes>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#Order -->
+
+    <Tables rdf:about="#Order">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <hasFile rdf:resource="#File.Order.sql"/>
+        <hasField rdf:resource="#amount"/>
+        <hasField rdf:resource="#date_place"/>
+        <hasField rdf:resource="#order_id"/>
+        <hasField rdf:resource="#user_id"/>
+    </Tables>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#Order.java -->
+
+    <owl:Thing rdf:about="#Order.java"/>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#OrderAmount -->
+
+    <owl:Thing rdf:about="#OrderAmount">
+        <setterMethod>setAmount</setterMethod>
+        <value>amount</value>
+        <getterMethod>getAmount</getterMethod>
+        <isDataType rdf:resource="#Integer"/>
+        <hasAccessModifier rdf:resource="#private"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#OrderCreated.jsp -->
+
+    <owl:Thing rdf:about="#OrderCreated.jsp"/>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#OrderCreatedContent -->
+
+    <owl:Thing rdf:about="#OrderCreatedContent">
+        <value
+            >&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=ISO-8859-1&quot;
+    pageEncoding=&quot;ISO-8859-1&quot;%&gt;
+&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=ISO-8859-1&quot;&gt;
+&lt;title&gt;Order has been created&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;B&gt;New Order has been created!&lt;/B&gt;
+
+&lt;a href=&quot;javascript:history.go(-1)&quot;&gt;Go Back&lt;/a&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</value>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#OrderObject -->
+
+    <BLL rdf:about="#OrderObject">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <hasFile rdf:resource="#Order.java"/>
+        <hasFieldDefinition rdf:resource="#OrderAmount"/>
+        <hasFieldDefinition rdf:resource="#datePlaceField"/>
+        <hasFieldDefinition rdf:resource="#order_idField"/>
+    </BLL>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#Order_created -->
+
+    <owl:Thing rdf:about="#Order_created">
+        <rdf:type rdf:resource="#Pages"/>
+        <value rdf:datatype="&xsd;string"
+            >&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=ISO-8859-1&quot;
+    pageEncoding=&quot;ISO-8859-1&quot;%&gt;
+&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=ISO-8859-1&quot;&gt;
+&lt;title&gt;Order has been created&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;B&gt;New Order has been created!&lt;/B&gt;
+
+&lt;a href=&quot;javascript:history.go(-1)&quot;&gt;Go Back&lt;/a&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</value>
+        <linkedToModule rdf:resource="#Order"/>
+        <hasFile rdf:resource="#OrderCreated.jsp"/>
+        <hasContent rdf:resource="#OrderCreatedContent"/>
+        <linkedToModule rdf:resource="#Orders"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#Orders -->
+
+    <owl:Thing rdf:about="#Orders">
+        <rdf:type rdf:resource="#Pages"/>
+        <value rdf:datatype="&xsd;string"
+            >&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=ISO-8859-1&quot;
+    pageEncoding=&quot;ISO-8859-1&quot;%&gt;
+&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=ISO-8859-1&quot;&gt;
+&lt;title&gt;Create Orders&lt;/title&gt;
+
+&lt;jsp:useBean id=&quot;orders&quot; type=&quot;java.util.ArrayList&lt;core.Order&gt;&quot; scope=&quot;request&quot;/&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+
+Orders for the customer with id: &lt;%= request.getParameter(&quot;cust_id&quot;) %&gt;&lt;br&gt;
+&lt;table border=&quot;1&quot;&gt;
+&lt;tr&gt;
+$OrderObject:{
+    &lt;th&gt;$it$&lt;/th&gt;
+}$
+	
+	
+&lt;/tr&gt;
+&lt;% for(core.Order o : orders) { %&gt;
+&lt;tr&gt;
+$OrderObject:{
+    &lt;td&gt;&lt;%= o.$it.getterMethodInvocation$() %&gt;&lt;/td&gt;
+}$
+	
+&lt;/tr&gt;
+&lt;% } %&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</value>
+        <hasFile rdf:resource="#File.Orders.jsp"/>
+        <hasFile rdf:resource="#OrderCreated.jsp"/>
+        <linkedToModule rdf:resource="#Order_created"/>
+        <hasContent rdf:resource="#OrdersContent"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#OrdersContent -->
+
+    <owl:Thing rdf:about="#OrdersContent">
+        <value
+            >&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=ISO-8859-1&quot;
+    pageEncoding=&quot;ISO-8859-1&quot;%&gt;
+&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=ISO-8859-1&quot;&gt;
+&lt;title&gt;Create Orders&lt;/title&gt;
+
+&lt;jsp:useBean id=&quot;orders&quot; type=&quot;java.util.ArrayList&lt;core.Order&gt;&quot; scope=&quot;request&quot;/&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+
+Orders for the customer with id: &lt;%= request.getParameter(&quot;cust_id&quot;) %&gt;&lt;br&gt;
+&lt;table border=&quot;1&quot;&gt;
+&lt;tr&gt;
+$Order.Fields:{
+    &lt;th&gt;$it$&lt;/th&gt;
+}$
+	
+	
+&lt;/tr&gt;
+&lt;% for(core.Order o : orders) { %&gt;
+&lt;tr&gt;
+$Order.Fields:{
+    &lt;td&gt;&lt;%= o.$it.getterMethodInvocation$() %&gt;&lt;/td&gt;
+}$
+	
+&lt;/tr&gt;
+&lt;% } %&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</value>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#ServletException -->
+
+    <owl:Thing rdf:about="#ServletException">
+        <isClass
+            >javax.servlet.ServletException</isClass>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#String -->
+
+    <owl:Thing rdf:about="#String">
+        <rdf:type rdf:resource="#ObjectTypes"/>
+        <isClass>string</isClass>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#address_field -->
+
+    <owl:Thing rdf:about="#address_field">
+        <rdf:type rdf:resource="#AnyField"/>
+        <getterMethod rdf:datatype="&xsd;string">getAddress</getterMethod>
+        <setterMethod rdf:datatype="&xsd;string">setAddress</setterMethod>
+        <value>address</value>
+        <isDataType rdf:resource="#String"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#amount -->
+
+    <owl:Thing rdf:about="#amount">
+        <isDataType rdf:resource="#Integer"/>
+        <hasProperty rdf:resource="#isprimary"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#conn -->
+
+    <owl:Thing rdf:about="#conn">
+        <value>conn</value>
+        <hasType rdf:resource="#Connection"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#createcustimerservler_doget -->
+
+    <MethodBody rdf:about="#createcustimerservler_doget">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <value
+            >try {
+			// create new order
+			int cust_id = (int)Math.random();
+			try {
+				cust_id = Integer.parseInt(request.getParameter(&quot;cust_id&quot;));
+			} catch (NumberFormatException nfe) {};
+			String date_placed_str = request.getParameter(&quot;date_placed&quot;);
+			Date date_placed = new Date(System.currentTimeMillis());
+			try {
+				long d = Date.parse(date_placed_str);
+				date_placed = new Date(d);
+			} catch (Exception e) {}
+			int order_amount = 0;
+			try {
+				order_amount = Integer.parseInt(request.getParameter(&quot;order_amount&quot;));
+			} catch (NumberFormatException nfe) {}
+
+			// create an order object
+			Order o = new Order();
+			int oid = Math.abs((int)System.currentTimeMillis());
+			o.setOder_id (oid);
+			o.setDatePlace(date_placed);
+			o.setUsr_id(cust_id);
+			o.setAmount(order_amount);
+
+			// create and execute database command
+			DatabaseCommand command = new CreateOrder(o);
+			Integer rows = (Integer)CommandExecutor.getInstance().executeDatabaseCommand(command);
+
+			// forward to a JSP
+			RequestDispatcher rd = getServletContext().getRequestDispatcher(&quot;/order_created.jsp&quot;);
+			rd.forward(request, response);
+
+		} catch (Exception e) {
+			throw new ServletException(e);
+		}</value>
+    </MethodBody>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#cust_id -->
+
+    <FieldDefinition rdf:about="#cust_id">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <hasAccessModifier rdf:resource="#private"/>
+    </FieldDefinition>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#customer_address -->
+
+    <owl:Thing rdf:about="#customer_address">
+        <hasProperty rdf:resource="#isprimary"/>
+        <isDataType rdf:resource="#string"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#customer_id -->
+
+    <owl:Thing rdf:about="#customer_id">
+        <isDataType rdf:resource="#Integer"/>
+        <hasProperty rdf:resource="#isprimary"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#customer_name -->
+
+    <Field rdf:about="#customer_name">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <hasProperty rdf:resource="#isprimary"/>
+        <isDataType rdf:resource="#string"/>
+    </Field>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#datatype -->
+
+    <Property rdf:about="#datatype">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </Property>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#datePlaceField -->
+
+    <owl:Thing rdf:about="#datePlaceField"/>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#date_place -->
+
+    <owl:Thing rdf:about="#date_place">
+        <isDataType rdf:resource="#datetime"/>
+        <hasProperty rdf:resource="#isprimary"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#datetime -->
+
+    <owl:Thing rdf:about="#datetime">
+        <rdf:type rdf:resource="#DBDataType"/>
+        <sqlString>datetime</sqlString>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#doGet -->
+
+    <MethodDefinition rdf:about="#doGet">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <throws rdf:resource="#IOException"/>
+        <throws rdf:resource="#ServletException"/>
+        <hasBody rdf:resource="#doGet_Body"/>
+        <hasAccessModifier rdf:resource="#protected"/>
+        <hasInputParams rdf:resource="#request"/>
+        <hasInputParams rdf:resource="#response"/>
+        <hasReturnType rdf:resource="#void"/>
+    </MethodDefinition>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#doGet_Body -->
+
+    <owl:Thing rdf:about="#doGet_Body">
+        <rdf:type rdf:resource="#MethodBody"/>
+        <value
+            >// TODO Auto-generated method stub
+		try {
+            // create customer - get parameters first
+            String first_name = request.getParameter(&quot;first_name&quot;);
+            String last_name = request.getParameter(&quot;last_name&quot;);
+            String address = request.getParameter(&quot;address&quot;);
+            int cust_id = Math.abs((int)System.currentTimeMillis());
+            Customer c = new Customer();
+            c.setId(cust_id);
+            c.setName(first_name);
+            c.setSurname(last_name);
+            c.setAddress(address);
+            DatabaseCommand command = new CreateCustomer(c);
+            int rows = (Integer)CommandExecutor.getInstance().executeDatabaseCommand(command);
+            RequestDispatcher rd = getServletContext().getRequestDispatcher(&quot;/customer_created.jsp&quot;);
+            rd.forward(request, response);
+
+		} catch (Exception e) {
+			throw new ServletException(e);
+		}</value>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#doPost -->
+
+    <MethodDefinition rdf:about="#doPost">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <throws rdf:resource="#IOException"/>
+        <throws rdf:resource="#ServletException"/>
+        <hasBody rdf:resource="#doPost_Body"/>
+        <hasAccessModifier rdf:resource="#protected"/>
+        <hasInputParams rdf:resource="#request"/>
+        <hasInputParams rdf:resource="#response"/>
+        <hasReturnType rdf:resource="#void"/>
+    </MethodDefinition>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#doPost_Body -->
+
+    <owl:Thing rdf:about="#doPost_Body">
+        <value></value>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#ds -->
+
+    <owl:Thing rdf:about="#ds">
+        <hasAccessModifier rdf:resource="#private"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#executeDatabaseCommand -->
+
+    <owl:Thing rdf:about="#executeDatabaseCommand">
+        <hasReturnType rdf:resource="#Object"/>
+        <hasInputParams rdf:resource="#executeDatabaseCommandParam1"/>
+        <hasBody rdf:resource="#executeDatabaseCommand_Body"/>
+        <hasAccessModifier rdf:resource="#public"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#executeDatabaseCommandParam1 -->
+
+    <owl:Thing rdf:about="#executeDatabaseCommandParam1">
+        <value rdf:datatype="&xsd;string">c</value>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#executeDatabaseCommand_Body -->
+
+    <owl:Thing rdf:about="#executeDatabaseCommand_Body">
+        <rdf:type rdf:resource="#MethodBody"/>
+        <value
+            >Connection conn = null;
+		try {
+			conn = getConnection();
+			Object o = c.executeDatabaseOperation(conn);
+			return o;
+		} catch (SQLException e) {
+			throw e;
+		} catch (NamingException ne) {
+			throw ne;
+		} finally {
+			if (conn != null) conn.close();
+		}</value>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#executeDatabaseOperation -->
+
+    <owl:Thing rdf:about="#executeDatabaseOperation">
+        <hasReturnType rdf:resource="#Object"/>
+        <hasInputParams rdf:resource="#conn"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#getConnection -->
+
+    <owl:Thing rdf:about="#getConnection">
+        <hasBody rdf:resource="#getConnection_Body"/>
+        <hasAccessModifier rdf:resource="#public"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#getConnection_Body -->
+
+    <owl:Thing rdf:about="#getConnection_Body">
+        <rdf:type rdf:resource="#MethodBody"/>
+        <value
+            >return getDataSource().getConnection();</value>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#getDataSource -->
+
+    <owl:Thing rdf:about="#getDataSource">
+        <hasReturnType rdf:resource="#DataSource"/>
+        <hasBody rdf:resource="#getDataSource_Body"/>
+        <hasAccessModifier rdf:resource="#public"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#getDataSource_Body -->
+
+    <owl:Thing rdf:about="#getDataSource_Body">
+        <rdf:type rdf:resource="#MethodBody"/>
+        <value
+            >if (ds == null) {
+			
+			InitialContext ctx = new InitialContext();
+			Context envCtx = (Context) ctx.lookup(&quot;java:comp/env&quot;);
+			ds = (DataSource) envCtx.lookup(&quot;jdbc/TestDB&quot;);
+			
+		}
+		
+		return ds;</value>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#getInstance -->
+
+    <owl:Thing rdf:about="#getInstance">
+        <hasReturnType rdf:resource="#CommandExecutor"/>
+        <hasBody rdf:resource="#getInstance_body"/>
+        <hasAccessModifier rdf:resource="#public"/>
+        <hasMemoryModifier rdf:resource="#static"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#getInstance_body -->
+
+    <owl:Thing rdf:about="#getInstance_body">
+        <rdf:type rdf:resource="#MethodBody"/>
+        <value
+            >if (myOnlyInstance == null) {
+			myOnlyInstance = new CommandExecutor();
+		}
+		return myOnlyInstance;</value>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#id -->
+
+    <owl:Thing rdf:about="#id">
+        <rdf:type rdf:resource="#AnyField"/>
+        <getterMethod>getId</getterMethod>
+        <setterMethod>setId</setterMethod>
+        <isDataType rdf:resource="#Integer"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#index -->
+
+    <owl:Thing rdf:about="#index">
+        <rdf:type rdf:resource="#Pages"/>
+        <value rdf:datatype="&xsd;string"
+            >&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=ISO-8859-1&quot;&gt;
+&lt;title&gt;Welcome Page&lt;/title&gt;
+
+&lt;script language=&quot;Javascript&quot;&gt;
+
+function testCreateCustomer() {
+$CustomerObject:{
+if (document.forms[0].$it$_prF.value.length == 0) {
+		alert(&quot;Empty $it$ field&quot;);
+		return false;
+	}
+ }$
+	
+
+
+	return true;
+
+}
+
+
+function testCreateOrder() {
+
+$OrderObject:{
+if (document.forms[1].$it$_prF.value.length == 0) {
+		alert(&quot;Empty $it$ field&quot;);
+		return false;
+	}
+ }$
+	
+	return true;
+}
+
+function testListOrders() {
+
+	if (document.forms[2].cust_id.value.length == 0) {
+		alert(&quot;Empty customer id field&quot;);
+		return false;
+	}
+	return true;
+}
+
+&lt;/script&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;a href=&quot;/Orders/ListCustomers&quot;&gt;List Registered Customer&lt;/a&gt;&lt;p&gt;
+
+&lt;hr&gt;
+
+&lt;form method=&quot;get&quot; action=&quot;/Orders/CreateCustomer&quot;&gt;
+&lt;b&gt;Customer Registration&lt;/b&gt;&lt;p&gt;
+$CustomerObject:{
+                      $it$ : &lt;input name=&quot;$it$_prF&quot; type=&quot;text&quot; size=&quot;10&quot;/&gt;&lt;br&gt;
+                     
+                           }$
+&lt;input type=&quot;submit&quot; value=&quot;Create Customer&quot;&gt;
+
+&lt;/form&gt;
+
+&lt;hr&gt;
+
+&lt;form method=&quot;get&quot; action=&quot;/Orders/CreateOrder&quot;&gt;
+
+&lt;b&gt;Create new order for customer:&lt;/b&gt;&lt;br&gt;
+$OrderObject:{
+                      $it$ : &lt;input name=&quot;$it$_prF&quot; type=&quot;text&quot; size=&quot;10&quot;/&gt;&lt;br&gt;
+                     
+                           }$
+
+&lt;input type=&quot;submit&quot; value=&quot;Create Order&quot; &gt;
+&lt;/form&gt;
+
+&lt;hr&gt;
+
+&lt;form method=&quot;get&quot; action=&quot;/Orders/ListCustomerOrders&quot;&gt;
+&lt;b&gt;List orders for customer:&lt;/b&gt;&lt;br&gt;
+Customer id: &lt;input name=&quot;cust_id&quot; type=&quot;text&quot; size=&quot;10&quot;&gt;
+&lt;input type=&quot;submit&quot; value=&quot;List Orders&quot; onClick=&quot;return testListOrders();&quot;&gt;
+&lt;/form&gt;
+
+
+&lt;/body&gt;
+&lt;/html&gt;</value>
+        <linkedToModule rdf:resource="#CreateCustomerServlet"/>
+        <linkedToModule rdf:resource="#CustomerObject"/>
+        <isDataType rdf:resource="#ListCustomerServlet"/>
+        <linkedToModule rdf:resource="#OrderObject"/>
+        <hasFile rdf:resource="#index.html"/>
+        <hasContent rdf:resource="#index_content"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#index.html -->
+
+    <File rdf:about="#index.html">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <address rdf:datatype="&xsd;string"
+            >WebContent\index.html</address>
+    </File>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#index_content -->
+
+    <owl:Thing rdf:about="#index_content">
+        <value
+            >&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=ISO-8859-1&quot;&gt;
+&lt;title&gt;Welcome Page&lt;/title&gt;
+
+&lt;script language=&quot;Javascript&quot;&gt;
+
+function testCreateCustomer() {
+$CustomerObject:{
+if (document.forms[0].$it$_prF.value.length == 0) {
+		alert(&quot;Empty $it$ field&quot;);
+		return false;
+	}
+ }$
+	
+
+
+	return true;
+
+}
+
+
+function testCreateOrder() {
+
+$OrderObject:{
+if (document.forms[1].$it$_prF.value.length == 0) {
+		alert(&quot;Empty $it$ field&quot;);
+		return false;
+	}
+ }$
+	
+	return true;
+}
+
+function testListOrders() {
+
+	if (document.forms[2].cust_id.value.length == 0) {
+		alert(&quot;Empty customer id field&quot;);
+		return false;
+	}
+	return true;
+}
+
+&lt;/script&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;a href=&quot;/Orders/ListCustomers&quot;&gt;List Registered Customer&lt;/a&gt;&lt;p&gt;
+
+&lt;hr&gt;
+
+&lt;form method=&quot;get&quot; action=&quot;/Orders/CreateCustomer&quot;&gt;
+&lt;b&gt;Customer Registration&lt;/b&gt;&lt;p&gt;
+$CustomerObject:{
+                      $it$ : &lt;input name=&quot;$it$_prF&quot; type=&quot;text&quot; size=&quot;10&quot;/&gt;&lt;br&gt;
+                     
+                           }$
+&lt;input type=&quot;submit&quot; value=&quot;Create Customer&quot;&gt;
+
+&lt;/form&gt;
+
+&lt;hr&gt;
+
+&lt;form method=&quot;get&quot; action=&quot;/Orders/CreateOrder&quot;&gt;
+
+&lt;b&gt;Create new order for customer:&lt;/b&gt;&lt;br&gt;
+$OrderObject:{
+                      $it$ : &lt;input name=&quot;$it$_prF&quot; type=&quot;text&quot; size=&quot;10&quot;/&gt;&lt;br&gt;
+                     
+                           }$
+
+&lt;input type=&quot;submit&quot; value=&quot;Create Order&quot; &gt;
+&lt;/form&gt;
+
+&lt;hr&gt;
+
+&lt;form method=&quot;get&quot; action=&quot;/Orders/ListCustomerOrders&quot;&gt;
+&lt;b&gt;List orders for customer:&lt;/b&gt;&lt;br&gt;
+Customer id: &lt;input name=&quot;cust_id&quot; type=&quot;text&quot; size=&quot;10&quot;&gt;
+&lt;input type=&quot;submit&quot; value=&quot;List Orders&quot; onClick=&quot;return testListOrders();&quot;&gt;
+&lt;/form&gt;
+
+
+&lt;/body&gt;
+&lt;/html&gt;</value>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#init -->
+
+    <owl:Thing rdf:about="#init">
+        <rdf:type rdf:resource="#MethodDefinition"/>
+        <throws rdf:resource="#ServletException"/>
+        <hasBody rdf:resource="#init_body"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#init_body -->
+
+    <owl:Thing rdf:about="#init_body">
+        <rdf:type rdf:resource="#MethodBody"/>
+        <value
+            >super.init();
+		try {
+			CommandExecutor.getInstance();
+		} catch (Exception e) {
+			throw new ServletException(e);
+		}</value>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#isprimary -->
+
+    <owl:Thing rdf:about="#isprimary">
+        <rdf:type rdf:resource="#Property"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#myOnlyInstance -->
+
+    <owl:Thing rdf:about="#myOnlyInstance">
+        <hasAccessModifier rdf:resource="#private"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#order -->
+
+    <owl:Thing rdf:about="#order">
+        <hasAccessModifier rdf:resource="#private"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#order_id -->
+
+    <owl:Thing rdf:about="#order_id">
+        <isDataType rdf:resource="#Integer"/>
+        <hasProperty rdf:resource="#isprimary"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#order_idField -->
+
+    <owl:Thing rdf:about="#order_idField">
+        <value>order_id</value>
+        <setterMethod>setOder_id</setterMethod>
+        <getterMethod>getOder_id</getterMethod>
+        <isDataType rdf:resource="#Integer"/>
+        <hasAccessModifier rdf:resource="#private"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#private -->
+
+    <owl:Thing rdf:about="#private">
+        <rdf:type rdf:resource="#AccessModifier"/>
+        <value>private</value>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#protected -->
+
+    <owl:Thing rdf:about="#protected">
+        <rdf:type rdf:resource="#AccessModifier"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#public -->
+
+    <AccessModifier rdf:about="#public">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <value>public</value>
+    </AccessModifier>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#request -->
+
+    <owl:Thing rdf:about="#request">
+        <hasType rdf:resource="#HttpServletRequest"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#response -->
+
+    <owl:Thing rdf:about="#response">
+        <hasType rdf:resource="#HttpServletResponse"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#static -->
+
+    <MemoryModifier rdf:about="#static">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <value>static</value>
+    </MemoryModifier>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#string -->
+
+    <owl:Thing rdf:about="#string">
+        <rdf:type rdf:resource="#DBDataType"/>
+        <sqlString>nvarchar(MAX)</sqlString>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#user_id -->
+
+    <owl:Thing rdf:about="#user_id">
+        <isDataType rdf:resource="#Integer"/>
+        <hasProperty rdf:resource="#datatype"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#void -->
+
+    <owl:Thing rdf:about="#void">
+        <rdf:type rdf:resource="#ObjectTypes"/>
+        <isClass>void</isClass>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#web.xml -->
+
+    <Configs rdf:about="#web.xml">
+        <rdf:type rdf:resource="#Pages"/>
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <value rdf:datatype="&xsd;string"
+            >&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;web-app xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://java.sun.com/xml/ns/javaee&quot; xmlns:web=&quot;http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd&quot; xsi:schemaLocation=&quot;http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd&quot; id=&quot;WebApp_ID&quot; version=&quot;2.5&quot;&gt;
+  &lt;display-name&gt;Orders&lt;/display-name&gt;
+  &lt;welcome-file-list&gt;
+    &lt;welcome-file&gt;index.html&lt;/welcome-file&gt;
+    &lt;welcome-file&gt;index.htm&lt;/welcome-file&gt;
+    &lt;welcome-file&gt;index.jsp&lt;/welcome-file&gt;
+    &lt;welcome-file&gt;default.html&lt;/welcome-file&gt;
+    &lt;welcome-file&gt;default.htm&lt;/welcome-file&gt;
+    &lt;welcome-file&gt;default.jsp&lt;/welcome-file&gt;
+  &lt;/welcome-file-list&gt;
+  &lt;servlet&gt;
+    &lt;description&gt;&lt;/description&gt;
+    &lt;display-name&gt;CreateCustomerServlet&lt;/display-name&gt;
+    &lt;servlet-name&gt;CreateCustomerServlet&lt;/servlet-name&gt;
+    &lt;servlet-class&gt;servlet.CreateCustomerServlet&lt;/servlet-class&gt;
+  &lt;/servlet&gt;
+  &lt;servlet-mapping&gt;
+    &lt;servlet-name&gt;CreateCustomerServlet&lt;/servlet-name&gt;
+    &lt;url-pattern&gt;/CreateCustomerServlet&lt;/url-pattern&gt;
+  &lt;/servlet-mapping&gt;
+  
+  &lt;resource-ref&gt;
+				&lt;description&gt;DB Connection&lt;/description&gt;
+  			&lt;res-ref-name&gt;jdbc/Orders&lt;/res-ref-name&gt;
+ 				&lt;res-type&gt;javax.sql.DataSource&lt;/res-type&gt;
+ 				&lt;res-auth&gt;Container&lt;/res-auth&gt;
+  &lt;/resource-ref&gt;
+&lt;/web-app&gt;</value>
+        <hasContent rdf:resource="#web.xml_content"/>
+        <hasFile rdf:resource="#web.xml_file"/>
+    </Configs>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#web.xml_content -->
+
+    <owl:Thing rdf:about="#web.xml_content">
+        <value
+            >&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;web-app xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://java.sun.com/xml/ns/javaee&quot; xmlns:web=&quot;http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd&quot; xsi:schemaLocation=&quot;http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd&quot; id=&quot;WebApp_ID&quot; version=&quot;2.5&quot;&gt;
+  &lt;display-name&gt;Orders&lt;/display-name&gt;
+  &lt;welcome-file-list&gt;
+    &lt;welcome-file&gt;index.html&lt;/welcome-file&gt;
+    &lt;welcome-file&gt;index.htm&lt;/welcome-file&gt;
+    &lt;welcome-file&gt;index.jsp&lt;/welcome-file&gt;
+    &lt;welcome-file&gt;default.html&lt;/welcome-file&gt;
+    &lt;welcome-file&gt;default.htm&lt;/welcome-file&gt;
+    &lt;welcome-file&gt;default.jsp&lt;/welcome-file&gt;
+  &lt;/welcome-file-list&gt;
+  &lt;servlet&gt;
+    &lt;description&gt;&lt;/description&gt;
+    &lt;display-name&gt;CreateCustomerServlet&lt;/display-name&gt;
+    &lt;servlet-name&gt;CreateCustomerServlet&lt;/servlet-name&gt;
+    &lt;servlet-class&gt;servlet.CreateCustomerServlet&lt;/servlet-class&gt;
+  &lt;/servlet&gt;
+  &lt;servlet-mapping&gt;
+    &lt;servlet-name&gt;CreateCustomerServlet&lt;/servlet-name&gt;
+    &lt;url-pattern&gt;/CreateCustomerServlet&lt;/url-pattern&gt;
+  &lt;/servlet-mapping&gt;
+  
+  &lt;resource-ref&gt;
+				&lt;description&gt;DB Connection&lt;/description&gt;
+  			&lt;res-ref-name&gt;jdbc/Orders&lt;/res-ref-name&gt;
+ 				&lt;res-type&gt;javax.sql.DataSource&lt;/res-type&gt;
+ 				&lt;res-auth&gt;Container&lt;/res-auth&gt;
+  &lt;/resource-ref&gt;
+&lt;/web-app&gt;</value>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#web.xml_file -->
+
+    <owl:Thing rdf:about="#web.xml_file">
+        <value>web.xml</value>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/10/TargetApp.owl#webxml_content -->
+
+    <owl:Thing rdf:about="#webxml_content"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

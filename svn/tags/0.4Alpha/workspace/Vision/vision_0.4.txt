@@ -1,0 +1,38 @@
+=====================
+IDP v.0.4 vision
+=====================
+1. Overview .
+======================
+
+1.1 Objectives.
+-------------------------------
+
+- Prototype should be able to process relatively simple change request, see examples in cr-examples directory.
+- Prototype should be able to change at least 2 modules regarding the change request, for example class file and database table.
+
+2. Main features.
+==================
+
+2.1 English language processing.
+---------------------------------
+The prototype is based on MontyLingua: Liu, Hugo (2004). MontyLingua: An end-to-end natural language processor with common sense. Available at: 
+ `<web.media.mit.edu/~hugo/montylingua>`_.
+
+2.2 Ontology.
+--------------
+The ontological representation of knowledge is based on owlapi. All the data required for the change request processing except for linguistic processing should be represented as knowledge-base in OWL.
+
+3. Development.
+=================
+Development could be arranged in several steps:
+
+1. Create Scala interface to jython application of MontyLingua.
+2. Create Scala text processor based on MontyLingua sentence processing and further processing in the analogical way as in metafor by Hugo Liu.
+3. Create mapping mechanisms in OWL
+	- Language mapping
+		* Java
+		* SQL
+	- Framework mapping
+		* GWT ?
+4. Create request based on CR text
+5. Test

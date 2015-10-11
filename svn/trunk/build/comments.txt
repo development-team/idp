@@ -1,0 +1,45 @@
+ Для винды:
+[path_to_mysql]/bin/mysqld.exe --bind-address=localhost -P [port] -b [path_to_mysql]
+-h [path_to_mysql]/data --log-error=[logs] -u root --standalone --default-storage-engine=InnoDB
+(10:00:05) alexey.barkhatov@gmail.com: это можно делать сразу после распаковки архива с mysql
+(10:00:40) alexey.barkhatov@gmail.com: для версий 5.0 должно работать
+(10:01:01) alexey.barkhatov@gmail.com: после этого можно цепляться рутом без пароля и загонять свои SQL с данными
+(10:02:52) alexey.barkhatov@gmail.com: т. е. что-то вроде
+mysql -u root -h localhost -P [port]  < menta_ddl.sql
+mysql -u root -h localhost -P [port] menta < menta_demo_data.sql
+
+первый скрипт создаст БД (имя menta) и таблички, а вторый загонит демонстрационные данные
+(10:03:48) max.talanov@gmail.com: hh iujxwu 
+(10:03:58) max.talanov@gmail.com: оо пасиба то что нужно 
+(10:04:05) alexey.barkhatov@gmail.com: только после старта подождите немного времени
+(10:04:10) alexey.barkhatov@gmail.com: секунд 5
+(10:04:31) alexey.barkhatov@gmail.com: для винды я эту задержку снес, а на linux у меня без нее не работало
+(10:04:40) alexey.barkhatov@gmail.com: сейчас для linux напишу
+(10:08:16) max.talanov@gmail.com: для лиуха не надда
+(10:08:42) alexey.barkhatov@gmail.com: ну вот, только написал :)
+[path_to_mysql]/bin/mysqld_safe \
+--no-defaults \
+--socket=/tmp/menta-mysql.sock \
+--port=[port] \
+--ledir=[path_to_mysql]/bin \
+--basedir=[path_to_mysql] \
+--datadir=[path_to_mysql]/data \
+--log-error=[logs]/mysql.log \
+--user=root \
+--default-storage-engine=InnoDB
+(10:08:51) alexey.barkhatov@gmail.com: пускай будет на случай
+(10:11:09) alexey.barkhatov@gmail.com: к этому всему еще можете приписать:
+--log=[logs]/mysql-debug.log
+--log-bin=[logs]/mysql-debug-bin.log
+
+если хотите дебажные логи на случай что-нибудь заглючит
+(10:12:30) alexey.barkhatov@gmail.com: А с томкэтом совсем просто. Скачайте его, снесите все примеры и подкиньте ему ваше приложение.
+(10:13:31) alexey.barkhatov@gmail.com: Все это можно и нужно запихать в maven build
+(10:13:49) alexey.barkhatov@gmail.com: заделать отдеальный модуль для demo-assembly и там все это замутить
+(10:14:03) alexey.barkhatov@gmail.com: mysql и tomcat залить в свою репу
+(10:14:04) max.talanov@gmail.com: у нас щас ант 
+(10:14:15) max.talanov@gmail.com: куда класть веб приклад ?
+(10:15:44) alexey.barkhatov@gmail.com: С антом сложнее. Хотя, если с мавеном такое не творили, то с антом проще.
+
+Как томкэт распакуете там будет каталог webapps. В ROOT кладете свое приложение. Тогда оно будет доступно по localhost:8080/ безо всяких контекстов.
+(10:27:50) alexey.barkhatov@gmail.com: Вон за спиной ругались. Дескать Макс-эксплуататор хочет, чтобы за день со всем разобрались, все сделали. Даже JVM ему надо пре-упакованную. А мы даже томкэта в глаза не видели :)

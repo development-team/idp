@@ -1,0 +1,476 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY TargetApp "http://idp.org/ontologies/2009/10/TargetApp.owl#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2006/12/owl2-xml#"
+     xml:base="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:TargetApp="http://idp.org/ontologies/2009/10/TargetApp.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     URI="http://idp.org/ontologies/2009/10/TargetApp.owl">
+    <Declaration>
+        <Class URI="&TargetApp;BLL"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&TargetApp;ClassMethod"/>
+        <Class URI="&TargetApp;LanguageKB"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&TargetApp;ClassMethod"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&TargetApp;ClassProperty"/>
+        <Class URI="&TargetApp;LanguageKB"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&TargetApp;ClassProperty"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&TargetApp;CommandExecutor"/>
+        <Class URI="&TargetApp;command"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&TargetApp;CommandExecutor"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&TargetApp;CommonStructure"/>
+        <Class URI="&TargetApp;Database"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&TargetApp;CommonStructure"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&TargetApp;Configs"/>
+        <Class URI="&TargetApp;Presentation"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&TargetApp;Configs"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&TargetApp;CreateCustomer"/>
+        <Class URI="&TargetApp;command"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&TargetApp;CreateCustomer"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&TargetApp;CreateCustomerServlet"/>
+        <Class URI="&TargetApp;servlet"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&TargetApp;CreateCustomerServlet"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&TargetApp;CreateOrder"/>
+        <Class URI="&TargetApp;command"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&TargetApp;CreateOrder"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&TargetApp;Customer.jsp"/>
+        <Class URI="&TargetApp;Pages"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&TargetApp;Customer.jsp"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&TargetApp;Customer_created"/>
+        <Class URI="&TargetApp;Pages"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&TargetApp;Customer_created"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&TargetApp;DBDataType"/>
+        <Class URI="&TargetApp;CommonStructure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&TargetApp;DBDataType"/>
+        <DataSomeValuesFrom>
+            <DataProperty URI="&TargetApp;sqlString"/>
+            <Datatype URI="&xsd;string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&TargetApp;DBDataType"/>
+    </Declaration>
+    <EntityAnnotation>
+        <Class URI="&TargetApp;Database"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant
+                >Contains description of Data structure</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <Declaration>
+        <Class URI="&TargetApp;Database"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&TargetApp;DatabaseCommand"/>
+        <Class URI="&TargetApp;command"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&TargetApp;DatabaseCommand"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&TargetApp;Field"/>
+        <Class URI="&TargetApp;CommonStructure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&TargetApp;Field"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&TargetApp;isDataType"/>
+            <Class URI="&TargetApp;DBDataType"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&TargetApp;Field"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&TargetApp;LanguageKB"/>
+        <Class URI="&TargetApp;BLL"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&TargetApp;LanguageKB"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&TargetApp;ListCustomerOrders"/>
+        <Class URI="&TargetApp;command"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&TargetApp;ListCustomerOrders"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&TargetApp;ListCustomers"/>
+        <Class URI="&TargetApp;command"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&TargetApp;ListCustomers"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&TargetApp;Methods"/>
+        <Class URI="&TargetApp;CommandExecutor"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&TargetApp;Methods"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&TargetApp;OrderCreated"/>
+        <Class URI="&TargetApp;Pages"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&TargetApp;OrderCreated"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&TargetApp;Orders"/>
+        <Class URI="&TargetApp;Pages"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&TargetApp;Orders"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&TargetApp;Packages"/>
+        <Class URI="&TargetApp;BLL"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&TargetApp;Packages"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&TargetApp;Pages"/>
+        <Class URI="&TargetApp;Presentation"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&TargetApp;Pages"/>
+    </Declaration>
+    <Declaration>
+        <Class URI="&TargetApp;Presentation"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&TargetApp;Property"/>
+        <Class URI="&TargetApp;Field"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&TargetApp;Property"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&TargetApp;Tables"/>
+        <Class URI="&TargetApp;Database"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&TargetApp;Tables"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&TargetApp;hasField"/>
+            <Class URI="&TargetApp;Field"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&TargetApp;Tables"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&TargetApp;command"/>
+        <Class URI="&TargetApp;Packages"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&TargetApp;command"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&TargetApp;core"/>
+        <Class URI="&TargetApp;Packages"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&TargetApp;core"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&TargetApp;servlet"/>
+        <Class URI="&TargetApp;Packages"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&TargetApp;servlet"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&TargetApp;web.xml"/>
+        <Class URI="&TargetApp;Configs"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&TargetApp;web.xml"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty URI="&TargetApp;Database"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty URI="&TargetApp;hasField"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty URI="&TargetApp;hasProperty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty URI="&TargetApp;is"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty URI="&TargetApp;isDataType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&TargetApp;sqlString"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&TargetApp;Tables"/>
+        <Individual URI="&TargetApp;Customer"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasField"/>
+        <Individual URI="&TargetApp;Customer"/>
+        <Individual URI="&TargetApp;customer_address"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasField"/>
+        <Individual URI="&TargetApp;Customer"/>
+        <Individual URI="&TargetApp;customer_id"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasField"/>
+        <Individual URI="&TargetApp;Customer"/>
+        <Individual URI="&TargetApp;customer_name"/>
+    </ObjectPropertyAssertion>
+    <Declaration>
+        <Individual URI="&TargetApp;Customer"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&TargetApp;DBDataType"/>
+        <Individual URI="&TargetApp;Integer"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;sqlString"/>
+        <Individual URI="&TargetApp;Integer"/>
+        <Constant>int</Constant>
+    </DataPropertyAssertion>
+    <Declaration>
+        <Individual URI="&TargetApp;Integer"/>
+    </Declaration>
+    <Declaration>
+        <Individual URI="&TargetApp;Method"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&TargetApp;Tables"/>
+        <Individual URI="&TargetApp;Order"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasField"/>
+        <Individual URI="&TargetApp;Order"/>
+        <Individual URI="&TargetApp;user_id"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasField"/>
+        <Individual URI="&TargetApp;Order"/>
+        <Individual URI="&TargetApp;amount"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasField"/>
+        <Individual URI="&TargetApp;Order"/>
+        <Individual URI="&TargetApp;order_id"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasField"/>
+        <Individual URI="&TargetApp;Order"/>
+        <Individual URI="&TargetApp;date_place"/>
+    </ObjectPropertyAssertion>
+    <Declaration>
+        <Individual URI="&TargetApp;Order"/>
+    </Declaration>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasProperty"/>
+        <Individual URI="&TargetApp;amount"/>
+        <Individual URI="&TargetApp;isprimary"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;isDataType"/>
+        <Individual URI="&TargetApp;amount"/>
+        <Individual URI="&TargetApp;Integer"/>
+    </ObjectPropertyAssertion>
+    <Declaration>
+        <Individual URI="&TargetApp;amount"/>
+    </Declaration>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasProperty"/>
+        <Individual URI="&TargetApp;customer_address"/>
+        <Individual URI="&TargetApp;isprimary"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;isDataType"/>
+        <Individual URI="&TargetApp;customer_address"/>
+        <Individual URI="&TargetApp;string"/>
+    </ObjectPropertyAssertion>
+    <Declaration>
+        <Individual URI="&TargetApp;customer_address"/>
+    </Declaration>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasProperty"/>
+        <Individual URI="&TargetApp;customer_id"/>
+        <Individual URI="&TargetApp;isprimary"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;isDataType"/>
+        <Individual URI="&TargetApp;customer_id"/>
+        <Individual URI="&TargetApp;Integer"/>
+    </ObjectPropertyAssertion>
+    <Declaration>
+        <Individual URI="&TargetApp;customer_id"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&TargetApp;Field"/>
+        <Individual URI="&TargetApp;customer_name"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasProperty"/>
+        <Individual URI="&TargetApp;customer_name"/>
+        <Individual URI="&TargetApp;isprimary"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;isDataType"/>
+        <Individual URI="&TargetApp;customer_name"/>
+        <Individual URI="&TargetApp;string"/>
+    </ObjectPropertyAssertion>
+    <Declaration>
+        <Individual URI="&TargetApp;customer_name"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&TargetApp;Property"/>
+        <Individual URI="&TargetApp;datatype"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&TargetApp;datatype"/>
+    </Declaration>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasProperty"/>
+        <Individual URI="&TargetApp;date_place"/>
+        <Individual URI="&TargetApp;isprimary"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;isDataType"/>
+        <Individual URI="&TargetApp;date_place"/>
+        <Individual URI="&TargetApp;datetime"/>
+    </ObjectPropertyAssertion>
+    <Declaration>
+        <Individual URI="&TargetApp;date_place"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&TargetApp;DBDataType"/>
+        <Individual URI="&TargetApp;datetime"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;sqlString"/>
+        <Individual URI="&TargetApp;datetime"/>
+        <Constant>datetime</Constant>
+    </DataPropertyAssertion>
+    <Declaration>
+        <Individual URI="&TargetApp;datetime"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&TargetApp;Methods"/>
+        <Individual URI="&TargetApp;getConnection"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&TargetApp;getConnection"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&TargetApp;Property"/>
+        <Individual URI="&TargetApp;isprimary"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&TargetApp;isprimary"/>
+    </Declaration>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasProperty"/>
+        <Individual URI="&TargetApp;order_id"/>
+        <Individual URI="&TargetApp;isprimary"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;isDataType"/>
+        <Individual URI="&TargetApp;order_id"/>
+        <Individual URI="&TargetApp;Integer"/>
+    </ObjectPropertyAssertion>
+    <Declaration>
+        <Individual URI="&TargetApp;order_id"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&TargetApp;DBDataType"/>
+        <Individual URI="&TargetApp;string"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;sqlString"/>
+        <Individual URI="&TargetApp;string"/>
+        <Constant>nvarchar(MAX)</Constant>
+    </DataPropertyAssertion>
+    <Declaration>
+        <Individual URI="&TargetApp;string"/>
+    </Declaration>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasProperty"/>
+        <Individual URI="&TargetApp;user_id"/>
+        <Individual URI="&TargetApp;datatype"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;isDataType"/>
+        <Individual URI="&TargetApp;user_id"/>
+        <Individual URI="&TargetApp;Integer"/>
+    </ObjectPropertyAssertion>
+    <Declaration>
+        <Individual URI="&TargetApp;user_id"/>
+    </Declaration>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

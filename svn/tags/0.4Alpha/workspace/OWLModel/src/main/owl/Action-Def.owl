@@ -1,0 +1,581 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY Action "http://idp.org/ontologies/2009/6/Action.owl#" >
+    <!ENTITY Application-KB "http://idp.org/ontologies/2009/6/Application-KB.owl#" >
+    <!ENTITY models "file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#" >
+]>
+
+
+<rdf:RDF xmlns="http://idp.org/ontologies/2009/6/Action.owl#"
+     xml:base="http://idp.org/ontologies/2009/6/Action.owl"
+     xmlns:models="file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:Action="http://idp.org/ontologies/2009/6/Action.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:Application-KB="http://idp.org/ontologies/2009/6/Application-KB.owl#">
+    <owl:Ontology rdf:about="">
+        <owl:imports rdf:resource="file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon"/>
+        <owl:imports rdf:resource="http://idp.org/ontologies/2009/6/Application-KB.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#hasAnyDomain -->
+
+    <owl:ObjectProperty rdf:about="&models;hasAnyDomain"/>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#hasComprehension -->
+
+    <owl:ObjectProperty rdf:about="&models;hasComprehension"/>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#hasLanguage -->
+
+    <owl:ObjectProperty rdf:about="&models;hasLanguage"/>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#hasObjectWhat -->
+
+    <owl:ObjectProperty rdf:about="&models;hasObjectWhat"/>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#hasObjectWhere -->
+
+    <owl:ObjectProperty rdf:about="&models;hasObjectWhere"/>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#hasPOS -->
+
+    <owl:ObjectProperty rdf:about="&models;hasPOS"/>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#hasPhrase -->
+
+    <owl:ObjectProperty rdf:about="&models;hasPhrase"/>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#hasPrecendingContext -->
+
+    <owl:ObjectProperty rdf:about="&models;hasPrecendingContext"/>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#hasRepresentation -->
+
+    <owl:ObjectProperty rdf:about="&models;hasRepresentation"/>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#hasStatement -->
+
+    <owl:ObjectProperty rdf:about="&models;hasStatement"/>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#hasStatementPhrase -->
+
+    <owl:ObjectProperty rdf:about="&models;hasStatementPhrase"/>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#hasSubject -->
+
+    <owl:ObjectProperty rdf:about="&models;hasSubject"/>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#hasTrailingContext -->
+
+    <owl:ObjectProperty rdf:about="&models;hasTrailingContext"/>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#hasWord -->
+
+    <owl:ObjectProperty rdf:about="&models;hasWord"/>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/6/Action.owl#hasApplicationContext -->
+
+    <owl:ObjectProperty rdf:about="#hasApplicationContext"/>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/6/Action.owl#hasConcept -->
+
+    <owl:ObjectProperty rdf:about="#hasConcept"/>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/6/Action.owl#hasExpression -->
+
+    <owl:ObjectProperty rdf:about="#hasExpression"/>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/6/Action.owl#hasOperand -->
+
+    <owl:ObjectProperty rdf:about="#hasOperand"/>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/6/Action.owl#hasOperator -->
+
+    <owl:ObjectProperty rdf:about="#hasOperator"/>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/6/Application-KB.owl#hasFramework -->
+
+    <owl:ObjectProperty rdf:about="&Application-KB;hasFramework"/>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/6/Application-KB.owl#hasLanguage -->
+
+    <owl:ObjectProperty rdf:about="&Application-KB;hasLanguage"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://idp.org/ontologies/2009/6/Action.owl#addActionSubject -->
+
+    <owl:DatatypeProperty rdf:about="#addActionSubject">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#AnyAction -->
+
+    <owl:Class rdf:about="&models;AnyAction">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasExpression"/>
+                <owl:someValuesFrom rdf:resource="#Expression"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&models;hasObjectWhat"/>
+                <owl:someValuesFrom rdf:resource="&models;Object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&models;hasSubject"/>
+                <owl:someValuesFrom rdf:resource="&models;Subject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&models;hasObjectWhere"/>
+                <owl:someValuesFrom rdf:resource="&models;Object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#AnyDomain -->
+
+    <owl:Class rdf:about="&models;AnyDomain">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&models;hasRepresentation"/>
+                <owl:someValuesFrom rdf:resource="&models;Representation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#CRDomain -->
+
+    <owl:Class rdf:about="&models;CRDomain"/>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#Comprehension -->
+
+    <owl:Class rdf:about="&models;Comprehension">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&models;hasAnyDomain"/>
+                <owl:allValuesFrom rdf:resource="&models;AnyDomain"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#Context -->
+
+    <owl:Class rdf:about="&models;Context">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&models;hasPhrase"/>
+                <owl:someValuesFrom rdf:resource="&models;Phrase"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#Language -->
+
+    <owl:Class rdf:about="&models;Language"/>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#Object -->
+
+    <owl:Class rdf:about="&models;Object"/>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#PartOfSpeach -->
+
+    <owl:Class rdf:about="&models;PartOfSpeach"/>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#Phrase -->
+
+    <owl:Class rdf:about="&models;Phrase">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&models;hasWord"/>
+                <owl:someValuesFrom rdf:resource="&models;Word"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#Representation -->
+
+    <owl:Class rdf:about="&models;Representation">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&models;hasStatement"/>
+                <owl:someValuesFrom rdf:resource="&models;Statement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#Sentence -->
+
+    <owl:Class rdf:about="&models;Sentence">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&models;hasStatement"/>
+                <owl:allValuesFrom rdf:resource="&models;Statement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#Statement -->
+
+    <owl:Class rdf:about="&models;Statement">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&models;hasTrailingContext"/>
+                <owl:allValuesFrom rdf:resource="&models;Context"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&models;hasComprehension"/>
+                <owl:someValuesFrom rdf:resource="&models;Comprehension"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&models;hasStatementPhrase"/>
+                <owl:someValuesFrom rdf:resource="&models;Phrase"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&models;hasPrecendingContext"/>
+                <owl:allValuesFrom rdf:resource="&models;Context"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#Subject -->
+
+    <owl:Class rdf:about="&models;Subject"/>
+    
+
+
+    <!-- file:/home/max/idpWorkspace/jobOfferOWL/3models.kaon#Word -->
+
+    <owl:Class rdf:about="&models;Word">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&models;hasPOS"/>
+                <owl:allValuesFrom rdf:resource="&models;PartOfSpeach"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&models;hasLanguage"/>
+                <owl:someValuesFrom rdf:resource="&models;Language"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/6/Action.owl#Action -->
+
+    <owl:Class rdf:about="#Action">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasExpression"/>
+                <owl:someValuesFrom rdf:resource="#Expression"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasApplicationContext"/>
+                <owl:someValuesFrom rdf:resource="#ApplicationContext"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasConcept"/>
+                <owl:someValuesFrom rdf:resource="&models;CRDomain"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/6/Action.owl#ApplicationContext -->
+
+    <owl:Class rdf:about="#ApplicationContext">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Application-KB;hasFramework"/>
+                <owl:allValuesFrom rdf:resource="&Application-KB;Framework"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Application-KB;hasLanguage"/>
+                <owl:allValuesFrom rdf:resource="&Application-KB;ProgrammingLanguage"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/6/Action.owl#Expression -->
+
+    <owl:Class rdf:about="#Expression">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasOperator"/>
+                <owl:someValuesFrom rdf:resource="#Operator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasOperand"/>
+                <owl:someValuesFrom rdf:resource="#Operand"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/6/Action.owl#Operand -->
+
+    <owl:Class rdf:about="#Operand"/>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/6/Action.owl#Operator -->
+
+    <owl:Class rdf:about="#Operator"/>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/6/Application-KB.owl#Framework -->
+
+    <owl:Class rdf:about="&Application-KB;Framework"/>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/6/Application-KB.owl#ProgrammingLanguage -->
+
+    <owl:Class rdf:about="&Application-KB;ProgrammingLanguage"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://idp.org/ontologies/2009/6/Action.owl#AddAction -->
+
+    <models:AnyAction rdf:about="#AddAction">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <hasExpression rdf:resource="#AddExpression"/>
+        <models:hasSubject rdf:resource="#Self"/>
+    </models:AnyAction>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/6/Action.owl#AddExpression -->
+
+    <owl:Thing rdf:about="#AddExpression">
+        <rdf:type rdf:resource="#Expression"/>
+        <hasOperator rdf:resource="#AddOperator"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/6/Action.owl#AddOperator -->
+
+    <owl:Thing rdf:about="#AddOperator">
+        <rdf:type rdf:resource="#Operator"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/6/Action.owl#RemoveAction -->
+
+    <models:AnyAction rdf:about="#RemoveAction">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <models:hasSubject rdf:resource="#Self"/>
+    </models:AnyAction>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/6/Action.owl#RemoveOperator -->
+
+    <Operator rdf:about="#RemoveOperator">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </Operator>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/6/Action.owl#Self -->
+
+    <owl:Thing rdf:about="#Self">
+        <rdf:type rdf:resource="&models;AnyDomain"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/6/Action.owl#addWord -->
+
+    <models:Word rdf:about="#addWord">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </models:Word>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/6/Action.owl#customerWord -->
+
+    <models:Word rdf:about="#customerWord">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </models:Word>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/6/Action.owl#fieldWord -->
+
+    <models:Word rdf:about="#fieldWord">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </models:Word>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/6/Action.owl#nameWord -->
+
+    <models:Word rdf:about="#nameWord">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </models:Word>
+    
+
+
+    <!-- http://idp.org/ontologies/2009/6/Action.owl#pageWord -->
+
+    <models:Word rdf:about="#pageWord">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </models:Word>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

@@ -1,0 +1,14 @@
+#labels Featured,Phase-Design
+#Future features.
+
+= Things to be done in next version =
+
+Nearest future:
+  * Rename Cogitative layer to Perceiving layer.
+  * Attach behaviour description to method of the module or to the module
+  * Add an mechanism to modify the domain layer based on incoming information (teach the domain)
+  * Add an option to generalize (create abstraction layers) of the domain(architecture of the application)
+  * Add an option to generalize cogitative concepts
+
+Far future:
+  * Cogitation is the special domain and Linguistics is the special domain, have to have links that will enable the system to be much more flexible

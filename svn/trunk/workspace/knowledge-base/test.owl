@@ -1,0 +1,2405 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY TargetApp "http://idp.org/ontologies/2009/10/TargetApp.owl#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2006/12/owl2-xml#"
+     xml:base="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:TargetApp="http://idp.org/ontologies/2009/10/TargetApp.owl#"
+     URI="http://idp.org/ontologies/2009/10/TargetApp.owl">
+    <SubClassOf>
+        <Class URI="&TargetApp;AccessModifier"/>
+        <Class URI="&TargetApp;MethodAttributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&TargetApp;AnyField"/>
+        <Class URI="&TargetApp;AnyFromApplication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&TargetApp;AnyField"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&TargetApp;hasDefinition"/>
+            <Class URI="&TargetApp;FieldDefinition"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&TargetApp;AnyFromApplication"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&TargetApp;hasFile"/>
+            <Class URI="&TargetApp;File"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&TargetApp;AnyFromApplication"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty URI="&TargetApp;value"/>
+            <Datatype URI="&xsd;string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&TargetApp;Application"/>
+        <Class URI="&TargetApp;AnyFromApplication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&TargetApp;Application"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&TargetApp;hasProject"/>
+            <Class URI="&TargetApp;Project"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&TargetApp;BLL"/>
+        <Class URI="&TargetApp;Module"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&TargetApp;CommonStructure"/>
+        <Class URI="&TargetApp;Database"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&TargetApp;Configs"/>
+        <Class URI="&TargetApp;Presentation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&TargetApp;DBDataType"/>
+        <Class URI="&TargetApp;CommonStructure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&TargetApp;DBDataType"/>
+        <DataSomeValuesFrom>
+            <DataProperty URI="&TargetApp;sqlString"/>
+            <Datatype URI="&xsd;string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&TargetApp;Data"/>
+        <Class URI="&TargetApp;Module"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&TargetApp;Data"/>
+        <Class URI="&TargetApp;Tables"/>
+    </SubClassOf>
+    <EntityAnnotation>
+        <Class URI="&TargetApp;Database"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant
+                >Contains description of Data structure</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubClassOf>
+        <Class URI="&TargetApp;Directory"/>
+        <Class URI="&TargetApp;File"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&TargetApp;ExternalTypes"/>
+        <Class URI="&TargetApp;FakeData"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&TargetApp;Field"/>
+        <Class URI="&TargetApp;CommonStructure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&TargetApp;Field"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&TargetApp;isDataType"/>
+            <Class URI="&TargetApp;DBDataType"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&TargetApp;FieldDefinition"/>
+        <Class URI="&TargetApp;Definition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&TargetApp;File"/>
+        <Class URI="&TargetApp;FileSystem"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&TargetApp;File"/>
+        <DataSomeValuesFrom>
+            <DataProperty URI="&TargetApp;address"/>
+            <Datatype URI="&xsd;anyURI"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&TargetApp;MemoryModifier"/>
+        <Class URI="&TargetApp;MethodAttributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&TargetApp;Method"/>
+        <Class URI="&TargetApp;AnyFromApplication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&TargetApp;Method"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&TargetApp;hasDefinition"/>
+            <Class URI="&TargetApp;MethodDefinition"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&TargetApp;MethodAttributes"/>
+        <Class URI="&TargetApp;FakeData"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&TargetApp;MethodBody"/>
+        <Class URI="&TargetApp;FakeData"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&TargetApp;MethodDefinition"/>
+        <Class URI="&TargetApp;Definition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&TargetApp;Module"/>
+        <Class URI="&TargetApp;AnyFromApplication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&TargetApp;Module"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&TargetApp;linkedToModule"/>
+            <Class URI="&TargetApp;Module"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&TargetApp;Module"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&TargetApp;hasDefinition"/>
+            <Class URI="&TargetApp;ModuleDefinition"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&TargetApp;Module"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&TargetApp;hasField"/>
+            <Class URI="&TargetApp;AnyField"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&TargetApp;Module"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&TargetApp;hasMethod"/>
+            <Class URI="&TargetApp;Method"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&TargetApp;Module"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&TargetApp;hasModule"/>
+            <Class URI="&TargetApp;Module"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&TargetApp;ModuleComplete"/>
+        <Class URI="&TargetApp;ModuleWithoutFields"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&TargetApp;ModuleComplete"/>
+        <Class URI="&TargetApp;ModuleWithoutMethods"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&TargetApp;ModuleDefinition"/>
+        <Class URI="&TargetApp;Definition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&TargetApp;ModuleDefinition"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&TargetApp;hasReference"/>
+            <Class URI="&TargetApp;ModuleDefinition"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&TargetApp;ModuleWithoutFields"/>
+        <Class URI="&TargetApp;ModuleDefinition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&TargetApp;ModuleWithoutFields"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&TargetApp;hasMethodDefinition"/>
+            <Class URI="&TargetApp;MethodDefinition"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&TargetApp;ModuleWithoutMethods"/>
+        <Class URI="&TargetApp;ModuleDefinition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&TargetApp;ModuleWithoutMethods"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&TargetApp;hasFieldDefinition"/>
+            <Class URI="&TargetApp;FieldDefinition"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&TargetApp;ObjectTypes"/>
+        <Class URI="&TargetApp;FakeData"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&TargetApp;Pages"/>
+        <Class URI="&TargetApp;Module"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&TargetApp;Pages"/>
+        <Class URI="&TargetApp;Presentation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&TargetApp;Project"/>
+        <Class URI="&TargetApp;AnyFromApplication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&TargetApp;Project"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&TargetApp;hasModule"/>
+            <Class URI="&TargetApp;Module"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&TargetApp;Property"/>
+        <Class URI="&TargetApp;Field"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&TargetApp;Tables"/>
+        <Class URI="&TargetApp;BLL"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&TargetApp;Tables"/>
+        <Class URI="&TargetApp;Database"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&TargetApp;Tables"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&TargetApp;hasField"/>
+            <Class URI="&TargetApp;Field"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&TargetApp;web.xml"/>
+        <Class URI="&TargetApp;Configs"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&TargetApp;web.xml"/>
+        <Class URI="&TargetApp;Module"/>
+    </SubClassOf>
+    <Declaration>
+        <ObjectProperty URI="&TargetApp;Database"/>
+    </Declaration>
+    <SubObjectPropertyOf>
+        <ObjectProperty URI="&TargetApp;extends"/>
+        <ObjectProperty URI="&TargetApp;classDefinition"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty URI="&TargetApp;hasAccessModifier"/>
+        <ObjectProperty URI="&TargetApp;hasBehavior"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty URI="&TargetApp;hasBehavior"/>
+        <ObjectProperty URI="&TargetApp;MethodProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty URI="&TargetApp;hasBody"/>
+        <ObjectProperty URI="&TargetApp;hasBehavior"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty URI="&TargetApp;hasContructorDefinition"/>
+        <ObjectProperty URI="&TargetApp;hasMethodDefinition"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty URI="&TargetApp;hasFieldDefinition"/>
+        <ObjectProperty URI="&TargetApp;definitionProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty URI="&TargetApp;hasInputParams"/>
+        <ObjectProperty URI="&TargetApp;hasBehavior"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty URI="&TargetApp;hasMemoryModifier"/>
+        <ObjectProperty URI="&TargetApp;hasBehavior"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty URI="&TargetApp;hasMethod"/>
+        <ObjectProperty URI="&TargetApp;applicationProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty URI="&TargetApp;hasMethodDefinition"/>
+        <ObjectProperty URI="&TargetApp;definitionProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty URI="&TargetApp;hasModule"/>
+        <ObjectProperty URI="&TargetApp;applicationProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty URI="&TargetApp;hasProject"/>
+        <ObjectProperty URI="&TargetApp;applicationProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty URI="&TargetApp;hasReference"/>
+        <ObjectProperty URI="&TargetApp;definitionProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty URI="&TargetApp;hasReturnType"/>
+        <ObjectProperty URI="&TargetApp;hasBehavior"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty URI="&TargetApp;implements"/>
+        <ObjectProperty URI="&TargetApp;classDefinition"/>
+    </SubObjectPropertyOf>
+    <SymmetricObjectProperty>
+        <ObjectProperty URI="&TargetApp;linkedToModule"/>
+    </SymmetricObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty URI="&TargetApp;linkedToModule"/>
+    </TransitiveObjectProperty>
+    <SubObjectPropertyOf>
+        <ObjectProperty URI="&TargetApp;throws"/>
+        <ObjectProperty URI="&TargetApp;classDefinition"/>
+    </SubObjectPropertyOf>
+    <ClassAssertion>
+        <Class URI="&TargetApp;ExternalTypes"/>
+        <Individual URI="&TargetApp;CTorType"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;CTorType"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;BLL"/>
+        <Individual URI="&TargetApp;CommandExecutor"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;CommandExecutor"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasFieldDefinition"/>
+        <Individual URI="&TargetApp;CommandExecutor"/>
+        <Individual URI="&TargetApp;ds"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasFieldDefinition"/>
+        <Individual URI="&TargetApp;CommandExecutor"/>
+        <Individual URI="&TargetApp;myOnlyInstance"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasFile"/>
+        <Individual URI="&TargetApp;CommandExecutor"/>
+        <Individual URI="&TargetApp;CommandExecutor.java"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasMethodDefinition"/>
+        <Individual URI="&TargetApp;CommandExecutor"/>
+        <Individual URI="&TargetApp;getInstance"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasMethodDefinition"/>
+        <Individual URI="&TargetApp;CommandExecutor"/>
+        <Individual URI="&TargetApp;getDataSource"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasMethodDefinition"/>
+        <Individual URI="&TargetApp;CommandExecutor"/>
+        <Individual URI="&TargetApp;CommandExecutorCtr"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasMethodDefinition"/>
+        <Individual URI="&TargetApp;CommandExecutor"/>
+        <Individual URI="&TargetApp;getConnection"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasMethodDefinition"/>
+        <Individual URI="&TargetApp;CommandExecutor"/>
+        <Individual URI="&TargetApp;executeDatabaseCommand"/>
+    </ObjectPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;CommandExecutor.java"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;CommandExecutorCtr"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasAccessModifier"/>
+        <Individual URI="&TargetApp;CommandExecutorCtr"/>
+        <Individual URI="&TargetApp;private"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasBody"/>
+        <Individual URI="&TargetApp;CommandExecutorCtr"/>
+        <Individual URI="&TargetApp;CommandExecutor_Body"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasReturnType"/>
+        <Individual URI="&TargetApp;CommandExecutorCtr"/>
+        <Individual URI="&TargetApp;CTorType"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;value"/>
+        <Individual URI="&TargetApp;CommandExecutorCtr"/>
+        <Constant></Constant>
+    </DataPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;MethodBody"/>
+        <Individual URI="&TargetApp;CommandExecutor_Body"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;CommandExecutor_Body"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;value"/>
+        <Individual URI="&TargetApp;CommandExecutor_Body"/>
+        <Constant
+            >getDataSource();</Constant>
+    </DataPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;ConnInputParameter"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;isDataType"/>
+        <Individual URI="&TargetApp;ConnInputParameter"/>
+        <Individual URI="&TargetApp;Connection"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;value"/>
+        <Individual URI="&TargetApp;ConnInputParameter"/>
+        <Constant>conn</Constant>
+    </DataPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;ExternalTypes"/>
+        <Individual URI="&TargetApp;Connection"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;Connection"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;isClass"/>
+        <Individual URI="&TargetApp;Connection"/>
+        <Constant
+            >java.sql.Connection</Constant>
+    </DataPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;CreateCusotmerCtor_Body"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;value"/>
+        <Individual URI="&TargetApp;CreateCusotmerCtor_Body"/>
+        <Constant>this.cust = c;</Constant>
+    </DataPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;BLL"/>
+        <Individual URI="&TargetApp;CreateCustomer"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;CreateCustomer"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;dependsOn"/>
+        <Individual URI="&TargetApp;CreateCustomer"/>
+        <Individual URI="&TargetApp;DatabaseCommand"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasContructorDefinition"/>
+        <Individual URI="&TargetApp;CreateCustomer"/>
+        <Individual URI="&TargetApp;CreateCustomer_Constructor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasFieldDefinition"/>
+        <Individual URI="&TargetApp;CreateCustomer"/>
+        <Individual URI="&TargetApp;CreateCustomer_CustField"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasFile"/>
+        <Individual URI="&TargetApp;CreateCustomer"/>
+        <Individual URI="&TargetApp;CreateCustomer.java"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasMethodDefinition"/>
+        <Individual URI="&TargetApp;CreateCustomer"/>
+        <Individual URI="&TargetApp;CreateCustomerMethod"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;implements"/>
+        <Individual URI="&TargetApp;CreateCustomer"/>
+        <Individual URI="&TargetApp;DatabaseCommand"/>
+    </ObjectPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;CreateCustomer.java"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;Method"/>
+        <Individual URI="&TargetApp;CreateCustomerMethod"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;CreateCustomerMethod"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasBody"/>
+        <Individual URI="&TargetApp;CreateCustomerMethod"/>
+        <Individual URI="&TargetApp;CreateCustomer_Body"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasInputParams"/>
+        <Individual URI="&TargetApp;CreateCustomerMethod"/>
+        <Individual URI="&TargetApp;executeDatabaseCommandParam1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasReturnType"/>
+        <Individual URI="&TargetApp;CreateCustomerMethod"/>
+        <Individual URI="&TargetApp;Object"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;value"/>
+        <Individual URI="&TargetApp;CreateCustomerMethod"/>
+        <Constant
+            >executeDatabaseOperation</Constant>
+    </DataPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;BLL"/>
+        <Individual URI="&TargetApp;CreateCustomerServlet"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;ModuleDefinition"/>
+        <Individual URI="&TargetApp;CreateCustomerServlet"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;CreateCustomerServlet"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;extends"/>
+        <Individual URI="&TargetApp;CreateCustomerServlet"/>
+        <Individual URI="&TargetApp;HttpServlet"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasMethodDefinition"/>
+        <Individual URI="&TargetApp;CreateCustomerServlet"/>
+        <Individual URI="&TargetApp;init"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasMethodDefinition"/>
+        <Individual URI="&TargetApp;CreateCustomerServlet"/>
+        <Individual URI="&TargetApp;doGet"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasMethodDefinition"/>
+        <Individual URI="&TargetApp;CreateCustomerServlet"/>
+        <Individual URI="&TargetApp;doPost"/>
+    </ObjectPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;MethodBody"/>
+        <Individual URI="&TargetApp;CreateCustomer_Body"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;CreateCustomer_Body"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;value"/>
+        <Individual URI="&TargetApp;CreateCustomer_Body"/>
+        <Constant
+            >PreparedStatement sta = conn.prepareStatement(&quot;INSERT INTO CUSTOMER (
+$Customer; separator=&quot;, &quot;$
+) VALUES (
+$Customer:{ ?, }$);
+	$Customer.Fields:{
+                       i=i+1 
+                       sta.setString(i,$it.setterMethod$)
+                           }$
+            
+	int rows_updated = sta.executeUpdate();
+	sta.close();
+		
+	return new Integer(rows_updated);</Constant>
+    </DataPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;Method"/>
+        <Individual URI="&TargetApp;CreateCustomer_Constructor"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;CreateCustomer_Constructor"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasBody"/>
+        <Individual URI="&TargetApp;CreateCustomer_Constructor"/>
+        <Individual URI="&TargetApp;CreateCusotmerCtor_Body"/>
+    </ObjectPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;AnyField"/>
+        <Individual URI="&TargetApp;CreateCustomer_CustField"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;CreateCustomer_CustField"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasAccessModifier"/>
+        <Individual URI="&TargetApp;CreateCustomer_CustField"/>
+        <Individual URI="&TargetApp;private"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;isDataType"/>
+        <Individual URI="&TargetApp;CreateCustomer_CustField"/>
+        <Individual URI="&TargetApp;CustomerObject"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;value"/>
+        <Individual URI="&TargetApp;CreateCustomer_CustField"/>
+        <Constant>cust</Constant>
+    </DataPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;BLL"/>
+        <Individual URI="&TargetApp;CreateOrder"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;CreateOrder"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;dependsOn"/>
+        <Individual URI="&TargetApp;CreateOrder"/>
+        <Individual URI="&TargetApp;DatabaseCommand"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasContructorDefinition"/>
+        <Individual URI="&TargetApp;CreateOrder"/>
+        <Individual URI="&TargetApp;CreateOrder_Ctr"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasField"/>
+        <Individual URI="&TargetApp;CreateOrder"/>
+        <Individual URI="&TargetApp;order"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasFile"/>
+        <Individual URI="&TargetApp;CreateOrder"/>
+        <Individual URI="&TargetApp;CreateOrder.java"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasMethodDefinition"/>
+        <Individual URI="&TargetApp;CreateOrder"/>
+        <Individual URI="&TargetApp;CreateOrderMethod"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;implements"/>
+        <Individual URI="&TargetApp;CreateOrder"/>
+        <Individual URI="&TargetApp;DatabaseCommand"/>
+    </ObjectPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;CreateOrder.java"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;CreateOrderMethod"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasBody"/>
+        <Individual URI="&TargetApp;CreateOrderMethod"/>
+        <Individual URI="&TargetApp;CreateOrder_body"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasInputParams"/>
+        <Individual URI="&TargetApp;CreateOrderMethod"/>
+        <Individual URI="&TargetApp;executeDatabaseCommandParam1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasReturnType"/>
+        <Individual URI="&TargetApp;CreateOrderMethod"/>
+        <Individual URI="&TargetApp;Object"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;value"/>
+        <Individual URI="&TargetApp;CreateOrderMethod"/>
+        <Constant
+            >executeDatabaseOperation</Constant>
+    </DataPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;CreateOrder_Ctr"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasContructorDefinition"/>
+        <Individual URI="&TargetApp;CreateOrder_Ctr"/>
+        <Individual URI="&TargetApp;CreateOrder_Ctr_Body"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;value"/>
+        <Individual URI="&TargetApp;CreateOrder_Ctr"/>
+        <Constant>this.order = o;</Constant>
+    </DataPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;CreateOrder_Ctr_Body"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;CreateOrder_body"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;value"/>
+        <Individual URI="&TargetApp;CreateOrder_body"/>
+        <Constant
+            >PreparedStatement sta = conn.prepareStatement(&quot;INSERT INTO ORDERS (
+$OrderObject.Fields:{
+       $it.value$,
+}$
+) VALUES (
+$OrderObject.Fields:{
+       ?,
+}$);
+	int i=1;
+	$OrderObject.Fields:{
+                           sta.setString(i,order.$it.getterMethod$);
+                     }$
+	int rows_updated = sta.executeUpdate();
+	sta.close();
+		
+	return new Integer(rows_updated);</Constant>
+    </DataPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;Tables"/>
+        <Individual URI="&TargetApp;Customer"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;Customer"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasField"/>
+        <Individual URI="&TargetApp;Customer"/>
+        <Individual URI="&TargetApp;customer_name"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasField"/>
+        <Individual URI="&TargetApp;Customer"/>
+        <Individual URI="&TargetApp;customer_id"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasField"/>
+        <Individual URI="&TargetApp;Customer"/>
+        <Individual URI="&TargetApp;customer_address"/>
+    </ObjectPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;Customer.java"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;Pages"/>
+        <Individual URI="&TargetApp;Customer.jsp"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;Customer.jsp"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasContent"/>
+        <Individual URI="&TargetApp;Customer.jsp"/>
+        <Individual URI="&TargetApp;Customer.jsp.Content"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasFile"/>
+        <Individual URI="&TargetApp;Customer.jsp"/>
+        <Individual URI="&TargetApp;File.Customer.jsp"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;linkedToModule"/>
+        <Individual URI="&TargetApp;Customer.jsp"/>
+        <Individual URI="&TargetApp;CreateCustomer"/>
+    </ObjectPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;Customer.jsp.Content"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;value"/>
+        <Individual URI="&TargetApp;Customer.jsp.Content"/>
+        <Constant
+            >&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=ISO-8859-1&quot;
+    pageEncoding=&quot;ISO-8859-1&quot;%&gt;
+&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=ISO-8859-1&quot;&gt;
+&lt;title&gt;Customers list&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;jsp:useBean id=&quot;customers&quot; type=&quot;java.util.ArrayList&lt;core.Customer&gt;&quot; scope=&quot;request&quot;/&gt;
+
+&lt;b&gt;Registered Customers:&lt;/b&gt;&lt;br&gt;
+&lt;table border=&quot;1&quot;&gt;
+&lt;tr&gt;
+	$Customer.Fields:{
+&lt;td&gt;		
+$it.value$;
+&lt;/td&gt;		
+	}$
+&lt;/tr&gt;
+&lt;% for(core.Customer c : customers) { %&gt;
+&lt;tr&gt;
+$Customer.Fields:{
+&lt;td&gt;		
+$it.getterMethod$();
+&lt;/td&gt;		
+	}$
+
+	
+	&lt;td&gt;&lt;a href=&quot;/Orders/ListCustomerOrders?cust_id=&lt;%= c.getId() %&gt;&quot;&gt;Orders&lt;/a&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;% } %&gt;
+
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</Constant>
+    </DataPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;BLL"/>
+        <Individual URI="&TargetApp;CustomerObject"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;CustomerObject"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;dependsOn"/>
+        <Individual URI="&TargetApp;CustomerObject"/>
+        <Individual URI="&TargetApp;Customer"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasFieldDefinition"/>
+        <Individual URI="&TargetApp;CustomerObject"/>
+        <Individual URI="&TargetApp;address_field"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasFieldDefinition"/>
+        <Individual URI="&TargetApp;CustomerObject"/>
+        <Individual URI="&TargetApp;id"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasFieldDefinition"/>
+        <Individual URI="&TargetApp;CustomerObject"/>
+        <Individual URI="&TargetApp;Firstname"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasFieldDefinition"/>
+        <Individual URI="&TargetApp;CustomerObject"/>
+        <Individual URI="&TargetApp;Lastname"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasFile"/>
+        <Individual URI="&TargetApp;CustomerObject"/>
+        <Individual URI="&TargetApp;Customer.java"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;value"/>
+        <Individual URI="&TargetApp;CustomerObject"/>
+        <Constant>Customer</Constant>
+    </DataPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;Customer_Created.jsp"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;Customer_Created_Content"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;value"/>
+        <Individual URI="&TargetApp;Customer_Created_Content"/>
+        <Constant
+            >&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=ISO-8859-1&quot;
+    pageEncoding=&quot;ISO-8859-1&quot;%&gt;
+&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=ISO-8859-1&quot;&gt;
+&lt;title&gt;Customer Created&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;B&gt;New Customer has been created!&lt;/B&gt;
+
+&lt;a href=&quot;javascript:history.go(-1)&quot;&gt;Go Back&lt;/a&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</Constant>
+    </DataPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;Pages"/>
+        <Individual URI="&TargetApp;Customer_crated"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;Customer_crated"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasContent"/>
+        <Individual URI="&TargetApp;Customer_crated"/>
+        <Individual URI="&TargetApp;Customer_Created_Content"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasFile"/>
+        <Individual URI="&TargetApp;Customer_crated"/>
+        <Individual URI="&TargetApp;Customer_Created.jsp"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;linkedToModule"/>
+        <Individual URI="&TargetApp;Customer_crated"/>
+        <Individual URI="&TargetApp;Customer"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;linkedToModule"/>
+        <Individual URI="&TargetApp;Customer_crated"/>
+        <Individual URI="&TargetApp;Customer.jsp"/>
+    </ObjectPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;ExternalTypes"/>
+        <Individual URI="&TargetApp;DataSource"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;DataSource"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;isClass"/>
+        <Individual URI="&TargetApp;DataSource"/>
+        <Constant
+            >java.sql.Connection</Constant>
+    </DataPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;BLL"/>
+        <Individual URI="&TargetApp;DatabaseCommand"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;DatabaseCommand"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasAccessModifier"/>
+        <Individual URI="&TargetApp;DatabaseCommand"/>
+        <Individual URI="&TargetApp;public"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasFile"/>
+        <Individual URI="&TargetApp;DatabaseCommand"/>
+        <Individual URI="&TargetApp;DatabaseCommand.java"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasMethod"/>
+        <Individual URI="&TargetApp;DatabaseCommand"/>
+        <Individual URI="&TargetApp;executeDatabaseOperation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;is"/>
+        <Individual URI="&TargetApp;DatabaseCommand"/>
+        <Individual URI="&TargetApp;Interface"/>
+    </ObjectPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;DatabaseCommand.java"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;Directory"/>
+        <Individual URI="&TargetApp;Directory.webapp"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;Directory.webapp"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;address"/>
+        <Individual URI="&TargetApp;Directory.webapp"/>
+        <Constant>/webapp</Constant>
+    </DataPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;File"/>
+        <Individual URI="&TargetApp;File.Customer.jsp"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;File.Customer.jsp"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;address"/>
+        <Individual URI="&TargetApp;File.Customer.jsp"/>
+        <Constant
+            >/webapp/Customer.jsp</Constant>
+    </DataPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;File"/>
+        <Individual URI="&TargetApp;File.Orders.jsp"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;File.Orders.jsp"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;address"/>
+        <Individual URI="&TargetApp;File.Orders.jsp"/>
+        <Constant
+            >/webapp/Orders.jsp</Constant>
+    </DataPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;AnyField"/>
+        <Individual URI="&TargetApp;Firstname"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;Firstname"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;isDataType"/>
+        <Individual URI="&TargetApp;Firstname"/>
+        <Individual URI="&TargetApp;string"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;getterMethod"/>
+        <Individual URI="&TargetApp;Firstname"/>
+        <Constant>getFirstname</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;setterMethod"/>
+        <Individual URI="&TargetApp;Firstname"/>
+        <Constant>setFirstname</Constant>
+    </DataPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;ObjectTypes"/>
+        <Individual URI="&TargetApp;HttpServlet"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;HttpServlet"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;isClass"/>
+        <Individual URI="&TargetApp;HttpServlet"/>
+        <Constant
+            >javax.servlet.http.HttpServlet</Constant>
+    </DataPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;HttpServletRequest"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;isClass"/>
+        <Individual URI="&TargetApp;HttpServletRequest"/>
+        <Constant
+            >javax.servlet.http.HttpServletRequest</Constant>
+    </DataPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;HttpServletResponse"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;isClass"/>
+        <Individual URI="&TargetApp;HttpServletResponse"/>
+        <Constant
+            >javax.servlet.http.HttpServletResponse</Constant>
+    </DataPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;IOException"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;isClass"/>
+        <Individual URI="&TargetApp;IOException"/>
+        <Constant
+            >java.io.IOException</Constant>
+    </DataPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;DBDataType"/>
+        <Individual URI="&TargetApp;Integer"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;ObjectTypes"/>
+        <Individual URI="&TargetApp;Integer"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;Integer"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;isClass"/>
+        <Individual URI="&TargetApp;Integer"/>
+        <Constant>int</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;sqlString"/>
+        <Individual URI="&TargetApp;Integer"/>
+        <Constant>int</Constant>
+    </DataPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;ObjectTypes"/>
+        <Individual URI="&TargetApp;Interface"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;Interface"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;value"/>
+        <Individual URI="&TargetApp;Interface"/>
+        <Constant>interface</Constant>
+    </DataPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;AnyField"/>
+        <Individual URI="&TargetApp;Lastname"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;Lastname"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;isDataType"/>
+        <Individual URI="&TargetApp;Lastname"/>
+        <Individual URI="&TargetApp;String"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;getterMethod"/>
+        <Individual URI="&TargetApp;Lastname"/>
+        <Constant>getLastname</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;setterMethod"/>
+        <Individual URI="&TargetApp;Lastname"/>
+        <Constant>setLastname</Constant>
+    </DataPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;Method"/>
+        <Individual URI="&TargetApp;ListCustimerOrders_List"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;ListCustimerOrders_List"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasAccessModifier"/>
+        <Individual URI="&TargetApp;ListCustimerOrders_List"/>
+        <Individual URI="&TargetApp;public"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasBody"/>
+        <Individual URI="&TargetApp;ListCustimerOrders_List"/>
+        <Individual URI="&TargetApp;ListCustomers_Body"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasInputParams"/>
+        <Individual URI="&TargetApp;ListCustimerOrders_List"/>
+        <Individual URI="&TargetApp;executeDatabaseCommandParam1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasReturnType"/>
+        <Individual URI="&TargetApp;ListCustimerOrders_List"/>
+        <Individual URI="&TargetApp;Object"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;value"/>
+        <Individual URI="&TargetApp;ListCustimerOrders_List"/>
+        <Constant
+            >executeDatabaseOperation</Constant>
+    </DataPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;BLL"/>
+        <Individual URI="&TargetApp;ListCustomerOrders"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;ModuleDefinition"/>
+        <Individual URI="&TargetApp;ListCustomerOrders"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;ListCustomerOrders"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;dependsOn"/>
+        <Individual URI="&TargetApp;ListCustomerOrders"/>
+        <Individual URI="&TargetApp;DatabaseCommand"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasContructorDefinition"/>
+        <Individual URI="&TargetApp;ListCustomerOrders"/>
+        <Individual URI="&TargetApp;ListCustomerOrdersCtr"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasFieldDefinition"/>
+        <Individual URI="&TargetApp;ListCustomerOrders"/>
+        <Individual URI="&TargetApp;cust_id"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasFile"/>
+        <Individual URI="&TargetApp;ListCustomerOrders"/>
+        <Individual URI="&TargetApp;ListCustomerOrders.java"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasMethodDefinition"/>
+        <Individual URI="&TargetApp;ListCustomerOrders"/>
+        <Individual URI="&TargetApp;ListCustimerOrders_List"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;implements"/>
+        <Individual URI="&TargetApp;ListCustomerOrders"/>
+        <Individual URI="&TargetApp;DatabaseCommand"/>
+    </ObjectPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;ListCustomerOrders.java"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;MethodDefinition"/>
+        <Individual URI="&TargetApp;ListCustomerOrdersCtr"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;ListCustomerOrdersCtr"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasInputParams"/>
+        <Individual URI="&TargetApp;ListCustomerOrdersCtr"/>
+        <Individual URI="&TargetApp;ListCustomerOrdersParam1"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;value"/>
+        <Individual URI="&TargetApp;ListCustomerOrdersCtr"/>
+        <Constant
+            >ListCustomerOrders</Constant>
+    </DataPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;ListCustomerOrdersParam1"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasBody"/>
+        <Individual URI="&TargetApp;ListCustomerOrdersParam1"/>
+        <Individual URI="&TargetApp;ListCustomerOrders_Body"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasReturnType"/>
+        <Individual URI="&TargetApp;ListCustomerOrdersParam1"/>
+        <Individual URI="&TargetApp;CTorType"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;isDataType"/>
+        <Individual URI="&TargetApp;ListCustomerOrdersParam1"/>
+        <Individual URI="&TargetApp;Integer"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;value"/>
+        <Individual URI="&TargetApp;ListCustomerOrdersParam1"/>
+        <Constant>i</Constant>
+    </DataPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;MethodBody"/>
+        <Individual URI="&TargetApp;ListCustomerOrders_Body"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;ListCustomerOrders_Body"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;value"/>
+        <Individual URI="&TargetApp;ListCustomerOrders_Body"/>
+        <Constant
+            >this.cust_id = i;</Constant>
+    </DataPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;ListCustomer_Body"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;value"/>
+        <Individual URI="&TargetApp;ListCustomer_Body"/>
+        <Constant
+            >// List customers in the database
+		
+		ArrayList&lt;Customer&gt; list = new ArrayList&lt;Customer&gt;();
+		Statement sta = conn.createStatement();
+		ResultSet rs = sta.executeQuery(&quot;SELECT * FROM CUSTOMER&quot;);
+		while(rs.next()) {
+			Customer cust = new Customer();
+int i=1;			
+$OrderObject.Fields:{
+		$it.setterMethod$(rs.getString(i));
+		i=i+1;
+	}$
+			list.add(cust);
+		}
+		
+		rs.close();
+		sta.close();
+		
+		return list;</Constant>
+    </DataPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;BLL"/>
+        <Individual URI="&TargetApp;ListCustomers"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;ModuleDefinition"/>
+        <Individual URI="&TargetApp;ListCustomers"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;ListCustomers"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;dependsOn"/>
+        <Individual URI="&TargetApp;ListCustomers"/>
+        <Individual URI="&TargetApp;DatabaseCommand"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasMethodDefinition"/>
+        <Individual URI="&TargetApp;ListCustomers"/>
+        <Individual URI="&TargetApp;ListCustomersMethod"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;implements"/>
+        <Individual URI="&TargetApp;ListCustomers"/>
+        <Individual URI="&TargetApp;DatabaseCommand"/>
+    </ObjectPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;Method"/>
+        <Individual URI="&TargetApp;ListCustomersMethod"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;ListCustomersMethod"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasAccessModifier"/>
+        <Individual URI="&TargetApp;ListCustomersMethod"/>
+        <Individual URI="&TargetApp;public"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasBody"/>
+        <Individual URI="&TargetApp;ListCustomersMethod"/>
+        <Individual URI="&TargetApp;ListCustomer_Body"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasInputParams"/>
+        <Individual URI="&TargetApp;ListCustomersMethod"/>
+        <Individual URI="&TargetApp;ConnInputParameter"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasReturnType"/>
+        <Individual URI="&TargetApp;ListCustomersMethod"/>
+        <Individual URI="&TargetApp;Object"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;implements"/>
+        <Individual URI="&TargetApp;ListCustomersMethod"/>
+        <Individual URI="&TargetApp;DatabaseCommand"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;value"/>
+        <Individual URI="&TargetApp;ListCustomersMethod"/>
+        <Constant
+            >executeDatabaseOperation</Constant>
+    </DataPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;MethodBody"/>
+        <Individual URI="&TargetApp;ListCustomers_Body"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;ListCustomers_Body"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;value"/>
+        <Individual URI="&TargetApp;ListCustomers_Body"/>
+        <Constant
+            >ArrayList&lt;Order&gt; list = new ArrayList&lt;Order&gt;();
+		PreparedStatement sta = conn.prepareStatement(&quot;SELECT ID, CUST_ID, DATE_PLACED, AMOUNT FROM ORDERS WHERE CUST_ID = ?&quot;);
+		sta.setInt(1, this.cust_id);
+		ResultSet rs = sta.executeQuery();
+		while(rs.next()) {
+			Order o = new Order();
+                                           int i=0;
+                                           $OrderObject.Fields:{
+                                                  $it.setterMethod$(rs.getString(1),i);
+                                                 i++;
+                                           }$                                                               
+
+			
+			list.add(o);			
+		}
+		
+		rs.close();
+		sta.close();
+		
+		return list;</Constant>
+    </DataPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;Method"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;ExternalTypes"/>
+        <Individual URI="&TargetApp;Object"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;Object"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;isClass"/>
+        <Individual URI="&TargetApp;Object"/>
+        <Constant>Object</Constant>
+    </DataPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;Tables"/>
+        <Individual URI="&TargetApp;Order"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;Order"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasField"/>
+        <Individual URI="&TargetApp;Order"/>
+        <Individual URI="&TargetApp;date_place"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasField"/>
+        <Individual URI="&TargetApp;Order"/>
+        <Individual URI="&TargetApp;user_id"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasField"/>
+        <Individual URI="&TargetApp;Order"/>
+        <Individual URI="&TargetApp;amount"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasField"/>
+        <Individual URI="&TargetApp;Order"/>
+        <Individual URI="&TargetApp;order_id"/>
+    </ObjectPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;Order.java"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;OrderAmount"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasAccessModifier"/>
+        <Individual URI="&TargetApp;OrderAmount"/>
+        <Individual URI="&TargetApp;private"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;isDataType"/>
+        <Individual URI="&TargetApp;OrderAmount"/>
+        <Individual URI="&TargetApp;Integer"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;getterMethod"/>
+        <Individual URI="&TargetApp;OrderAmount"/>
+        <Constant>getAmount</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;setterMethod"/>
+        <Individual URI="&TargetApp;OrderAmount"/>
+        <Constant>setAmount</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;value"/>
+        <Individual URI="&TargetApp;OrderAmount"/>
+        <Constant>amount</Constant>
+    </DataPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;OrderCreated.jsp"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;OrderCreatedContent"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;value"/>
+        <Individual URI="&TargetApp;OrderCreatedContent"/>
+        <Constant
+            >&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=ISO-8859-1&quot;
+    pageEncoding=&quot;ISO-8859-1&quot;%&gt;
+&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=ISO-8859-1&quot;&gt;
+&lt;title&gt;Order has been created&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;B&gt;New Order has been created!&lt;/B&gt;
+
+&lt;a href=&quot;javascript:history.go(-1)&quot;&gt;Go Back&lt;/a&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</Constant>
+    </DataPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;BLL"/>
+        <Individual URI="&TargetApp;OrderObject"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;OrderObject"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasFieldDefinition"/>
+        <Individual URI="&TargetApp;OrderObject"/>
+        <Individual URI="&TargetApp;order_idField"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasFieldDefinition"/>
+        <Individual URI="&TargetApp;OrderObject"/>
+        <Individual URI="&TargetApp;OrderAmount"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasFieldDefinition"/>
+        <Individual URI="&TargetApp;OrderObject"/>
+        <Individual URI="&TargetApp;datePlaceField"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasFile"/>
+        <Individual URI="&TargetApp;OrderObject"/>
+        <Individual URI="&TargetApp;Order.java"/>
+    </ObjectPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;Pages"/>
+        <Individual URI="&TargetApp;Order_created"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;Order_created"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasContent"/>
+        <Individual URI="&TargetApp;Order_created"/>
+        <Individual URI="&TargetApp;OrderCreatedContent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasFile"/>
+        <Individual URI="&TargetApp;Order_created"/>
+        <Individual URI="&TargetApp;OrderCreated.jsp"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;linkedToModule"/>
+        <Individual URI="&TargetApp;Order_created"/>
+        <Individual URI="&TargetApp;Orders"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;linkedToModule"/>
+        <Individual URI="&TargetApp;Order_created"/>
+        <Individual URI="&TargetApp;Order"/>
+    </ObjectPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;Pages"/>
+        <Individual URI="&TargetApp;Orders"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;Orders"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasContent"/>
+        <Individual URI="&TargetApp;Orders"/>
+        <Individual URI="&TargetApp;OrdersContent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasFile"/>
+        <Individual URI="&TargetApp;Orders"/>
+        <Individual URI="&TargetApp;File.Orders.jsp"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasFile"/>
+        <Individual URI="&TargetApp;Orders"/>
+        <Individual URI="&TargetApp;OrderCreated.jsp"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;linkedToModule"/>
+        <Individual URI="&TargetApp;Orders"/>
+        <Individual URI="&TargetApp;Order_created"/>
+    </ObjectPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;OrdersContent"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;value"/>
+        <Individual URI="&TargetApp;OrdersContent"/>
+        <Constant
+            >&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=ISO-8859-1&quot;
+    pageEncoding=&quot;ISO-8859-1&quot;%&gt;
+&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=ISO-8859-1&quot;&gt;
+&lt;title&gt;Create Orders&lt;/title&gt;
+
+&lt;jsp:useBean id=&quot;orders&quot; type=&quot;java.util.ArrayList&lt;core.Order&gt;&quot; scope=&quot;request&quot;/&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+
+Orders for the customer with id: &lt;%= request.getParameter(&quot;cust_id&quot;) %&gt;&lt;br&gt;
+&lt;table border=&quot;1&quot;&gt;
+&lt;tr&gt;
+$OrderObject.Fields:{
+    &lt;th&gt;$it.value$&lt;/th&gt;
+}$
+	
+	
+&lt;/tr&gt;
+&lt;% for(core.Order o : orders) { %&gt;
+&lt;tr&gt;
+$OrderObject.Fields:{
+    &lt;td&gt;&lt;%= o.$it.getterMethod$() %&gt;&lt;/td&gt;
+}$
+	
+&lt;/tr&gt;
+&lt;% } %&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</Constant>
+    </DataPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;ServletException"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;isClass"/>
+        <Individual URI="&TargetApp;ServletException"/>
+        <Constant
+            >javax.servlet.ServletException</Constant>
+    </DataPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;ObjectTypes"/>
+        <Individual URI="&TargetApp;String"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;String"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;isClass"/>
+        <Individual URI="&TargetApp;String"/>
+        <Constant>string</Constant>
+    </DataPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;AnyField"/>
+        <Individual URI="&TargetApp;address_field"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;address_field"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;isDataType"/>
+        <Individual URI="&TargetApp;address_field"/>
+        <Individual URI="&TargetApp;String"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;getterMethod"/>
+        <Individual URI="&TargetApp;address_field"/>
+        <Constant>getAddress</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;setterMethod"/>
+        <Individual URI="&TargetApp;address_field"/>
+        <Constant>setAddress</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;value"/>
+        <Individual URI="&TargetApp;address_field"/>
+        <Constant>address</Constant>
+    </DataPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;amount"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasProperty"/>
+        <Individual URI="&TargetApp;amount"/>
+        <Individual URI="&TargetApp;isprimary"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;isDataType"/>
+        <Individual URI="&TargetApp;amount"/>
+        <Individual URI="&TargetApp;Integer"/>
+    </ObjectPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;conn"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasType"/>
+        <Individual URI="&TargetApp;conn"/>
+        <Individual URI="&TargetApp;Connection"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;value"/>
+        <Individual URI="&TargetApp;conn"/>
+        <Constant>conn</Constant>
+    </DataPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;FieldDefinition"/>
+        <Individual URI="&TargetApp;cust_id"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;cust_id"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasAccessModifier"/>
+        <Individual URI="&TargetApp;cust_id"/>
+        <Individual URI="&TargetApp;private"/>
+    </ObjectPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;customer_address"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasProperty"/>
+        <Individual URI="&TargetApp;customer_address"/>
+        <Individual URI="&TargetApp;isprimary"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;isDataType"/>
+        <Individual URI="&TargetApp;customer_address"/>
+        <Individual URI="&TargetApp;string"/>
+    </ObjectPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;customer_id"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasProperty"/>
+        <Individual URI="&TargetApp;customer_id"/>
+        <Individual URI="&TargetApp;isprimary"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;isDataType"/>
+        <Individual URI="&TargetApp;customer_id"/>
+        <Individual URI="&TargetApp;Integer"/>
+    </ObjectPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;Field"/>
+        <Individual URI="&TargetApp;customer_name"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;customer_name"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasProperty"/>
+        <Individual URI="&TargetApp;customer_name"/>
+        <Individual URI="&TargetApp;isprimary"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;isDataType"/>
+        <Individual URI="&TargetApp;customer_name"/>
+        <Individual URI="&TargetApp;string"/>
+    </ObjectPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;Property"/>
+        <Individual URI="&TargetApp;datatype"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;datatype"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;datePlaceField"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;date_place"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasProperty"/>
+        <Individual URI="&TargetApp;date_place"/>
+        <Individual URI="&TargetApp;isprimary"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;isDataType"/>
+        <Individual URI="&TargetApp;date_place"/>
+        <Individual URI="&TargetApp;datetime"/>
+    </ObjectPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;DBDataType"/>
+        <Individual URI="&TargetApp;datetime"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;datetime"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;sqlString"/>
+        <Individual URI="&TargetApp;datetime"/>
+        <Constant>datetime</Constant>
+    </DataPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;MethodDefinition"/>
+        <Individual URI="&TargetApp;doGet"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;doGet"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasAccessModifier"/>
+        <Individual URI="&TargetApp;doGet"/>
+        <Individual URI="&TargetApp;protected"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasBody"/>
+        <Individual URI="&TargetApp;doGet"/>
+        <Individual URI="&TargetApp;doGet_Body"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasInputParams"/>
+        <Individual URI="&TargetApp;doGet"/>
+        <Individual URI="&TargetApp;request"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasInputParams"/>
+        <Individual URI="&TargetApp;doGet"/>
+        <Individual URI="&TargetApp;response"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasReturnType"/>
+        <Individual URI="&TargetApp;doGet"/>
+        <Individual URI="&TargetApp;void"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;throws"/>
+        <Individual URI="&TargetApp;doGet"/>
+        <Individual URI="&TargetApp;IOException"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;throws"/>
+        <Individual URI="&TargetApp;doGet"/>
+        <Individual URI="&TargetApp;ServletException"/>
+    </ObjectPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;MethodBody"/>
+        <Individual URI="&TargetApp;doGet_Body"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;doGet_Body"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;value"/>
+        <Individual URI="&TargetApp;doGet_Body"/>
+        <Constant
+            >// TODO Auto-generated method stub
+		try {
+			// perform list customer operations
+			ArrayList&lt;Customer&gt; list = (ArrayList&lt;Customer&gt;)CommandExecutor.getInstance().executeDatabaseCommand(new command.ListCustomers());
+			request.setAttribute(&quot;customers&quot;, list);
+			RequestDispatcher rd = getServletContext().getRequestDispatcher(&quot;/customers.jsp&quot;);
+			rd.forward(request, response);
+		} catch (Exception e) {
+			throw new ServletException(e);
+		}</Constant>
+    </DataPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;MethodDefinition"/>
+        <Individual URI="&TargetApp;doPost"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;doPost"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasAccessModifier"/>
+        <Individual URI="&TargetApp;doPost"/>
+        <Individual URI="&TargetApp;protected"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasBody"/>
+        <Individual URI="&TargetApp;doPost"/>
+        <Individual URI="&TargetApp;doPost_Body"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasInputParams"/>
+        <Individual URI="&TargetApp;doPost"/>
+        <Individual URI="&TargetApp;request"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasInputParams"/>
+        <Individual URI="&TargetApp;doPost"/>
+        <Individual URI="&TargetApp;response"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasReturnType"/>
+        <Individual URI="&TargetApp;doPost"/>
+        <Individual URI="&TargetApp;void"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;throws"/>
+        <Individual URI="&TargetApp;doPost"/>
+        <Individual URI="&TargetApp;IOException"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;throws"/>
+        <Individual URI="&TargetApp;doPost"/>
+        <Individual URI="&TargetApp;ServletException"/>
+    </ObjectPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;doPost_Body"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;value"/>
+        <Individual URI="&TargetApp;doPost_Body"/>
+        <Constant></Constant>
+    </DataPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;ds"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasAccessModifier"/>
+        <Individual URI="&TargetApp;ds"/>
+        <Individual URI="&TargetApp;private"/>
+    </ObjectPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;executeDatabaseCommand"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasAccessModifier"/>
+        <Individual URI="&TargetApp;executeDatabaseCommand"/>
+        <Individual URI="&TargetApp;public"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasBody"/>
+        <Individual URI="&TargetApp;executeDatabaseCommand"/>
+        <Individual URI="&TargetApp;executeDatabaseCommand_Body"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasInputParams"/>
+        <Individual URI="&TargetApp;executeDatabaseCommand"/>
+        <Individual URI="&TargetApp;executeDatabaseCommandParam1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasReturnType"/>
+        <Individual URI="&TargetApp;executeDatabaseCommand"/>
+        <Individual URI="&TargetApp;Object"/>
+    </ObjectPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;executeDatabaseCommandParam1"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;value"/>
+        <Individual URI="&TargetApp;executeDatabaseCommandParam1"/>
+        <Constant>c</Constant>
+    </DataPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;MethodBody"/>
+        <Individual URI="&TargetApp;executeDatabaseCommand_Body"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;executeDatabaseCommand_Body"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;value"/>
+        <Individual URI="&TargetApp;executeDatabaseCommand_Body"/>
+        <Constant
+            >Connection conn = null;
+		try {
+			conn = getConnection();
+			Object o = c.executeDatabaseOperation(conn);
+			return o;
+		} catch (SQLException e) {
+			throw e;
+		} catch (NamingException ne) {
+			throw ne;
+		} finally {
+			if (conn != null) conn.close();
+		}</Constant>
+    </DataPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;executeDatabaseOperation"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasInputParams"/>
+        <Individual URI="&TargetApp;executeDatabaseOperation"/>
+        <Individual URI="&TargetApp;conn"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasReturnType"/>
+        <Individual URI="&TargetApp;executeDatabaseOperation"/>
+        <Individual URI="&TargetApp;Object"/>
+    </ObjectPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;getConnection"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasAccessModifier"/>
+        <Individual URI="&TargetApp;getConnection"/>
+        <Individual URI="&TargetApp;public"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasBody"/>
+        <Individual URI="&TargetApp;getConnection"/>
+        <Individual URI="&TargetApp;getConnection_Body"/>
+    </ObjectPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;MethodBody"/>
+        <Individual URI="&TargetApp;getConnection_Body"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;getConnection_Body"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;value"/>
+        <Individual URI="&TargetApp;getConnection_Body"/>
+        <Constant
+            >return getDataSource().getConnection();</Constant>
+    </DataPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;getDataSource"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasAccessModifier"/>
+        <Individual URI="&TargetApp;getDataSource"/>
+        <Individual URI="&TargetApp;public"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasBody"/>
+        <Individual URI="&TargetApp;getDataSource"/>
+        <Individual URI="&TargetApp;getDataSource_Body"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasReturnType"/>
+        <Individual URI="&TargetApp;getDataSource"/>
+        <Individual URI="&TargetApp;DataSource"/>
+    </ObjectPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;MethodBody"/>
+        <Individual URI="&TargetApp;getDataSource_Body"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;getDataSource_Body"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;value"/>
+        <Individual URI="&TargetApp;getDataSource_Body"/>
+        <Constant
+            >if (ds == null) {
+			
+			InitialContext ctx = new InitialContext();
+			Context envCtx = (Context) ctx.lookup(&quot;java:comp/env&quot;);
+			ds = (DataSource) envCtx.lookup(&quot;jdbc/TestDB&quot;);
+			
+		}
+		
+		return ds;</Constant>
+    </DataPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;getInstance"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasAccessModifier"/>
+        <Individual URI="&TargetApp;getInstance"/>
+        <Individual URI="&TargetApp;public"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasBody"/>
+        <Individual URI="&TargetApp;getInstance"/>
+        <Individual URI="&TargetApp;getInstance_body"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasMemoryModifier"/>
+        <Individual URI="&TargetApp;getInstance"/>
+        <Individual URI="&TargetApp;static"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasReturnType"/>
+        <Individual URI="&TargetApp;getInstance"/>
+        <Individual URI="&TargetApp;CommandExecutor"/>
+    </ObjectPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;MethodBody"/>
+        <Individual URI="&TargetApp;getInstance_body"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;getInstance_body"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;value"/>
+        <Individual URI="&TargetApp;getInstance_body"/>
+        <Constant
+            >if (myOnlyInstance == null) {
+			myOnlyInstance = new CommandExecutor();
+		}
+		return myOnlyInstance;</Constant>
+    </DataPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;AnyField"/>
+        <Individual URI="&TargetApp;id"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;id"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;isDataType"/>
+        <Individual URI="&TargetApp;id"/>
+        <Individual URI="&TargetApp;Integer"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;getterMethod"/>
+        <Individual URI="&TargetApp;id"/>
+        <Constant>getId</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;setterMethod"/>
+        <Individual URI="&TargetApp;id"/>
+        <Constant>setId</Constant>
+    </DataPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;MethodDefinition"/>
+        <Individual URI="&TargetApp;init"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;init"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasBody"/>
+        <Individual URI="&TargetApp;init"/>
+        <Individual URI="&TargetApp;init_body"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;throws"/>
+        <Individual URI="&TargetApp;init"/>
+        <Individual URI="&TargetApp;ServletException"/>
+    </ObjectPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;MethodBody"/>
+        <Individual URI="&TargetApp;init_body"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;init_body"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;value"/>
+        <Individual URI="&TargetApp;init_body"/>
+        <Constant
+            >super.init();
+		try {
+			CommandExecutor.getInstance();
+		} catch (Exception e) {
+			throw new ServletException(e);
+		}</Constant>
+    </DataPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;Property"/>
+        <Individual URI="&TargetApp;isprimary"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;isprimary"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;myOnlyInstance"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasAccessModifier"/>
+        <Individual URI="&TargetApp;myOnlyInstance"/>
+        <Individual URI="&TargetApp;private"/>
+    </ObjectPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;order"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasAccessModifier"/>
+        <Individual URI="&TargetApp;order"/>
+        <Individual URI="&TargetApp;private"/>
+    </ObjectPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;order_id"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasProperty"/>
+        <Individual URI="&TargetApp;order_id"/>
+        <Individual URI="&TargetApp;isprimary"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;isDataType"/>
+        <Individual URI="&TargetApp;order_id"/>
+        <Individual URI="&TargetApp;Integer"/>
+    </ObjectPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;order_idField"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasAccessModifier"/>
+        <Individual URI="&TargetApp;order_idField"/>
+        <Individual URI="&TargetApp;private"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;isDataType"/>
+        <Individual URI="&TargetApp;order_idField"/>
+        <Individual URI="&TargetApp;Integer"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;getterMethod"/>
+        <Individual URI="&TargetApp;order_idField"/>
+        <Constant>getOder_id</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;setterMethod"/>
+        <Individual URI="&TargetApp;order_idField"/>
+        <Constant>setOder_id</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;value"/>
+        <Individual URI="&TargetApp;order_idField"/>
+        <Constant>order_id</Constant>
+    </DataPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;AccessModifier"/>
+        <Individual URI="&TargetApp;private"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;private"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;value"/>
+        <Individual URI="&TargetApp;private"/>
+        <Constant>private</Constant>
+    </DataPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;AccessModifier"/>
+        <Individual URI="&TargetApp;protected"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;protected"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;AccessModifier"/>
+        <Individual URI="&TargetApp;public"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;public"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;value"/>
+        <Individual URI="&TargetApp;public"/>
+        <Constant>public</Constant>
+    </DataPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;request"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasType"/>
+        <Individual URI="&TargetApp;request"/>
+        <Individual URI="&TargetApp;HttpServletRequest"/>
+    </ObjectPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;response"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasType"/>
+        <Individual URI="&TargetApp;response"/>
+        <Individual URI="&TargetApp;HttpServletResponse"/>
+    </ObjectPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;MemoryModifier"/>
+        <Individual URI="&TargetApp;static"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;static"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;value"/>
+        <Individual URI="&TargetApp;static"/>
+        <Constant>static</Constant>
+    </DataPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;DBDataType"/>
+        <Individual URI="&TargetApp;string"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;string"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;sqlString"/>
+        <Individual URI="&TargetApp;string"/>
+        <Constant>nvarchar(MAX)</Constant>
+    </DataPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;user_id"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;hasProperty"/>
+        <Individual URI="&TargetApp;user_id"/>
+        <Individual URI="&TargetApp;datatype"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&TargetApp;isDataType"/>
+        <Individual URI="&TargetApp;user_id"/>
+        <Individual URI="&TargetApp;Integer"/>
+    </ObjectPropertyAssertion>
+    <ClassAssertion>
+        <Class URI="&TargetApp;ObjectTypes"/>
+        <Individual URI="&TargetApp;void"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class URI="&owl;Thing"/>
+        <Individual URI="&TargetApp;void"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&TargetApp;isClass"/>
+        <Individual URI="&TargetApp;void"/>
+        <Constant>void</Constant>
+    </DataPropertyAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

@@ -1,0 +1,250 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns="http://www.owl-ontologies.com/LingDomainMDDL.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://www.owl-ontologies.com/LingDomainMDDL.owl">
+  <owl:Ontology rdf:about=""/>
+  <owl:Class rdf:ID="MetaConceptClass">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </owl:Class>
+  <owl:Class rdf:ID="MeaningOfConcept">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Meaning"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="hasConcept"/>
+        </owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#MetaConceptClass"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="MeaningOfRelation">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Meaning"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="hasRelation"/>
+        </owl:onProperty>
+        <owl:allValuesFrom>
+          <owl:Class rdf:ID="MetaDomainRelation"/>
+        </owl:allValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="MeaningOfValue">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Meaning"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="hasValue"/>
+        </owl:onProperty>
+        <owl:allValuesFrom>
+          <owl:Class rdf:ID="MetaDomainValue"/>
+        </owl:allValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="LinguisticResource"/>
+  <owl:Class rdf:ID="Word">
+    <rdfs:subClassOf rdf:resource="#LinguisticResource"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Language">
+    <rdfs:subClassOf rdf:resource="#LinguisticResource"/>
+  </owl:Class>
+  <owl:Class rdf:about="#MetaDomainRelation">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Meaning">
+    <rdfs:subClassOf rdf:resource="#LinguisticResource"/>
+  </owl:Class>
+  <owl:Class rdf:ID="DomainResource"/>
+  <owl:Class rdf:ID="MeaningOfInstance">
+    <rdfs:subClassOf rdf:resource="#Meaning"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#DomainResource"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="hasInstance"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#MetaDomainValue">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:ID="hasLinguisticsProperty"/>
+  <owl:ObjectProperty rdf:about="#hasRelation">
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:ID="superHasDomainResource"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="#MetaDomainRelation"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasWord">
+    <rdfs:domain rdf:resource="#Meaning"/>
+    <rdfs:range rdf:resource="#Word"/>
+    <rdfs:subPropertyOf rdf:resource="#hasLinguisticsProperty"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="hasMeaning"/>
+    </owl:inverseOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasConcept">
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#superHasDomainResource"/>
+    </rdfs:subPropertyOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasValue">
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#superHasDomainResource"/>
+    </rdfs:subPropertyOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#superHasDomainResource">
+    <rdfs:subPropertyOf rdf:resource="#hasLinguisticsProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasInstance">
+    <rdfs:subPropertyOf rdf:resource="#superHasDomainResource"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasMeaning">
+    <rdfs:range rdf:resource="#Meaning"/>
+    <rdfs:domain rdf:resource="#Word"/>
+    <rdfs:subPropertyOf rdf:resource="#hasLinguisticsProperty"/>
+    <owl:inverseOf rdf:resource="#hasWord"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="linguisticsDataType"/>
+  <owl:DatatypeProperty rdf:ID="DomainValues"/>
+  <owl:FunctionalProperty rdf:ID="languageShortName">
+    <rdfs:subPropertyOf rdf:resource="#linguisticsDataType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Language"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="hasLanguage">
+    <rdfs:domain rdf:resource="#Word"/>
+    <rdfs:range rdf:resource="#Language"/>
+    <rdfs:subPropertyOf rdf:resource="#hasLinguisticsProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="spell">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:subPropertyOf rdf:resource="#linguisticsDataType"/>
+    <rdfs:domain rdf:resource="#Word"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="hasCompanyName">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="#MetaDomainValue"/>
+    <rdfs:subPropertyOf rdf:resource="#DomainValues"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="languageNationalName">
+    <rdfs:subPropertyOf rdf:resource="#linguisticsDataType"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Language"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <CompanyConcept rdf:ID="IBM">
+    <hasEmpoyee>
+      <EmployeeConcept rdf:ID="Crocker_Pete"/>
+    </hasEmpoyee>
+  </CompanyConcept>
+  <Word rdf:ID="Name">
+    <hasLanguage>
+      <Language rdf:ID="English">
+        <languageShortName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >en</languageShortName>
+        <languageNationalName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >English</languageNationalName>
+      </Language>
+    </hasLanguage>
+    <spell rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >name</spell>
+    <hasMeaning>
+      <MeaningOfValue rdf:ID="hasNameValue">
+        <hasValue rdf:resource="#hasCompanyName"/>
+        <hasWord rdf:resource="#Name"/>
+      </MeaningOfValue>
+    </hasMeaning>
+  </Word>
+  <Word rdf:ID="CompanyWord">
+    <hasMeaning>
+      <MeaningOfConcept rdf:ID="MeaningOfCompany">
+        <hasConcept>
+          <MetaConceptClass rdf:ID="CompanyConcept">
+            <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            <rdfs:subClassOf rdf:resource="#DomainResource"/>
+            <rdfs:subClassOf>
+              <owl:Restriction>
+                <owl:onProperty>
+                  <MetaDomainRelation rdf:ID="hasEmpoyee">
+                    <rdfs:domain rdf:resource="#CompanyConcept"/>
+                    <rdfs:subPropertyOf>
+                      <MetaDomainRelation rdf:ID="hasDomainRelation"/>
+                    </rdfs:subPropertyOf>
+                  </MetaDomainRelation>
+                </owl:onProperty>
+                <owl:allValuesFrom>
+                  <MetaConceptClass rdf:ID="EmployeeConcept">
+                    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                    <rdfs:subClassOf rdf:resource="#DomainResource"/>
+                  </MetaConceptClass>
+                </owl:allValuesFrom>
+              </owl:Restriction>
+            </rdfs:subClassOf>
+          </MetaConceptClass>
+        </hasConcept>
+        <hasWord rdf:resource="#CompanyWord"/>
+      </MeaningOfConcept>
+    </hasMeaning>
+    <spell rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >company</spell>
+    <hasLanguage rdf:resource="#English"/>
+  </Word>
+  <Word rdf:ID="Employee">
+    <hasLanguage rdf:resource="#English"/>
+    <spell rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >empoyee</spell>
+    <hasMeaning>
+      <MeaningOfRelation rdf:ID="HasEmployeeRelationMeaning">
+        <hasRelation rdf:resource="#hasEmpoyee"/>
+        <hasWord rdf:resource="#Employee"/>
+      </MeaningOfRelation>
+    </hasMeaning>
+  </Word>
+  <CompanyConcept rdf:ID="Oracle"/>
+  <Word rdf:ID="IBMWordRu">
+    <hasMeaning>
+      <MeaningOfInstance rdf:ID="MeaningIBM">
+        <hasWord rdf:resource="#IBMWordRu"/>
+        <hasWord>
+          <Word rdf:ID="IBMWord">
+            <hasLanguage rdf:resource="#English"/>
+            <hasMeaning rdf:resource="#MeaningIBM"/>
+            <spell rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >IBM</spell>
+          </Word>
+        </hasWord>
+        <hasInstance rdf:resource="#IBM"/>
+        <hasLanguage rdf:resource="#English"/>
+      </MeaningOfInstance>
+    </hasMeaning>
+    <hasLanguage>
+      <Language rdf:ID="Russian">
+        <languageShortName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >ru</languageShortName>
+        <languageNationalName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Русский</languageNationalName>
+      </Language>
+    </hasLanguage>
+    <spell rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ИБМ</spell>
+  </Word>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.3.1, Build 430)  http://protege.stanford.edu -->
